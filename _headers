@@ -1,4 +1,4 @@
-/data/crop-monitor/*
+/data/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=300, must-revalidate
   X-Content-Type-Options: nosniff
