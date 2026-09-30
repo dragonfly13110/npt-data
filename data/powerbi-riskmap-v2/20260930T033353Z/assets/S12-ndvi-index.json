@@ -1,0 +1,45 @@
+{
+  "provider": "Copernicus Data Space Ecosystem",
+  "source": "Sentinel-2 L2A (10m)",
+  "signal": "ndvi-vegetation-index",
+  "updatedAt": "2026-09-28T12:00:00.000Z",
+  "totalScenes": 6,
+  "scenes": [
+    {
+      "id": "S2B_MSIL2A_20260925T033529_N0511_R018_T47PNQ",
+      "datetime": "2026-09-25T03:35:29Z",
+      "platform": "sentinel-2b",
+      "cloudCoverage": 14.5
+    },
+    {
+      "id": "S2A_MSIL2A_20260920T033531_N0511_R018_T47PNQ",
+      "datetime": "2026-09-20T03:35:31Z",
+      "platform": "sentinel-2a",
+      "cloudCoverage": 8.2
+    },
+    {
+      "id": "S2B_MSIL2A_20260915T033529_N0511_R018_T47PNQ",
+      "datetime": "2026-09-15T03:35:29Z",
+      "platform": "sentinel-2b",
+      "cloudCoverage": 18.0
+    },
+    {
+      "id": "S2A_MSIL2A_20260910T033531_N0511_R018_T47PNQ",
+      "datetime": "2026-09-10T03:35:31Z",
+      "platform": "sentinel-2a",
+      "cloudCoverage": 24.3
+    },
+    {
+      "id": "S2B_MSIL2A_20260905T033529_N0511_R018_T47PNQ",
+      "datetime": "2026-09-05T03:35:29Z",
+      "platform": "sentinel-2b",
+      "cloudCoverage": 11.7
+    },
+    {
+      "id": "S2A_MSIL2A_20260831T033531_N0511_R018_T47PNQ",
+      "datetime": "2026-08-31T03:35:31Z",
+      "platform": "sentinel-2a",
+      "cloudCoverage": 6.8
+    }
+  ]
+}

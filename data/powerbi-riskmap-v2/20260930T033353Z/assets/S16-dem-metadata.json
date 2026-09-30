@@ -1,0 +1,56 @@
+{
+  "imageUrl": "/data/npt-elevation-copernicus.webp",
+  "bounds": [
+    [13.646582173925058, 99.81583117716983],
+    [14.181525301090245, 100.3394591562831]
+  ],
+  "resolutionM": 30,
+  "source": "Copernicus DEM GLO-30 Public, 2021 release",
+  "surfaceModel": true,
+  "verticalDatum": "EGM2008",
+  "colorStops": [
+    {
+      "elevationM": 0,
+      "color": "#217f9b"
+    },
+    {
+      "elevationM": 2,
+      "color": "#57adae"
+    },
+    {
+      "elevationM": 4,
+      "color": "#a5cf9f"
+    },
+    {
+      "elevationM": 6,
+      "color": "#d5db8c"
+    },
+    {
+      "elevationM": 10,
+      "color": "#eed077"
+    },
+    {
+      "elevationM": 20,
+      "color": "#dcaa67"
+    },
+    {
+      "elevationM": 40,
+      "color": "#b77b58"
+    },
+    {
+      "elevationM": 80,
+      "color": "#79594e"
+    }
+  ],
+  "elevationPercentilesM": {
+    "p05": 2.0,
+    "p50": 3.8,
+    "p95": 11.2
+  },
+  "sourceUrls": [
+    "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N13_00_E099_00_DEM/Copernicus_DSM_COG_10_N13_00_E099_00_DEM.tif",
+    "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N13_00_E100_00_DEM/Copernicus_DSM_COG_10_N13_00_E100_00_DEM.tif",
+    "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N14_00_E099_00_DEM/Copernicus_DSM_COG_10_N14_00_E099_00_DEM.tif",
+    "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N14_00_E100_00_DEM/Copernicus_DSM_COG_10_N14_00_E100_00_DEM.tif"
+  ]
+}

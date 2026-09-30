@@ -1,0 +1,731 @@
+{
+  "schemaVersion": "1.0",
+  "batchId": "20260930T033353Z",
+  "capturedAtUtc": "2026-09-30T03:33:53.803Z",
+  "modelNowUtc": "2026-09-30T03:33:53.803Z",
+  "timeZone": "Asia/Bangkok",
+  "codeCommit": "ede05483",
+  "riskModelVersion": "risk-map-v2-simple-v1",
+  "dataMode": "live-snapshot",
+  "sceneAssetsIncluded": true,
+  "sourceRegistry": [
+    {
+      "sourceId": "S03",
+      "requestPath": "/api/public-flood-history",
+      "httpStatus": 200,
+      "transportStatus": "ok",
+      "sourceStatus": "ready",
+      "capturedAtUtc": "2026-09-30T03:33:53.845Z",
+      "serverDate": "Wed, 30 Sep 2026 03:33:53 GMT",
+      "attempts": 1,
+      "contentType": "application/json",
+      "responseBytes": 1189227,
+      "jsonValid": true,
+      "savedPath": "raw/S03.json",
+      "payloadStatus": "ready",
+      "rootKeys": [
+        "dataStatus",
+        "data"
+      ],
+      "arrayCounts": {
+        "data": 4752
+      },
+      "errorReason": null
+    },
+    {
+      "sourceId": "S04",
+      "requestPath": "/api/public-satellite-coverage",
+      "httpStatus": 200,
+      "transportStatus": "ok",
+      "sourceStatus": "ok",
+      "capturedAtUtc": "2026-09-30T03:33:54.137Z",
+      "serverDate": "Wed, 30 Sep 2026 03:33:56 GMT",
+      "attempts": 1,
+      "contentType": "application/json",
+      "responseBytes": 3568,
+      "jsonValid": true,
+      "savedPath": "raw/S04.json",
+      "payloadStatus": "ok",
+      "rootKeys": [
+        "provider",
+        "aoi",
+        "query",
+        "status",
+        "configured",
+        "collections",
+        "errors"
+      ],
+      "arrayCounts": {
+        "errors": 0
+      },
+      "errorReason": null
+    },
+    {
+      "sourceId": "S02",
+      "requestPath": "/api/public-national-weather",
+      "httpStatus": 200,
+      "transportStatus": "ok",
+      "sourceStatus": "partial",
+      "capturedAtUtc": "2026-09-30T03:33:53.844Z",
+      "serverDate": "Wed, 30 Sep 2026 03:33:59 GMT",
+      "attempts": 1,
+      "contentType": "application/json",
+      "responseBytes": 140445,
+      "jsonValid": true,
+      "savedPath": "raw/S02.json",
+      "payloadStatus": "partial",
+      "rootKeys": [
+        "data",
+        "meta"
+      ],
+      "arrayCounts": {
+        "data": 130
+      },
+      "errorReason": null
+    },
+    {
+      "sourceId": "S05",
+      "requestPath": "/api/public-waterways",
+      "httpStatus": 200,
+      "transportStatus": "ok",
+      "sourceStatus": "ok",
+      "capturedAtUtc": "2026-09-30T03:33:56.773Z",
+      "serverDate": "Wed, 30 Sep 2026 03:34:00 GMT",
+      "attempts": 1,
+      "contentType": "application/json",
+      "responseBytes": 2117128,
+      "jsonValid": true,
+      "savedPath": "raw/S05.json",
+      "payloadStatus": "ok",
+      "rootKeys": [
+        "data",
+        "metadata"
+      ],
+      "arrayCounts": {
+        "data.features": 5797
+      },
+      "errorReason": null
+    },
+    {
+      "sourceId": "S07",
+      "requestPath": "/api/public-risk-map-ai-latest",
+      "httpStatus": 200,
+      "transportStatus": "ok",
+      "sourceStatus": null,
+      "capturedAtUtc": "2026-09-30T03:34:01.024Z",
+      "serverDate": "Wed, 30 Sep 2026 03:34:03 GMT",
+      "attempts": 1,
+      "contentType": "application/json",
+      "responseBytes": 33598,
+      "jsonValid": true,
+      "savedPath": "raw/S07.json",
+      "payloadStatus": null,
+      "rootKeys": [
+        "data"
+      ],
+      "arrayCounts": {},
+      "errorReason": null
+    },
+    {
+      "sourceId": "S08",
+      "requestPath": "/api/public-satellite-water-history?days=90&limit=5",
+      "httpStatus": 200,
+      "transportStatus": "ok",
+      "sourceStatus": "ok",
+      "capturedAtUtc": "2026-09-30T03:34:03.187Z",
+      "serverDate": "Wed, 30 Sep 2026 03:34:03 GMT",
+      "attempts": 1,
+      "contentType": "application/json",
+      "responseBytes": 1458,
+      "jsonValid": true,
+      "savedPath": "raw/S08.json",
+      "payloadStatus": "ok",
+      "rootKeys": [
+        "provider",
+        "source",
+        "warning",
+        "query",
+        "status",
+        "configured",
+        "sceneCount",
+        "scenes"
+      ],
+      "arrayCounts": {
+        "scenes": 5
+      },
+      "errorReason": null
+    },
+    {
+      "sourceId": "S06",
+      "requestPath": "/api/public-gistda-flood",
+      "httpStatus": 502,
+      "transportStatus": "http_error",
+      "sourceStatus": "unavailable",
+      "capturedAtUtc": "2026-09-30T03:33:59.286Z",
+      "serverDate": "Wed, 30 Sep 2026 03:34:05 GMT",
+      "attempts": 3,
+      "contentType": "application/json",
+      "responseBytes": 214,
+      "jsonValid": true,
+      "savedPath": "raw/S06.json",
+      "payloadStatus": "unavailable",
+      "rootKeys": [
+        "data",
+        "metadata"
+      ],
+      "arrayCounts": {
+        "data.features": 0
+      },
+      "errorReason": "HTTP 502"
+    },
+    {
+      "sourceId": "S10",
+      "requestPath": "/api/public-satellite-ndvi-history?days=90&limit=6",
+      "httpStatus": 200,
+      "transportStatus": "ok",
+      "sourceStatus": "ok",
+      "capturedAtUtc": "2026-09-30T03:34:03.225Z",
+      "serverDate": "Wed, 30 Sep 2026 03:34:05 GMT",
+      "attempts": 1,
+      "contentType": "application/json",
+      "responseBytes": 1387,
+      "jsonValid": true,
+      "savedPath": "raw/S10.json",
+      "payloadStatus": "ok",
+      "rootKeys": [
+        "provider",
+        "source",
+        "signal",
+        "warning",
+        "query",
+        "status",
+        "configured",
+        "sceneCount",
+        "scenes"
+      ],
+      "arrayCounts": {
+        "scenes": 5
+      },
+      "errorReason": null
+    },
+    {
+      "sourceId": "S01",
+      "requestPath": "/api/public-risk-map-current",
+      "httpStatus": 200,
+      "transportStatus": "ok",
+      "sourceStatus": "ok",
+      "capturedAtUtc": "2026-09-30T03:33:53.806Z",
+      "serverDate": "Wed, 30 Sep 2026 03:34:10 GMT",
+      "attempts": 1,
+      "contentType": "application/json",
+      "responseBytes": 588101,
+      "jsonValid": true,
+      "savedPath": "raw/S01.json",
+      "payloadStatus": "ok",
+      "rootKeys": [
+        "observed",
+        "historical",
+        "forecast",
+        "hourlyForecast",
+        "forecastMembers",
+        "metadata"
+      ],
+      "arrayCounts": {
+        "observed": 228,
+        "historical": 403,
+        "forecast": 49,
+        "hourlyForecast": 84,
+        "forecastMembers": 147
+      },
+      "errorReason": null
+    },
+    {
+      "sourceId": "S13-districts",
+      "sourcePath": "src/data/nakhon_pathom_districts.json",
+      "transportStatus": "local_file",
+      "sourceStatus": "present",
+      "capturedAtUtc": "2026-09-30T03:34:10.831Z",
+      "responseBytes": 65874,
+      "savedPath": "assets/S13-districts.json",
+      "sha256": "50ad7f9409623971546a48e6e71691d0a3a49082af0257a37e28b13a6875102e"
+    },
+    {
+      "sourceId": "S13-tambons",
+      "sourcePath": "src/data/nakhon_pathom_subdistricts.json",
+      "transportStatus": "local_file",
+      "sourceStatus": "present",
+      "capturedAtUtc": "2026-09-30T03:34:10.832Z",
+      "responseBytes": 156273,
+      "savedPath": "assets/S13-tambons.json",
+      "sha256": "e70f45e29084d6d964e37c549628ef0d84910a0270d8782585b9b0d73e881682"
+    },
+    {
+      "sourceId": "S14-river",
+      "sourcePath": "src/data/thachin_river.json",
+      "transportStatus": "local_file",
+      "sourceStatus": "present",
+      "capturedAtUtc": "2026-09-30T03:34:10.833Z",
+      "responseBytes": 135109,
+      "savedPath": "assets/S14-river.json",
+      "sha256": "9f3fd4d88528a3593637ae5ffd2d8c3ec09b855a6471a8c7f78a0a725acc3b96"
+    },
+    {
+      "sourceId": "S15-terrain",
+      "sourcePath": "src/features/risk-map-v2/data/nptTerrainSubdistricts.json",
+      "transportStatus": "local_file",
+      "sourceStatus": "present",
+      "capturedAtUtc": "2026-09-30T03:34:10.834Z",
+      "responseBytes": 34202,
+      "savedPath": "assets/S15-terrain.json",
+      "sha256": "d02c8e7dc8299a52a00c10cb15b5c2245a8cc1fbffd7f39e4f796b56aec79db4"
+    },
+    {
+      "sourceId": "S16-dem-metadata",
+      "sourcePath": "src/features/risk-map-v2/data/nptElevationRaster.json",
+      "transportStatus": "local_file",
+      "sourceStatus": "present",
+      "capturedAtUtc": "2026-09-30T03:34:10.835Z",
+      "responseBytes": 1463,
+      "savedPath": "assets/S16-dem-metadata.json",
+      "sha256": "20009457473809586ff51982423f4e3054dd5ae42c9bc13686b2ff9b4c9cfc74"
+    },
+    {
+      "sourceId": "S16-dem-image",
+      "sourcePath": "public/data/npt-elevation-copernicus.webp",
+      "transportStatus": "local_file",
+      "sourceStatus": "present",
+      "capturedAtUtc": "2026-09-30T03:34:10.836Z",
+      "responseBytes": 981012,
+      "savedPath": "assets/S16-dem.webp",
+      "sha256": "56fd4b3912b36eaa0b5d08f9540796412c9824c50dfaecbe9d9e6e961baa3af3"
+    },
+    {
+      "sourceId": "S12-ndvi-index",
+      "sourcePath": "public/data/satellite/ndvi/index.json",
+      "transportStatus": "local_file",
+      "sourceStatus": "present",
+      "capturedAtUtc": "2026-09-30T03:34:10.838Z",
+      "responseBytes": 1305,
+      "savedPath": "assets/S12-ndvi-index.json",
+      "sha256": "a27903bb5f9b46fef4bcd5fddc35d2721ffd88f58a138bad2f86c4fa91952331"
+    },
+    {
+      "sourceId": "S12-ndvi-sample",
+      "sourcePath": "public/data/satellite/ndvi/sample.png",
+      "transportStatus": "local_file",
+      "sourceStatus": "present",
+      "capturedAtUtc": "2026-09-30T03:34:10.839Z",
+      "responseBytes": 21297,
+      "savedPath": "assets/S12-ndvi-sample.png",
+      "sha256": "42ae65c49ee68bf632f2abef2b690d409c498448f7a748a22727923ab415e172"
+    }
+  ],
+  "sceneRegistry": [
+    {
+      "sourceId": "S09",
+      "sceneCount": 5,
+      "transportStatus": "ok",
+      "scenes": [
+        {
+          "sourceId": "S09",
+          "sceneId": "S1D_IW_GRDH_1SDV_20260927T112830_20260927T112855_004763_008EC4_BFC9_COG.SAFE",
+          "acquiredAt": "2026-09-27T11:28:30Z",
+          "requestPath": "/api/public-satellite-water?acquiredAt=2026-09-27T11%3A28%3A30Z",
+          "capturedAtUtc": "2026-09-30T03:34:10.841Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-1 GRD",
+            "x-satellite-signal": "low-backscatter-water-heuristic",
+            "x-satellite-warning": "Water signal heuristic; not flood confirmation",
+            "x-satellite-from": "2026-09-27T10:58:30.000Z",
+            "x-satellite-to": "2026-09-27T11:58:30.000Z",
+            "x-satellite-acquired-at": "2026-09-27T11:28:30.000Z",
+            "x-satellite-scene-id": "S1D_IW_GRDH_1SDV_20260927T112830_20260927T112855_004763_008EC4_BFC9_COG.SAFE",
+            "x-satellite-platform": "sentinel-1d",
+            "x-satellite-scene-count": "1"
+          },
+          "responseBytes": 33789,
+          "savedPath": "assets/S09/49c086d29f3fec07.png",
+          "sha256": "c649653793c204b79fe89e9ce6111e9eb073e7c8d7aac8351439eca1ca23479d"
+        },
+        {
+          "sourceId": "S09",
+          "sceneId": "S1D_IW_GRDH_1SDV_20260919T230840_20260919T230905_004653_008B05_587D_COG.SAFE",
+          "acquiredAt": "2026-09-19T23:08:40Z",
+          "requestPath": "/api/public-satellite-water?acquiredAt=2026-09-19T23%3A08%3A40Z",
+          "capturedAtUtc": "2026-09-30T03:34:10.841Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-1 GRD",
+            "x-satellite-signal": "low-backscatter-water-heuristic",
+            "x-satellite-warning": "Water signal heuristic; not flood confirmation",
+            "x-satellite-from": "2026-09-19T22:38:40.000Z",
+            "x-satellite-to": "2026-09-19T23:38:40.000Z",
+            "x-satellite-acquired-at": "2026-09-19T23:08:40.000Z",
+            "x-satellite-scene-id": "S1D_IW_GRDH_1SDV_20260919T230840_20260919T230905_004653_008B05_587D_COG.SAFE",
+            "x-satellite-platform": "sentinel-1d",
+            "x-satellite-scene-count": "1"
+          },
+          "responseBytes": 24688,
+          "savedPath": "assets/S09/d493830b4e15e87e.png",
+          "sha256": "4a62d4f1ae6ec7d1d4c3c5648c3bf64c821afb4244188447f84e6b24d40f64d7"
+        },
+        {
+          "sourceId": "S09",
+          "sceneId": "S1D_IW_GRDH_1SDV_20260915T112830_20260915T112855_004588_0088BA_0029_COG.SAFE",
+          "acquiredAt": "2026-09-15T11:28:30Z",
+          "requestPath": "/api/public-satellite-water?acquiredAt=2026-09-15T11%3A28%3A30Z",
+          "capturedAtUtc": "2026-09-30T03:34:13.933Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-1 GRD",
+            "x-satellite-signal": "low-backscatter-water-heuristic",
+            "x-satellite-warning": "Water signal heuristic; not flood confirmation",
+            "x-satellite-from": "2026-09-15T10:58:30.000Z",
+            "x-satellite-to": "2026-09-15T11:58:30.000Z",
+            "x-satellite-acquired-at": "2026-09-15T11:28:30.000Z",
+            "x-satellite-scene-id": "S1D_IW_GRDH_1SDV_20260915T112830_20260915T112855_004588_0088BA_0029_COG.SAFE",
+            "x-satellite-platform": "sentinel-1d",
+            "x-satellite-scene-count": "1"
+          },
+          "responseBytes": 25562,
+          "savedPath": "assets/S09/0b857cefa988bfba.png",
+          "sha256": "ae34f84dc49a4ef56800a408e65a8a925a2493d27853bfbeba085a05e3eb8b69"
+        },
+        {
+          "sourceId": "S09",
+          "sceneId": "S1D_IW_GRDH_1SDV_20260907T230840_20260907T230905_004478_0084F9_A13F_COG.SAFE",
+          "acquiredAt": "2026-09-07T23:08:40Z",
+          "requestPath": "/api/public-satellite-water?acquiredAt=2026-09-07T23%3A08%3A40Z",
+          "capturedAtUtc": "2026-09-30T03:34:14.007Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-1 GRD",
+            "x-satellite-signal": "low-backscatter-water-heuristic",
+            "x-satellite-warning": "Water signal heuristic; not flood confirmation",
+            "x-satellite-from": "2026-09-07T22:38:40.000Z",
+            "x-satellite-to": "2026-09-07T23:38:40.000Z",
+            "x-satellite-acquired-at": "2026-09-07T23:08:40.000Z",
+            "x-satellite-scene-id": "S1D_IW_GRDH_1SDV_20260907T230840_20260907T230905_004478_0084F9_A13F_COG.SAFE",
+            "x-satellite-platform": "sentinel-1d",
+            "x-satellite-scene-count": "1"
+          },
+          "responseBytes": 28486,
+          "savedPath": "assets/S09/77c64097d75d8ea7.png",
+          "sha256": "bebd49a782dab80ec87381f91125ee9ea9d772a05c110d87c69b80264cf44ae5"
+        },
+        {
+          "sourceId": "S09",
+          "sceneId": "S1D_IW_GRDH_1SDV_20260903T112830_20260903T112855_004413_0082B1_8121_COG.SAFE",
+          "acquiredAt": "2026-09-03T11:28:30Z",
+          "requestPath": "/api/public-satellite-water?acquiredAt=2026-09-03T11%3A28%3A30Z",
+          "capturedAtUtc": "2026-09-30T03:34:15.910Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-1 GRD",
+            "x-satellite-signal": "low-backscatter-water-heuristic",
+            "x-satellite-warning": "Water signal heuristic; not flood confirmation",
+            "x-satellite-from": "2026-09-03T10:58:30.000Z",
+            "x-satellite-to": "2026-09-03T11:58:30.000Z",
+            "x-satellite-acquired-at": "2026-09-03T11:28:30.000Z",
+            "x-satellite-scene-id": "S1D_IW_GRDH_1SDV_20260903T112830_20260903T112855_004413_0082B1_8121_COG.SAFE",
+            "x-satellite-platform": "sentinel-1d",
+            "x-satellite-scene-count": "1"
+          },
+          "responseBytes": 21075,
+          "savedPath": "assets/S09/d5195cbcc70ac63c.png",
+          "sha256": "f21804a7d6452f4c9ecdf099bed685a87622db1755a46172d6262a3982c0bcfa"
+        }
+      ]
+    },
+    {
+      "sourceId": "S11",
+      "sceneCount": 5,
+      "transportStatus": "ok",
+      "scenes": [
+        {
+          "sourceId": "S11",
+          "sceneId": "S2B_MSIL2A_20260912T033529_N0512_R061_T47PNR_20260912T073504.SAFE",
+          "acquiredAt": "2026-09-12T03:54:24.984Z",
+          "requestPath": "/api/public-satellite-ndvi?acquiredAt=2026-09-12T03%3A54%3A24.984Z",
+          "capturedAtUtc": "2026-09-30T03:34:17.869Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-2 L2A",
+            "x-satellite-signal": "ndvi-vegetation-index",
+            "x-satellite-warning": "Vegetation index heuristic; cloud masked",
+            "x-satellite-from": "2026-09-12T03:24:24.984Z",
+            "x-satellite-to": "2026-09-12T04:24:24.984Z",
+            "x-satellite-acquired-at": "2026-09-12T03:54:24.984Z",
+            "x-satellite-scene-id": "S2B_MSIL2A_20260912T033529_N0512_R061_T47PNR_20260912T073504.SAFE",
+            "x-satellite-platform": "sentinel-2b",
+            "x-satellite-scene-count": "1",
+            "x-satellite-cloud-coverage": "49"
+          },
+          "responseBytes": 159240,
+          "savedPath": "assets/S11/4dbf3e6827d37923.png",
+          "sha256": "76c4aef0157770232c09035d3d18b41200ba14f5d9e7b788e77767220579dbde"
+        },
+        {
+          "sourceId": "S11",
+          "sceneId": "S2C_MSIL2A_20260818T033531_N0512_R061_T47PPR_20260818T084111.SAFE",
+          "acquiredAt": "2026-08-18T03:54:23.29Z",
+          "requestPath": "/api/public-satellite-ndvi?acquiredAt=2026-08-18T03%3A54%3A23.29Z",
+          "capturedAtUtc": "2026-09-30T03:34:17.869Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-2 L2A",
+            "x-satellite-signal": "ndvi-vegetation-index",
+            "x-satellite-warning": "Vegetation index heuristic; cloud masked",
+            "x-satellite-from": "2026-08-18T03:24:23.290Z",
+            "x-satellite-to": "2026-08-18T04:24:23.290Z",
+            "x-satellite-acquired-at": "2026-08-18T03:54:23.290Z",
+            "x-satellite-scene-id": "S2C_MSIL2A_20260818T033531_N0512_R061_T47PPR_20260818T084111.SAFE",
+            "x-satellite-platform": "sentinel-2c",
+            "x-satellite-scene-count": "1",
+            "x-satellite-cloud-coverage": "45.83"
+          },
+          "responseBytes": 147909,
+          "savedPath": "assets/S11/51fd991270528b08.png",
+          "sha256": "0e7d998b695e288843c741a695bf75ee95a26afde902c58d7b4d26e850168dd6"
+        },
+        {
+          "sourceId": "S11",
+          "sceneId": "S2B_MSIL2A_20260806T034529_N0512_R104_T47PPR_20260806T073405.SAFE",
+          "acquiredAt": "2026-08-06T04:04:15.839Z",
+          "requestPath": "/api/public-satellite-ndvi?acquiredAt=2026-08-06T04%3A04%3A15.839Z",
+          "capturedAtUtc": "2026-09-30T03:34:18.003Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-2 L2A",
+            "x-satellite-signal": "ndvi-vegetation-index",
+            "x-satellite-warning": "Vegetation index heuristic; cloud masked",
+            "x-satellite-from": "2026-08-06T03:34:15.839Z",
+            "x-satellite-to": "2026-08-06T04:34:15.839Z",
+            "x-satellite-acquired-at": "2026-08-06T04:04:15.839Z",
+            "x-satellite-scene-id": "S2B_MSIL2A_20260806T034529_N0512_R104_T47PPR_20260806T073405.SAFE",
+            "x-satellite-platform": "sentinel-2b",
+            "x-satellite-scene-count": "1",
+            "x-satellite-cloud-coverage": "31.95"
+          },
+          "responseBytes": 3381,
+          "savedPath": "assets/S11/525641731a619e9f.png",
+          "sha256": "2a0034f190daa9d98121ea44767d176dcaa8dfd4eb9943826d9a9bb280790f0a"
+        },
+        {
+          "sourceId": "S11",
+          "sceneId": "S2B_MSIL2A_20260803T033539_N0512_R061_T47PNR_20260803T072631.SAFE",
+          "acquiredAt": "2026-08-03T03:54:28.828Z",
+          "requestPath": "/api/public-satellite-ndvi?acquiredAt=2026-08-03T03%3A54%3A28.828Z",
+          "capturedAtUtc": "2026-09-30T03:34:20.404Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-2 L2A",
+            "x-satellite-signal": "ndvi-vegetation-index",
+            "x-satellite-warning": "Vegetation index heuristic; cloud masked",
+            "x-satellite-from": "2026-08-03T03:24:28.828Z",
+            "x-satellite-to": "2026-08-03T04:24:28.828Z",
+            "x-satellite-acquired-at": "2026-08-03T03:54:28.828Z",
+            "x-satellite-scene-id": "S2B_MSIL2A_20260803T033539_N0512_R061_T47PNR_20260803T072631.SAFE",
+            "x-satellite-platform": "sentinel-2b",
+            "x-satellite-scene-count": "1",
+            "x-satellite-cloud-coverage": "34.54"
+          },
+          "responseBytes": 258354,
+          "savedPath": "assets/S11/4e39e9340d1fb450.png",
+          "sha256": "193fa9ed10f90c19351f260b5190541683a09b6d3c19525861730b41b7a254d5"
+        },
+        {
+          "sourceId": "S11",
+          "sceneId": "S2B_MSIL2A_20260727T034539_N0512_R104_T47PPR_20260727T073607.SAFE",
+          "acquiredAt": "2026-07-27T04:04:16.796Z",
+          "requestPath": "/api/public-satellite-ndvi?acquiredAt=2026-07-27T04%3A04%3A16.796Z",
+          "capturedAtUtc": "2026-09-30T03:34:20.572Z",
+          "httpStatus": 200,
+          "transportStatus": "ok",
+          "contentType": "image/png",
+          "headers": {
+            "x-satellite-bbox": "99.81883117716984,13.649651972361415,100.33628115179386,14.178525301090257",
+            "x-satellite-source": "Sentinel-2 L2A",
+            "x-satellite-signal": "ndvi-vegetation-index",
+            "x-satellite-warning": "Vegetation index heuristic; cloud masked",
+            "x-satellite-from": "2026-07-27T03:34:16.796Z",
+            "x-satellite-to": "2026-07-27T04:34:16.796Z",
+            "x-satellite-acquired-at": "2026-07-27T04:04:16.796Z",
+            "x-satellite-scene-id": "S2B_MSIL2A_20260727T034539_N0512_R104_T47PNR_20260727T073607.SAFE",
+            "x-satellite-platform": "sentinel-2b",
+            "x-satellite-scene-count": "1",
+            "x-satellite-cloud-coverage": "56.67"
+          },
+          "responseBytes": 49395,
+          "savedPath": "assets/S11/e85da69f46b39384.png",
+          "sha256": "675b1fcd7d77f5f552cac1e835512197258d594a9295a03465d1b530321623dc"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "raw/S03.json",
+      "bytes": 1189227,
+      "sha256": "f878828d16b3794aae07e379c7c8a992cbb676c806fcec04726908a3e7de1d2a"
+    },
+    {
+      "path": "raw/S04.json",
+      "bytes": 3568,
+      "sha256": "42f117aeb71695113d4c67225a250683f3a4783ebc6ba113421cb6889a96944b"
+    },
+    {
+      "path": "raw/S02.json",
+      "bytes": 140445,
+      "sha256": "a19d0e69e3c6097b7a923e981bd9f02fed605ace482993e890f81650f694903c"
+    },
+    {
+      "path": "raw/S05.json",
+      "bytes": 2117128,
+      "sha256": "84d5115dd6da2dd5d585af65695fbbbefdf15b914219a6ba8ad43031a038ce99"
+    },
+    {
+      "path": "raw/S07.json",
+      "bytes": 33598,
+      "sha256": "736f845c41e7e5d1fe2a793f83ed51b24fbd3feaf9fba2d56386a31080ece1ef"
+    },
+    {
+      "path": "raw/S08.json",
+      "bytes": 1458,
+      "sha256": "1ae6809b9d35327b737b7364d4699a1de4b3016b730340df074f234aa308342f"
+    },
+    {
+      "path": "raw/S06.json",
+      "bytes": 214,
+      "sha256": "54ffc929cfad647da745909f33fd88d10c97f61a50737979b99e6104ff1c3022"
+    },
+    {
+      "path": "raw/S10.json",
+      "bytes": 1387,
+      "sha256": "4f59ca39ebc0751b99ff64ca906002e7e8ebd5094cf8aad1518d95a629308ef8"
+    },
+    {
+      "path": "raw/S01.json",
+      "bytes": 588101,
+      "sha256": "9ac7cf5875cbf08bea82dbfbe54aaae02e17cb2dbdd11b949179fb97845d13b6"
+    },
+    {
+      "path": "assets/S13-districts.json",
+      "bytes": 65874,
+      "sha256": "50ad7f9409623971546a48e6e71691d0a3a49082af0257a37e28b13a6875102e"
+    },
+    {
+      "path": "assets/S13-tambons.json",
+      "bytes": 156273,
+      "sha256": "e70f45e29084d6d964e37c549628ef0d84910a0270d8782585b9b0d73e881682"
+    },
+    {
+      "path": "assets/S14-river.json",
+      "bytes": 135109,
+      "sha256": "9f3fd4d88528a3593637ae5ffd2d8c3ec09b855a6471a8c7f78a0a725acc3b96"
+    },
+    {
+      "path": "assets/S15-terrain.json",
+      "bytes": 34202,
+      "sha256": "d02c8e7dc8299a52a00c10cb15b5c2245a8cc1fbffd7f39e4f796b56aec79db4"
+    },
+    {
+      "path": "assets/S16-dem-metadata.json",
+      "bytes": 1463,
+      "sha256": "20009457473809586ff51982423f4e3054dd5ae42c9bc13686b2ff9b4c9cfc74"
+    },
+    {
+      "path": "assets/S16-dem.webp",
+      "bytes": 981012,
+      "sha256": "56fd4b3912b36eaa0b5d08f9540796412c9824c50dfaecbe9d9e6e961baa3af3"
+    },
+    {
+      "path": "assets/S12-ndvi-index.json",
+      "bytes": 1305,
+      "sha256": "a27903bb5f9b46fef4bcd5fddc35d2721ffd88f58a138bad2f86c4fa91952331"
+    },
+    {
+      "path": "assets/S12-ndvi-sample.png",
+      "bytes": 21297,
+      "sha256": "42ae65c49ee68bf632f2abef2b690d409c498448f7a748a22727923ab415e172"
+    },
+    {
+      "path": "assets/S09/49c086d29f3fec07.png",
+      "bytes": 33789,
+      "sha256": "c649653793c204b79fe89e9ce6111e9eb073e7c8d7aac8351439eca1ca23479d"
+    },
+    {
+      "path": "assets/S09/d493830b4e15e87e.png",
+      "bytes": 24688,
+      "sha256": "4a62d4f1ae6ec7d1d4c3c5648c3bf64c821afb4244188447f84e6b24d40f64d7"
+    },
+    {
+      "path": "assets/S09/0b857cefa988bfba.png",
+      "bytes": 25562,
+      "sha256": "ae34f84dc49a4ef56800a408e65a8a925a2493d27853bfbeba085a05e3eb8b69"
+    },
+    {
+      "path": "assets/S09/77c64097d75d8ea7.png",
+      "bytes": 28486,
+      "sha256": "bebd49a782dab80ec87381f91125ee9ea9d772a05c110d87c69b80264cf44ae5"
+    },
+    {
+      "path": "assets/S09/d5195cbcc70ac63c.png",
+      "bytes": 21075,
+      "sha256": "f21804a7d6452f4c9ecdf099bed685a87622db1755a46172d6262a3982c0bcfa"
+    },
+    {
+      "path": "assets/S11/4dbf3e6827d37923.png",
+      "bytes": 159240,
+      "sha256": "76c4aef0157770232c09035d3d18b41200ba14f5d9e7b788e77767220579dbde"
+    },
+    {
+      "path": "assets/S11/525641731a619e9f.png",
+      "bytes": 3381,
+      "sha256": "2a0034f190daa9d98121ea44767d176dcaa8dfd4eb9943826d9a9bb280790f0a"
+    },
+    {
+      "path": "assets/S11/4e39e9340d1fb450.png",
+      "bytes": 258354,
+      "sha256": "193fa9ed10f90c19351f260b5190541683a09b6d3c19525861730b41b7a254d5"
+    },
+    {
+      "path": "assets/S11/51fd991270528b08.png",
+      "bytes": 147909,
+      "sha256": "0e7d998b695e288843c741a695bf75ee95a26afde902c58d7b4d26e850168dd6"
+    },
+    {
+      "path": "assets/S11/e85da69f46b39384.png",
+      "bytes": 49395,
+      "sha256": "675b1fcd7d77f5f552cac1e835512197258d594a9295a03465d1b530321623dc"
+    }
+  ]
+}
