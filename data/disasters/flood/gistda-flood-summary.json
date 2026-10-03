@@ -3,7 +3,7 @@
   "source": "Disaster Platform - https://disaster.gistda.or.th",
   "province": "นครปฐม",
   "provinceCode": "73",
-  "updatedAt": "2026-10-03T09:30:40.842Z",
+  "updatedAt": "2026-10-03T09:41:40.884Z",
   "periods": {
     "1day": {
       "status": "no_data",
@@ -36,24 +36,15 @@
         {
           "amphoe": "บางเลน",
           "amphoeCode": 7305,
-          "floodAreaSqm": 39717871.43744452,
+          "floodAreaSqm": 39717871.437444516,
           "floodAreaRai": 24823.7,
-          "riceAreaSqm": 10442471.959598891,
+          "riceAreaSqm": 10442471.959598893,
           "riceAreaRai": 6526.5,
           "population": 5926,
           "buildingCount": 7,
           "roadLengthM": 8560.486693311836,
           "tambonCount": 15,
           "tambons": [
-            {
-              "tambon": "บางภาษี",
-              "tambonCode": 730504,
-              "floodAreaRai": 2191,
-              "riceAreaRai": 583,
-              "population": 0,
-              "buildingCount": 0,
-              "roadLengthM": 305
-            },
             {
               "tambon": "บัวปากท่า",
               "tambonCode": 730511,
@@ -64,76 +55,13 @@
               "roadLengthM": 155
             },
             {
-              "tambon": "ไผ่หูช้าง",
-              "tambonCode": 730515,
-              "floodAreaRai": 1764.3,
-              "riceAreaRai": 441.4,
-              "population": 192,
+              "tambon": "ดอนตูม",
+              "tambonCode": 730509,
+              "floodAreaRai": 935.5,
+              "riceAreaRai": 83.5,
+              "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 9
-            },
-            {
-              "tambon": "คลองนกกระทุง",
-              "tambonCode": 730512,
-              "floodAreaRai": 775.8,
-              "riceAreaRai": 156.7,
-              "population": 546,
-              "buildingCount": 0,
-              "roadLengthM": 549
-            },
-            {
-              "tambon": "บางไทรป่า",
-              "tambonCode": 730506,
-              "floodAreaRai": 1589.2,
-              "riceAreaRai": 331.6,
-              "population": 317,
-              "buildingCount": 1,
-              "roadLengthM": 621
-            },
-            {
-              "tambon": "หินมูล",
-              "tambonCode": 730507,
-              "floodAreaRai": 3706.7,
-              "riceAreaRai": 1493,
-              "population": 948,
-              "buildingCount": 0,
-              "roadLengthM": 1589
-            },
-            {
-              "tambon": "บางหลวง",
-              "tambonCode": 730503,
-              "floodAreaRai": 3416.6,
-              "riceAreaRai": 964.1,
-              "population": 672,
-              "buildingCount": 4,
-              "roadLengthM": 2252
-            },
-            {
-              "tambon": "นิลเพชร",
-              "tambonCode": 730510,
-              "floodAreaRai": 1564.5,
-              "riceAreaRai": 325,
-              "population": 373,
-              "buildingCount": 0,
-              "roadLengthM": 350
-            },
-            {
-              "tambon": "บางปลา",
-              "tambonCode": 730502,
-              "floodAreaRai": 1768.3,
-              "riceAreaRai": 335.9,
-              "population": 523,
-              "buildingCount": 2,
-              "roadLengthM": 134
-            },
-            {
-              "tambon": "นราภิรมย์",
-              "tambonCode": 730513,
-              "floodAreaRai": 1770.5,
-              "riceAreaRai": 486,
-              "population": 570,
-              "buildingCount": 0,
-              "roadLengthM": 169
+              "roadLengthM": 49
             },
             {
               "tambon": "ไทรงาม",
@@ -145,13 +73,49 @@
               "roadLengthM": 2076
             },
             {
-              "tambon": "ลำพญา",
-              "tambonCode": 730514,
-              "floodAreaRai": 388.5,
-              "riceAreaRai": 86.2,
+              "tambon": "คลองนกกระทุง",
+              "tambonCode": 730512,
+              "floodAreaRai": 775.8,
+              "riceAreaRai": 156.7,
+              "population": 546,
+              "buildingCount": 0,
+              "roadLengthM": 549
+            },
+            {
+              "tambon": "นราภิรมย์",
+              "tambonCode": 730513,
+              "floodAreaRai": 1770.5,
+              "riceAreaRai": 486,
+              "population": 570,
+              "buildingCount": 0,
+              "roadLengthM": 169
+            },
+            {
+              "tambon": "หินมูล",
+              "tambonCode": 730507,
+              "floodAreaRai": 3706.7,
+              "riceAreaRai": 1493,
+              "population": 948,
+              "buildingCount": 0,
+              "roadLengthM": 1589
+            },
+            {
+              "tambon": "บางภาษี",
+              "tambonCode": 730504,
+              "floodAreaRai": 2191,
+              "riceAreaRai": 583,
               "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 197
+              "roadLengthM": 305
+            },
+            {
+              "tambon": "บางหลวง",
+              "tambonCode": 730503,
+              "floodAreaRai": 3416.6,
+              "riceAreaRai": 964.1,
+              "population": 672,
+              "buildingCount": 4,
+              "roadLengthM": 2252
             },
             {
               "tambon": "บางระกำ",
@@ -163,13 +127,49 @@
               "roadLengthM": 80
             },
             {
-              "tambon": "ดอนตูม",
-              "tambonCode": 730509,
-              "floodAreaRai": 935.5,
-              "riceAreaRai": 83.5,
+              "tambon": "บางปลา",
+              "tambonCode": 730502,
+              "floodAreaRai": 1768.3,
+              "riceAreaRai": 335.9,
+              "population": 523,
+              "buildingCount": 2,
+              "roadLengthM": 134
+            },
+            {
+              "tambon": "บางไทรป่า",
+              "tambonCode": 730506,
+              "floodAreaRai": 1589.2,
+              "riceAreaRai": 331.6,
+              "population": 317,
+              "buildingCount": 1,
+              "roadLengthM": 621
+            },
+            {
+              "tambon": "นิลเพชร",
+              "tambonCode": 730510,
+              "floodAreaRai": 1564.5,
+              "riceAreaRai": 325,
+              "population": 373,
+              "buildingCount": 0,
+              "roadLengthM": 350
+            },
+            {
+              "tambon": "ไผ่หูช้าง",
+              "tambonCode": 730515,
+              "floodAreaRai": 1764.3,
+              "riceAreaRai": 441.4,
+              "population": 192,
+              "buildingCount": 0,
+              "roadLengthM": 9
+            },
+            {
+              "tambon": "ลำพญา",
+              "tambonCode": 730514,
+              "floodAreaRai": 388.5,
+              "riceAreaRai": 86.2,
               "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 49
+              "roadLengthM": 197
             },
             {
               "tambon": "บางเลน",
@@ -188,7 +188,7 @@
           "amphoeCode": 7303,
           "floodAreaSqm": 5748643.030021634,
           "floodAreaRai": 3592.9,
-          "riceAreaSqm": 631688.1300156895,
+          "riceAreaSqm": 631688.1300156896,
           "riceAreaRai": 394.8,
           "population": 2464,
           "buildingCount": 2,
@@ -196,20 +196,29 @@
           "tambonCount": 12,
           "tambons": [
             {
-              "tambon": "วัดละมุด",
-              "tambonCode": 730319,
-              "floodAreaRai": 740.7,
-              "riceAreaRai": 38,
-              "population": 178,
+              "tambon": "บางแก้วฟ้า",
+              "tambonCode": 730321,
+              "floodAreaRai": 421,
+              "riceAreaRai": 129.5,
+              "population": 200,
               "buildingCount": 0,
-              "roadLengthM": 75
+              "roadLengthM": 307
             },
             {
-              "tambon": "วัดสำโรง",
-              "tambonCode": 730316,
-              "floodAreaRai": 38.6,
-              "riceAreaRai": 0.5,
+              "tambon": "ลานตากฟ้า",
+              "tambonCode": 730322,
+              "floodAreaRai": 88.8,
+              "riceAreaRai": 6.1,
               "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 0
+            },
+            {
+              "tambon": "ศรีมหาโพธิ์",
+              "tambonCode": 730314,
+              "floodAreaRai": 419.9,
+              "riceAreaRai": 24.6,
+              "population": 528,
               "buildingCount": 0,
               "roadLengthM": 0
             },
@@ -232,10 +241,19 @@
               "roadLengthM": 0
             },
             {
-              "tambon": "ลานตากฟ้า",
-              "tambonCode": 730322,
-              "floodAreaRai": 88.8,
-              "riceAreaRai": 6.1,
+              "tambon": "ศีรษะทอง",
+              "tambonCode": 730312,
+              "floodAreaRai": 138.2,
+              "riceAreaRai": 29.7,
+              "population": 318,
+              "buildingCount": 0,
+              "roadLengthM": 0
+            },
+            {
+              "tambon": "สัมปทวน",
+              "tambonCode": 730315,
+              "floodAreaRai": 140.2,
+              "riceAreaRai": 0,
               "population": 0,
               "buildingCount": 0,
               "roadLengthM": 0
@@ -250,22 +268,22 @@
               "roadLengthM": 0
             },
             {
-              "tambon": "ศรีมหาโพธิ์",
-              "tambonCode": 730314,
-              "floodAreaRai": 419.9,
-              "riceAreaRai": 24.6,
-              "population": 528,
+              "tambon": "วัดแค",
+              "tambonCode": 730303,
+              "floodAreaRai": 24.8,
+              "riceAreaRai": 0,
+              "population": 0,
               "buildingCount": 0,
               "roadLengthM": 0
             },
             {
-              "tambon": "บางแก้วฟ้า",
-              "tambonCode": 730321,
-              "floodAreaRai": 421,
-              "riceAreaRai": 129.5,
-              "population": 200,
+              "tambon": "วัดสำโรง",
+              "tambonCode": 730316,
+              "floodAreaRai": 38.6,
+              "riceAreaRai": 0.5,
+              "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 307
+              "roadLengthM": 0
             },
             {
               "tambon": "ห้วยพลู",
@@ -277,31 +295,13 @@
               "roadLengthM": 0
             },
             {
-              "tambon": "สัมปทวน",
-              "tambonCode": 730315,
-              "floodAreaRai": 140.2,
-              "riceAreaRai": 0,
-              "population": 0,
+              "tambon": "วัดละมุด",
+              "tambonCode": 730319,
+              "floodAreaRai": 740.7,
+              "riceAreaRai": 38,
+              "population": 178,
               "buildingCount": 0,
-              "roadLengthM": 0
-            },
-            {
-              "tambon": "วัดแค",
-              "tambonCode": 730303,
-              "floodAreaRai": 24.8,
-              "riceAreaRai": 0,
-              "population": 0,
-              "buildingCount": 0,
-              "roadLengthM": 0
-            },
-            {
-              "tambon": "ศีรษะทอง",
-              "tambonCode": 730312,
-              "floodAreaRai": 138.2,
-              "riceAreaRai": 29.7,
-              "population": 318,
-              "buildingCount": 0,
-              "roadLengthM": 0
+              "roadLengthM": 75
             }
           ],
           "roadLengthKm": 0.4
@@ -309,7 +309,7 @@
         {
           "amphoe": "ดอนตูม",
           "amphoeCode": 7304,
-          "floodAreaSqm": 3881594.4705313076,
+          "floodAreaSqm": 3881594.470531308,
           "floodAreaRai": 2426,
           "riceAreaSqm": 483972.76138699363,
           "riceAreaRai": 302.5,
@@ -318,15 +318,6 @@
           "roadLengthM": 987.1563507844655,
           "tambonCount": 6,
           "tambons": [
-            {
-              "tambon": "ห้วยพระ",
-              "tambonCode": 730402,
-              "floodAreaRai": 306.8,
-              "riceAreaRai": 29.2,
-              "population": 638,
-              "buildingCount": 0,
-              "roadLengthM": 235
-            },
             {
               "tambon": "ลำลูกบัว",
               "tambonCode": 730408,
@@ -337,22 +328,13 @@
               "roadLengthM": 71
             },
             {
-              "tambon": "ลำเหย",
-              "tambonCode": 730403,
-              "floodAreaRai": 942.8,
-              "riceAreaRai": 242,
-              "population": 0,
+              "tambon": "ห้วยพระ",
+              "tambonCode": 730402,
+              "floodAreaRai": 306.8,
+              "riceAreaRai": 29.2,
+              "population": 638,
               "buildingCount": 0,
-              "roadLengthM": 59
-            },
-            {
-              "tambon": "ดอนพุทรา",
-              "tambonCode": 730404,
-              "floodAreaRai": 292.3,
-              "riceAreaRai": 4.9,
-              "population": 309,
-              "buildingCount": 0,
-              "roadLengthM": 458
+              "roadLengthM": 235
             },
             {
               "tambon": "สามง่าม",
@@ -364,6 +346,15 @@
               "roadLengthM": 160
             },
             {
+              "tambon": "ลำเหย",
+              "tambonCode": 730403,
+              "floodAreaRai": 942.8,
+              "riceAreaRai": 242,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 59
+            },
+            {
               "tambon": "บ้านหลวง",
               "tambonCode": 730405,
               "floodAreaRai": 201.4,
@@ -371,6 +362,15 @@
               "population": 0,
               "buildingCount": 0,
               "roadLengthM": 4
+            },
+            {
+              "tambon": "ดอนพุทรา",
+              "tambonCode": 730404,
+              "floodAreaRai": 292.3,
+              "riceAreaRai": 4.9,
+              "population": 309,
+              "buildingCount": 0,
+              "roadLengthM": 458
             }
           ],
           "roadLengthKm": 1
@@ -397,15 +397,6 @@
               "roadLengthM": 78
             },
             {
-              "tambon": "มหาสวัสดิ์",
-              "tambonCode": 730703,
-              "floodAreaRai": 53.5,
-              "riceAreaRai": 15,
-              "population": 183,
-              "buildingCount": 0,
-              "roadLengthM": 0
-            },
-            {
               "tambon": "คลองโยง",
               "tambonCode": 730702,
               "floodAreaRai": 465.9,
@@ -413,6 +404,15 @@
               "population": 0,
               "buildingCount": 0,
               "roadLengthM": 290
+            },
+            {
+              "tambon": "มหาสวัสดิ์",
+              "tambonCode": 730703,
+              "floodAreaRai": 53.5,
+              "riceAreaRai": 15,
+              "population": 183,
+              "buildingCount": 0,
+              "roadLengthM": 0
             }
           ],
           "roadLengthKm": 0.4
@@ -439,13 +439,13 @@
               "roadLengthM": 0
             },
             {
-              "tambon": "ดอนข่อย",
-              "tambonCode": 730208,
-              "floodAreaRai": 25.1,
-              "riceAreaRai": 0,
+              "tambon": "ห้วยม่วง",
+              "tambonCode": 730211,
+              "floodAreaRai": 343.7,
+              "riceAreaRai": 30.2,
               "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 0
+              "roadLengthM": 96
             },
             {
               "tambon": "สระสี่มุม",
@@ -457,13 +457,13 @@
               "roadLengthM": 0
             },
             {
-              "tambon": "ห้วยม่วง",
-              "tambonCode": 730211,
-              "floodAreaRai": 343.7,
-              "riceAreaRai": 30.2,
+              "tambon": "ดอนข่อย",
+              "tambonCode": 730208,
+              "floodAreaRai": 25.1,
+              "riceAreaRai": 0,
               "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 96
+              "roadLengthM": 0
             }
           ],
           "roadLengthKm": 0.1
@@ -492,69 +492,6 @@
           "tambonCount": 15,
           "tambons": [
             {
-              "tambon": "บัวปากท่า",
-              "tambonCode": 730511,
-              "floodAreaRai": 339.7,
-              "riceAreaRai": 44,
-              "population": 153,
-              "buildingCount": 0,
-              "roadLengthM": 155
-            },
-            {
-              "tambon": "ไทรงาม",
-              "tambonCode": 730508,
-              "floodAreaRai": 3078.8,
-              "riceAreaRai": 992,
-              "population": 585,
-              "buildingCount": 0,
-              "roadLengthM": 2076
-            },
-            {
-              "tambon": "ดอนตูม",
-              "tambonCode": 730509,
-              "floodAreaRai": 935.5,
-              "riceAreaRai": 83.5,
-              "population": 0,
-              "buildingCount": 0,
-              "roadLengthM": 49
-            },
-            {
-              "tambon": "ลำพญา",
-              "tambonCode": 730514,
-              "floodAreaRai": 388.5,
-              "riceAreaRai": 86.2,
-              "population": 0,
-              "buildingCount": 0,
-              "roadLengthM": 197
-            },
-            {
-              "tambon": "บางเลน",
-              "tambonCode": 730501,
-              "floodAreaRai": 600.1,
-              "riceAreaRai": 54.9,
-              "population": 181,
-              "buildingCount": 0,
-              "roadLengthM": 26
-            },
-            {
-              "tambon": "บางภาษี",
-              "tambonCode": 730504,
-              "floodAreaRai": 2191,
-              "riceAreaRai": 583,
-              "population": 0,
-              "buildingCount": 0,
-              "roadLengthM": 305
-            },
-            {
-              "tambon": "หินมูล",
-              "tambonCode": 730507,
-              "floodAreaRai": 3706.7,
-              "riceAreaRai": 1493,
-              "population": 948,
-              "buildingCount": 0,
-              "roadLengthM": 1589
-            },
-            {
               "tambon": "ไผ่หูช้าง",
               "tambonCode": 730515,
               "floodAreaRai": 1764.3,
@@ -562,42 +499,6 @@
               "population": 192,
               "buildingCount": 0,
               "roadLengthM": 9
-            },
-            {
-              "tambon": "บางไทรป่า",
-              "tambonCode": 730506,
-              "floodAreaRai": 1589.2,
-              "riceAreaRai": 331.6,
-              "population": 317,
-              "buildingCount": 1,
-              "roadLengthM": 621
-            },
-            {
-              "tambon": "นิลเพชร",
-              "tambonCode": 730510,
-              "floodAreaRai": 1564.5,
-              "riceAreaRai": 325,
-              "population": 373,
-              "buildingCount": 0,
-              "roadLengthM": 350
-            },
-            {
-              "tambon": "นราภิรมย์",
-              "tambonCode": 730513,
-              "floodAreaRai": 1770.5,
-              "riceAreaRai": 486,
-              "population": 570,
-              "buildingCount": 0,
-              "roadLengthM": 169
-            },
-            {
-              "tambon": "คลองนกกระทุง",
-              "tambonCode": 730512,
-              "floodAreaRai": 775.8,
-              "riceAreaRai": 156.7,
-              "population": 546,
-              "buildingCount": 0,
-              "roadLengthM": 549
             },
             {
               "tambon": "บางหลวง",
@@ -609,6 +510,33 @@
               "roadLengthM": 2252
             },
             {
+              "tambon": "บางเลน",
+              "tambonCode": 730501,
+              "floodAreaRai": 600.1,
+              "riceAreaRai": 54.9,
+              "population": 181,
+              "buildingCount": 0,
+              "roadLengthM": 26
+            },
+            {
+              "tambon": "ดอนตูม",
+              "tambonCode": 730509,
+              "floodAreaRai": 935.5,
+              "riceAreaRai": 83.5,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 49
+            },
+            {
+              "tambon": "คลองนกกระทุง",
+              "tambonCode": 730512,
+              "floodAreaRai": 775.8,
+              "riceAreaRai": 156.7,
+              "population": 546,
+              "buildingCount": 0,
+              "roadLengthM": 549
+            },
+            {
               "tambon": "บางปลา",
               "tambonCode": 730502,
               "floodAreaRai": 1768.3,
@@ -618,6 +546,51 @@
               "roadLengthM": 134
             },
             {
+              "tambon": "นราภิรมย์",
+              "tambonCode": 730513,
+              "floodAreaRai": 1770.5,
+              "riceAreaRai": 486,
+              "population": 570,
+              "buildingCount": 0,
+              "roadLengthM": 169
+            },
+            {
+              "tambon": "ลำพญา",
+              "tambonCode": 730514,
+              "floodAreaRai": 388.5,
+              "riceAreaRai": 86.2,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 197
+            },
+            {
+              "tambon": "หินมูล",
+              "tambonCode": 730507,
+              "floodAreaRai": 3706.7,
+              "riceAreaRai": 1493,
+              "population": 948,
+              "buildingCount": 0,
+              "roadLengthM": 1589
+            },
+            {
+              "tambon": "ไทรงาม",
+              "tambonCode": 730508,
+              "floodAreaRai": 3078.8,
+              "riceAreaRai": 992,
+              "population": 585,
+              "buildingCount": 0,
+              "roadLengthM": 2076
+            },
+            {
+              "tambon": "นิลเพชร",
+              "tambonCode": 730510,
+              "floodAreaRai": 1564.5,
+              "riceAreaRai": 325,
+              "population": 373,
+              "buildingCount": 0,
+              "roadLengthM": 350
+            },
+            {
               "tambon": "บางระกำ",
               "tambonCode": 730505,
               "floodAreaRai": 934.2,
@@ -625,6 +598,33 @@
               "population": 866,
               "buildingCount": 0,
               "roadLengthM": 80
+            },
+            {
+              "tambon": "บัวปากท่า",
+              "tambonCode": 730511,
+              "floodAreaRai": 339.7,
+              "riceAreaRai": 44,
+              "population": 153,
+              "buildingCount": 0,
+              "roadLengthM": 155
+            },
+            {
+              "tambon": "บางภาษี",
+              "tambonCode": 730504,
+              "floodAreaRai": 2191,
+              "riceAreaRai": 583,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 305
+            },
+            {
+              "tambon": "บางไทรป่า",
+              "tambonCode": 730506,
+              "floodAreaRai": 1589.2,
+              "riceAreaRai": 331.6,
+              "population": 317,
+              "buildingCount": 1,
+              "roadLengthM": 621
             }
           ],
           "roadLengthKm": 8.6
@@ -634,13 +634,49 @@
           "amphoeCode": 7303,
           "floodAreaSqm": 5748643.030021635,
           "floodAreaRai": 3592.9,
-          "riceAreaSqm": 631688.1300156894,
+          "riceAreaSqm": 631688.1300156895,
           "riceAreaRai": 394.8,
           "population": 2464,
           "buildingCount": 2,
           "roadLengthM": 382.4276804284891,
           "tambonCount": 12,
           "tambons": [
+            {
+              "tambon": "ลานตากฟ้า",
+              "tambonCode": 730322,
+              "floodAreaRai": 88.8,
+              "riceAreaRai": 6.1,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 0
+            },
+            {
+              "tambon": "วัดแค",
+              "tambonCode": 730303,
+              "floodAreaRai": 24.8,
+              "riceAreaRai": 0,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 0
+            },
+            {
+              "tambon": "บางแก้วฟ้า",
+              "tambonCode": 730321,
+              "floodAreaRai": 421,
+              "riceAreaRai": 129.5,
+              "population": 200,
+              "buildingCount": 0,
+              "roadLengthM": 307
+            },
+            {
+              "tambon": "ห้วยพลู",
+              "tambonCode": 730318,
+              "floodAreaRai": 154.3,
+              "riceAreaRai": 31.2,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 0
+            },
             {
               "tambon": "วัดสำโรง",
               "tambonCode": 730316,
@@ -649,15 +685,6 @@
               "population": 0,
               "buildingCount": 0,
               "roadLengthM": 0
-            },
-            {
-              "tambon": "วัดละมุด",
-              "tambonCode": 730319,
-              "floodAreaRai": 740.7,
-              "riceAreaRai": 38,
-              "population": 178,
-              "buildingCount": 0,
-              "roadLengthM": 75
             },
             {
               "tambon": "บางพระ",
@@ -675,42 +702,6 @@
               "riceAreaRai": 29.7,
               "population": 318,
               "buildingCount": 0,
-              "roadLengthM": 0
-            },
-            {
-              "tambon": "บางแก้วฟ้า",
-              "tambonCode": 730321,
-              "floodAreaRai": 421,
-              "riceAreaRai": 129.5,
-              "population": 200,
-              "buildingCount": 0,
-              "roadLengthM": 307
-            },
-            {
-              "tambon": "ศรีมหาโพธิ์",
-              "tambonCode": 730314,
-              "floodAreaRai": 419.9,
-              "riceAreaRai": 24.6,
-              "population": 528,
-              "buildingCount": 0,
-              "roadLengthM": 0
-            },
-            {
-              "tambon": "ห้วยพลู",
-              "tambonCode": 730318,
-              "floodAreaRai": 154.3,
-              "riceAreaRai": 31.2,
-              "population": 0,
-              "buildingCount": 0,
-              "roadLengthM": 0
-            },
-            {
-              "tambon": "แหลมบัว",
-              "tambonCode": 730313,
-              "floodAreaRai": 695.8,
-              "riceAreaRai": 90.8,
-              "population": 700,
-              "buildingCount": 2,
               "roadLengthM": 0
             },
             {
@@ -732,20 +723,29 @@
               "roadLengthM": 0
             },
             {
-              "tambon": "ลานตากฟ้า",
-              "tambonCode": 730322,
-              "floodAreaRai": 88.8,
-              "riceAreaRai": 6.1,
-              "population": 0,
+              "tambon": "วัดละมุด",
+              "tambonCode": 730319,
+              "floodAreaRai": 740.7,
+              "riceAreaRai": 38,
+              "population": 178,
               "buildingCount": 0,
+              "roadLengthM": 75
+            },
+            {
+              "tambon": "แหลมบัว",
+              "tambonCode": 730313,
+              "floodAreaRai": 695.8,
+              "riceAreaRai": 90.8,
+              "population": 700,
+              "buildingCount": 2,
               "roadLengthM": 0
             },
             {
-              "tambon": "วัดแค",
-              "tambonCode": 730303,
-              "floodAreaRai": 24.8,
-              "riceAreaRai": 0,
-              "population": 0,
+              "tambon": "ศรีมหาโพธิ์",
+              "tambonCode": 730314,
+              "floodAreaRai": 419.9,
+              "riceAreaRai": 24.6,
+              "population": 528,
               "buildingCount": 0,
               "roadLengthM": 0
             }
@@ -755,7 +755,7 @@
         {
           "amphoe": "ดอนตูม",
           "amphoeCode": 7304,
-          "floodAreaSqm": 3881594.470531308,
+          "floodAreaSqm": 3881594.4705313076,
           "floodAreaRai": 2426,
           "riceAreaSqm": 483972.7613869936,
           "riceAreaRai": 302.5,
@@ -774,13 +774,22 @@
               "roadLengthM": 59
             },
             {
-              "tambon": "บ้านหลวง",
-              "tambonCode": 730405,
-              "floodAreaRai": 201.4,
-              "riceAreaRai": 1.8,
+              "tambon": "ลำลูกบัว",
+              "tambonCode": 730408,
+              "floodAreaRai": 313.8,
+              "riceAreaRai": 20.1,
               "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 4
+              "roadLengthM": 71
+            },
+            {
+              "tambon": "สามง่าม",
+              "tambonCode": 730401,
+              "floodAreaRai": 368.9,
+              "riceAreaRai": 4.5,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 160
             },
             {
               "tambon": "ห้วยพระ",
@@ -801,22 +810,13 @@
               "roadLengthM": 458
             },
             {
-              "tambon": "สามง่าม",
-              "tambonCode": 730401,
-              "floodAreaRai": 368.9,
-              "riceAreaRai": 4.5,
+              "tambon": "บ้านหลวง",
+              "tambonCode": 730405,
+              "floodAreaRai": 201.4,
+              "riceAreaRai": 1.8,
               "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 160
-            },
-            {
-              "tambon": "ลำลูกบัว",
-              "tambonCode": 730408,
-              "floodAreaRai": 313.8,
-              "riceAreaRai": 20.1,
-              "population": 0,
-              "buildingCount": 0,
-              "roadLengthM": 71
+              "roadLengthM": 4
             }
           ],
           "roadLengthKm": 1
@@ -834,13 +834,13 @@
           "tambonCount": 3,
           "tambons": [
             {
-              "tambon": "ศาลายา",
-              "tambonCode": 730701,
-              "floodAreaRai": 335.5,
-              "riceAreaRai": 43.4,
-              "population": 146,
+              "tambon": "คลองโยง",
+              "tambonCode": 730702,
+              "floodAreaRai": 465.9,
+              "riceAreaRai": 79,
+              "population": 0,
               "buildingCount": 0,
-              "roadLengthM": 78
+              "roadLengthM": 290
             },
             {
               "tambon": "มหาสวัสดิ์",
@@ -852,13 +852,13 @@
               "roadLengthM": 0
             },
             {
-              "tambon": "คลองโยง",
-              "tambonCode": 730702,
-              "floodAreaRai": 465.9,
-              "riceAreaRai": 79,
-              "population": 0,
+              "tambon": "ศาลายา",
+              "tambonCode": 730701,
+              "floodAreaRai": 335.5,
+              "riceAreaRai": 43.4,
+              "population": 146,
               "buildingCount": 0,
-              "roadLengthM": 290
+              "roadLengthM": 78
             }
           ],
           "roadLengthKm": 0.4
@@ -866,7 +866,7 @@
         {
           "amphoe": "กำแพงแสน",
           "amphoeCode": 7302,
-          "floodAreaSqm": 1266624.8324473843,
+          "floodAreaSqm": 1266624.8324473845,
           "floodAreaRai": 791.6,
           "riceAreaSqm": 48380.13968352402,
           "riceAreaRai": 30.2,
@@ -876,9 +876,18 @@
           "tambonCount": 4,
           "tambons": [
             {
-              "tambon": "สระพัฒนา",
-              "tambonCode": 730209,
-              "floodAreaRai": 309.4,
+              "tambon": "ห้วยม่วง",
+              "tambonCode": 730211,
+              "floodAreaRai": 343.7,
+              "riceAreaRai": 30.2,
+              "population": 0,
+              "buildingCount": 0,
+              "roadLengthM": 96
+            },
+            {
+              "tambon": "สระสี่มุม",
+              "tambonCode": 730206,
+              "floodAreaRai": 113.5,
               "riceAreaRai": 0,
               "population": 0,
               "buildingCount": 0,
@@ -894,18 +903,9 @@
               "roadLengthM": 0
             },
             {
-              "tambon": "ห้วยม่วง",
-              "tambonCode": 730211,
-              "floodAreaRai": 343.7,
-              "riceAreaRai": 30.2,
-              "population": 0,
-              "buildingCount": 0,
-              "roadLengthM": 96
-            },
-            {
-              "tambon": "สระสี่มุม",
-              "tambonCode": 730206,
-              "floodAreaRai": 113.5,
+              "tambon": "สระพัฒนา",
+              "tambonCode": 730209,
+              "floodAreaRai": 309.4,
               "riceAreaRai": 0,
               "population": 0,
               "buildingCount": 0,
