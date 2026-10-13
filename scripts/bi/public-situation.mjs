@@ -241,8 +241,8 @@ async function readAll(client, definition) {
 }
 
 export function flattenWaterAdvice(report) {
-  if (!report) return [];
-  if (!Array.isArray(report.analysis?.districtAnalyses))
+  if (report === null) return [];
+  if (!Array.isArray(report?.analysis?.districtAnalyses))
     throw new Error('Invalid public water analysis');
   return report.analysis.districtAnalyses
     .filter((row) => Object.hasOwn(districtNames, row.areaCode))

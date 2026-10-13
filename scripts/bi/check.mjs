@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { collectPagesSnapshot } from './pages.mjs';
-import { flattenDiseaseForecasts, flattenWaterSituation, flattenRainForecast } from './public-situation.mjs';
+import { flattenDiseaseForecasts, flattenWaterSituation, flattenRainForecast, flattenWaterAdvice } from './public-situation.mjs';
 
 const result = { data: [{ id: 'one', phone: 'private' }], count: 1, error: null };
 const client = { from: () => ({ select: () => ({ order: () => ({ range: async () => result }) }) }) };
@@ -15,4 +15,6 @@ const water = flattenWaterSituation({ observed: [{ provinceCode: '73', stationCo
 assert.equal(water[0].water_level, null);
 assert.equal(water[0].freshness, 'ข้อมูลเก่า');
 assert.equal(flattenRainForecast({ forecast: [{ provinceCode: '73', variable: 'ForecastRain', value: null }] })[0].rain_mm, null);
+assert.throws(() => flattenWaterAdvice(undefined));
+assert.deepEqual(flattenWaterAdvice(null), []);
 console.log('Public BI privacy, failed-source, AI and missing-value checks passed');
