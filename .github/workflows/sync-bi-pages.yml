@@ -1,0 +1,72 @@
+name: Update public BI data and deploy Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 09:17 Asia/Bangkok; avoid the busy start of the hour.
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout public data
+        uses: actions/checkout@v4
+        with:
+          path: site
+          ref: main
+      - uses: actions/setup-node@v4
+        if: github.event_name != 'push'
+        with:
+          node-version: '22'
+      - name: Check snapshot and privacy behavior
+        if: github.event_name != 'push'
+        run: node scripts/bi/check.mjs
+        working-directory: site
+      - name: Export complete batch
+        if: github.event_name != 'push'
+        env:
+          SUPABASE_URL: ${{ secrets.BI_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.BI_SUPABASE_ANON_KEY }}
+        run: node scripts/bi/pages.mjs --no-queries
+        working-directory: site
+      - name: Save only BI JSON files
+        if: github.event_name != 'push'
+        shell: bash
+        run: |
+          mkdir -p site/data/bi
+          cp site/output/bi-pages/*.json site/data/bi/
+          cd site
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -- data/bi/*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(bi): update public decision data snapshot"
+            git push origin HEAD:main
+          fi
+          # Export scratch files are not part of the public Pages artifact.
+          rm -f output/bi-pages/*.json
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload complete site, including existing maps and documents
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
