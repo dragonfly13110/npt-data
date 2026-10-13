@@ -24,6 +24,20 @@ const districtNames = {
 
 // These flat fields are the public contract. Never publish raw AI JSON or station payloads.
 export const PUBLIC_SITUATION_DATASETS = {
+  public_water_advice: {
+    title: 'บทวิเคราะห์ประกอบการติดตามน้ำ AI',
+    types: {
+      district_code: 'text',
+      district: 'text',
+      horizon: 'text',
+      summary: 'text',
+      recommended_checks: 'text',
+      uncertainties: 'text',
+      source_status: 'text',
+      generated_at: 'text',
+      evidence_type: 'text',
+    },
+  },
   public_disease_reports: {
     title: 'รอบวิเคราะห์โรคพืช AI',
     types: {
@@ -226,6 +240,25 @@ async function readAll(client, definition) {
   return rows;
 }
 
+export function flattenWaterAdvice(report) {
+  if (!report) return [];
+  if (!Array.isArray(report.analysis?.districtAnalyses))
+    throw new Error('Invalid public water analysis');
+  return report.analysis.districtAnalyses
+    .filter((row) => Object.hasOwn(districtNames, row.areaCode))
+    .map((row) => ({
+      district_code: row.areaCode,
+      district: districtNames[row.areaCode],
+      horizon: text(row.horizon),
+      summary: text(row.summary),
+      recommended_checks: listText(row.recommendedChecks),
+      uncertainties: listText(row.uncertainties),
+      source_status: text(report.sourceStatus),
+      generated_at: text(report.generatedAt),
+      evidence_type: 'AI วิเคราะห์ประกอบการติดตาม ไม่ใช่การยืนยันเหตุ',
+    }));
+}
+
 export async function collectPublicSituation(
   client,
   fetchedAt,
@@ -257,7 +290,14 @@ export async function collectPublicSituation(
   const payload = await response.json();
   if (!Array.isArray(payload.observed) || !Array.isArray(payload.forecast))
     throw new Error('Invalid public water response');
+  const adviceResponse = await fetcher(
+    'https://npt-dashboard.netlify.app/api/public-risk-map-ai-latest',
+    { signal: AbortSignal.timeout(60000) }
+  );
+  if (!adviceResponse.ok) throw new Error('Public water analysis unavailable');
+  const advice = (await adviceResponse.json()).data;
   const data = {
+    public_water_advice: flattenWaterAdvice(advice),
     public_disease_watch: flattenDiseaseForecasts(reports),
     public_disease_reports: reports.map((row) => ({
       forecast_date: row.forecast_date,
