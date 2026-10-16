@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "table": "public_daily_briefing",
+  "status": "ready",
+  "fetchedAt": "2026-10-16T16:43:36.614Z",
+  "date": "2026-10-16",
+  "model": "gemini-3.5-flash-lite",
+  "promptVersion": "bi-daily-v4",
+  "inputHash": "4bcdaa9cd8e6eab1c44833f7e89276ad575d5c1d71b50d19145df8728629e904",
+  "sourceSnapshotFetchedAt": "2026-10-16T15:32:44.491Z",
+  "sources": [
+    {
+      "table": "public_water",
+      "count": 23,
+      "sha256": "7c0fb8027ae3accd4cd9e0134530d18f1eefe8d3f9aa5f8a62d633daaf14352d",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    },
+    {
+      "table": "public_weather",
+      "count": 91,
+      "sha256": "f133b9050d4cad572aebdead9654b704821249efc069eebba57cf86c8f21cd1a",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    },
+    {
+      "table": "public_rain_forecast",
+      "count": 49,
+      "sha256": "081f44792be1127a2ad7df8638c64074490ec349528925009db051bd810098f6",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    },
+    {
+      "table": "public_disease_reports",
+      "count": 88,
+      "sha256": "44c17eeddf9e317e58c5d8e55d2495c8fec6237472d8269c2fcaa1c743e8cd58",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    },
+    {
+      "table": "public_disease_watch",
+      "count": 443,
+      "sha256": "e81d17751824cc0819c61b5202063a924281ada95a25033ec2e6ebb75ce4526e",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    },
+    {
+      "table": "public_hotspots",
+      "count": 1134,
+      "sha256": "e57bda432bb64ea3ae05bb84fd67871459e88fda383d60302c8a3c036ab10fcc",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    },
+    {
+      "table": "farmer_registry",
+      "count": 8,
+      "sha256": "384adeab77662b0a56fc85e8bd059aabcad1d12666494135f30a1b23e1db8f3f",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    },
+    {
+      "table": "geoplots_parcel_progress",
+      "count": 7,
+      "sha256": "c84a7ef42d8404b3326a9f32f42a4765262454ae31873be7706fae6ae7103f29",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    },
+    {
+      "table": "certifications",
+      "count": 5840,
+      "sha256": "1d69d66c3cea137d208bee4d7f566940a74edd2ff1cec210cd6299d01988970e",
+      "fetchedAt": "2026-10-16T15:32:44.491Z"
+    }
+  ],
+  "usage": {
+    "promptTokenCount": 9740,
+    "candidatesTokenCount": 1142,
+    "totalTokenCount": 10882,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9740
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "count": 8,
+  "data": [
+    {
+      "briefing_date": "2026-10-16",
+      "topic_order": 0,
+      "topic": "ภาพรวม",
+      "summary": "จังหวัดนครปฐมมีสถานการณ์น้ำจากสถานีตรวจวัดต่างๆ เช่น บางเลน 2.8 เมตรจากระดับน้ำทะเลปานกลาง และวัดบางไผ่นารถ 2.58 เมตรจากระดับน้ำทะเลปานกลาง พร้อมทั้งพบการเฝ้าระวังโรคพืชกลุ่มเสี่ยงสูงและจุดความร้อน 7 จุด",
+      "next_steps": "ติดตามสถานการณ์น้ำในพื้นที่เสี่ยงและเฝ้าระวังโรคพืชตามประกาศ พร้อมตรวจสอบข้อมูลทะเบียนเกษตรกรและการวาดแปลง",
+      "limitations": "ข้อมูลแต่ละหัวข้ออาจคนละวัน ผล AI ใช้ประกอบการตรวจสอบ",
+      "source_dates": "น้ำ: 2026-10-16T15:32:55.744Z • อากาศและฝน: 2026-10-16 • โรคและแมลง: 2026-10-16 • จุดความร้อน: 2026-10-04 • ทะเบียนเกษตรกร: 2026-10-01 • การวาดแปลง: 2026-09-07 • มาตรฐานสินค้า (วันอ้างอิงคำนวณหมดอายุ): 2026-10-16",
+      "evidence_ids": [
+        "water",
+        "weather",
+        "disease",
+        "hotspots",
+        "registry",
+        "parcels",
+        "certifications"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
+      "generated_at": "2026-10-16T16:43:36.614Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-16",
+      "topic_order": 1,
+      "topic": "น้ำ",
+      "summary": "ระดับน้ำในสถานีสำคัญวันที่ 16 ตุลาคม 2569 เช่น บางเลน 2.8 เมตรจากระดับน้ำทะเลปานกลาง วัดบางไผ่นารถ 2.58 เมตรจากระดับน้ำทะเลปานกลาง และที่ว่าการอำเภอนครชัยศรี 2.25 เมตรจากระดับน้ำทะเลปานกลาง",
+      "next_steps": "ติดตามระดับน้ำและสถานีวัดน้ำอย่างใกล้ชิดเพื่อประเมินสถานการณ์น้ำในพื้นที่",
+      "limitations": "ใช้เฉพาะค่าที่มีเวลาตรวจวัดใน 48 ชั่วโมง สถานีเก่าหรือไม่มีเวลาไม่นับเป็นสถานการณ์ปัจจุบัน",
+      "source_dates": "น้ำ: 2026-10-16T15:32:55.744Z",
+      "evidence_ids": [
+        "water"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
+      "generated_at": "2026-10-16T16:43:36.614Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-16",
+      "topic_order": 2,
+      "topic": "อากาศและฝน",
+      "summary": "พยากรณ์ปริมาณฝนวันที่ 16 ตุลาคม 2569 อำเภอสามพรานมีฝน 21.65 มิลลิเมตร และอำเภอเมืองนครปฐมมีฝน 5.55 มิลลิเมตร โดยอุณหภูมิเฉลี่ยจังหวัดวันที่ 16 ตุลาคม 2569 อยู่ที่ 27.1 องศาเซลเซียส",
+      "next_steps": "ติดตามสภาพอากาศและปริมาณฝนรายอำเภอเพื่อเตรียมรับมือฝนตกสะสม",
+      "limitations": "ข้อมูลแบบจำลองอากาศและฝน ไม่ใช่ผลตรวจวัดรายแปลง",
+      "source_dates": "อากาศและฝน: 2026-10-16",
+      "evidence_ids": [
+        "weather"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_weather.json",
+      "generated_at": "2026-10-16T16:43:36.614Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-16",
+      "topic_order": 3,
+      "topic": "โรคและแมลง",
+      "summary": "ผลประเมิน AI พบโรคพืชกลุ่มเสี่ยงสูงในข้าว กล้วยไม้ และพืชผัก ได้แก่ โรคไหม้ข้าว โรคเน่าดำกล้วยไม้ และโรคเน่าเละพืชผัก จากสภาพอากาศที่มีฝนตกชุกต่อเนื่อง",
+      "next_steps": "สำรวจแปลงเพาะปลูกเพื่อเฝ้าระวังอาการของโรคพืชตามคำแนะนำการติดตาม",
+      "limitations": "ผล AI เฝ้าระวังระดับจังหวัด ยังไม่ยืนยันโรคระบาดหรือความเสี่ยงรายแปลง",
+      "source_dates": "โรคและแมลง: 2026-10-16",
+      "evidence_ids": [
+        "disease"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_disease_reports.json",
+      "generated_at": "2026-10-16T16:43:36.614Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-16",
+      "topic_order": 4,
+      "topic": "จุดความร้อน",
+      "summary": "ตรวจพบจุดความร้อนสะสมจำนวน 7 จุดในชุดข้อมูลช่วงวันที่ 17 กันยายน ถึง 16 ตุลาคม 2569 โดยพบที่อำเภอบางเลน 5 จุด กำแพงแสน 1 จุด และเมืองนครปฐม 1 จุด",
+      "next_steps": "ตรวจสอบพื้นที่ที่พบจุดความร้อนเพื่อป้องกันการเผาในพื้นที่เกษตร",
+      "limitations": "นับจุดในชุดข้อมูลตามช่วงที่ระบุ วันที่ตรวจพบล่าสุดไม่ใช่วันที่ยืนยันว่าดึงข้อมูลครบ และไม่ใช่จำนวนเหตุไฟไหม้",
+      "source_dates": "จุดความร้อน: 2026-10-04",
+      "evidence_ids": [
+        "hotspots"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_hotspots.json",
+      "generated_at": "2026-10-16T16:43:36.614Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-16",
+      "topic_order": 5,
+      "topic": "ทะเบียนเกษตรกร",
+      "summary": "ข้อมูลทะเบียนเกษตรกรปี 2569 จังหวัดนครปฐมมีครัวเรือนทั้งหมด 36365 ครัวเรือน และมีครัวเรือนที่ปรับปรุงข้อมูลแล้ว 33830 ครัวเรือน จากเป้าหมาย 34000 ครัวเรือน",
+      "next_steps": "ตรวจสอบรายชื่อครัวเรือนเกษตรกรที่ยังไม่ได้ปรับปรุงข้อมูลทะเบียนเกษตร",
+      "limitations": "ข้อมูลทะเบียนตามรอบวันตัดยอดที่ระบุ ไม่ใช่จำนวนที่ปรับปรุงวันนี้",
+      "source_dates": "ทะเบียนเกษตรกร: 2026-10-01",
+      "evidence_ids": [
+        "registry"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/farmer_registry.json",
+      "generated_at": "2026-10-16T16:43:36.614Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-16",
+      "topic_order": 6,
+      "topic": "การวาดแปลง",
+      "summary": "ผลการวาดแปลงเกษตรกรวันที่ 7 กันยายน 2569 อำเภอกำแพงแสนวาดแปลงได้ 2198 แปลง คิดเป็น 118.75 เปอร์เซ็นต์ และอำเภอบางเลนวาดได้ 2853 แปลง คงเหลือเป้าหมาย 122 แปลง",
+      "next_steps": "ติดตามและเร่งรัดการวาดแปลงในอำเภอที่ยังไม่ครบถ้วนตามเป้าหมาย",
+      "limitations": "ความคืบหน้าตามวันรายงานต้นทาง อาจยังไม่มีงานที่ทำหลังจากวันดังกล่าว",
+      "source_dates": "การวาดแปลง: 2026-09-07",
+      "evidence_ids": [
+        "parcels"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/geoplots_parcel_progress.json",
+      "generated_at": "2026-10-16T16:43:36.614Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-16",
+      "topic_order": 7,
+      "topic": "มาตรฐานสินค้า",
+      "summary": "ข้อมูลใบรับรองมาตรฐานสินค้ามีทั้งหมด 5840รายการ มีใบรับรองที่หมดอายุแล้ว 236รายการ และจะหมดอายุภายใน 30 วันจำนวน 13รายการ",
+      "next_steps": "ตรวจสอบสถานะใบรับรองมาตรฐานสินค้าที่ใกล้หมดอายุและดำเนินการต่ออายุ",
+      "limitations": "คำนวณจากวันหมดอายุในข้อมูล นับใบรับรอง ไม่ใช่เกษตรกร ต้องตรวจสถานะต่ออายุหรือเพิกถอนกับหน่วยงาน",
+      "source_dates": "มาตรฐานสินค้า (วันอ้างอิงคำนวณหมดอายุ): 2026-10-16",
+      "evidence_ids": [
+        "certifications"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/certifications.json",
+      "generated_at": "2026-10-16T16:43:36.614Z",
+      "model": "gemini-3.5-flash-lite"
+    }
+  ]
+}

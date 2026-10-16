@@ -45,6 +45,17 @@ jobs:
           SUPABASE_ANON_KEY: ${{ secrets.BI_SUPABASE_ANON_KEY }}
         run: node scripts/bi/pages.mjs --no-queries
         working-directory: site
+      - name: Summarize public data in plain Thai
+        id: briefing
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          BI_GEMINI_API_KEYS: ${{ secrets.BI_GEMINI_API_KEYS }}
+        run: node scripts/bi/daily-briefing.mjs --input output/bi-pages --output data/bi/daily-briefing
+        working-directory: site
+      - name: Report retained AI summary
+        if: github.event_name != 'push' && steps.briefing.outcome == 'failure'
+        run: echo '::warning::Daily AI summary failed. Previous published summary and its original date are retained.'
       - name: Save only BI JSON files
         if: github.event_name != 'push'
         shell: bash
@@ -54,7 +65,7 @@ jobs:
           cd site
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -- data/bi/*.json
+          git add -- data/bi
           if ! git diff --cached --quiet; then
             git commit -m "chore(bi): update public decision data snapshot"
             git push origin HEAD:main
