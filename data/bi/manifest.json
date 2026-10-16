@@ -1,132 +1,132 @@
 {
   "schemaVersion": 1,
-  "fetchedAt": "2026-10-16T15:32:44.491Z",
+  "fetchedAt": "2026-10-16T16:45:46.112Z",
   "tables": [
     {
       "table": "farmer_registry",
       "title": "ทะเบียนเกษตรกรรายอำเภอ",
       "status": "ready",
       "count": 8,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 3226,
-      "sha256": "384adeab77662b0a56fc85e8bd059aabcad1d12666494135f30a1b23e1db8f3f"
+      "sha256": "1d7130b3a94189900eedd796c1f8dd3f312091dfde027ca32943761967cb8308"
     },
     {
       "table": "farmer_registry_subdistricts",
       "title": "ทะเบียนเกษตรกรรายตำบล",
       "status": "ready",
       "count": 102,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 42970,
-      "sha256": "b949f9b282a70d8b50f74a86f6dc759623d1d92c14ee79bd5b3c91c26573b76e"
+      "sha256": "d314affc074b3a7402efa6e66a38874c668d717603ad809cd5d178e1acbef2db"
     },
     {
       "table": "farmer_registry_snapshots",
       "title": "ประวัติทะเบียนเกษตรกรรายอำเภอ",
       "status": "ready",
       "count": 288,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 98045,
-      "sha256": "5d4fe796f28e1ad33c1c3c3aa3841552953e7ce6da113c1021cab232a7594611"
+      "sha256": "5db798a7f892f315da9095ed64efb6048373c5048d544d53af7ac92446ddece9"
     },
     {
       "table": "farmer_registry_subdistrict_snapshots",
       "title": "ประวัติทะเบียนเกษตรกรรายตำบล",
       "status": "ready",
       "count": 3515,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 1317000,
-      "sha256": "7b92d8daca6956b10c9f77f6b273ce90142773ed54743cc2e33491bc76d84765"
+      "sha256": "acdc0c3c0193426fcc8a92679670cbd6877a4a1a72abe90fc727dc65fba5db31"
     },
     {
       "table": "geoplots_parcel_progress",
       "title": "ความก้าวหน้าวาดแปลงรายอำเภอ",
       "status": "ready",
       "count": 7,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 1747,
-      "sha256": "c84a7ef42d8404b3326a9f32f42a4765262454ae31873be7706fae6ae7103f29"
+      "sha256": "3b76dd34332bd77fd1749b2736c1c57b6fb47f842c42d755da51a6524997f23d"
     },
     {
       "table": "geoplots_parcel_subdistrict_progress",
       "title": "ความก้าวหน้าวาดแปลงรายตำบล",
       "status": "ready",
       "count": 106,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 28902,
-      "sha256": "255ac58a6a2bdf2798db38564250020b12c66da9fd18a0b4575d09f47218e0e5"
+      "sha256": "4cdc546b593a17f76b1a5b4d52f64502d692859728968534a14824d2c8113b97"
     },
     {
       "table": "certifications",
       "title": "การรับรองมาตรฐานพืช",
       "status": "ready",
       "count": 5840,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 1797976,
-      "sha256": "1d69d66c3cea137d208bee4d7f566940a74edd2ff1cec210cd6299d01988970e"
+      "sha256": "0a469825d13d3a252220b15f5f2b0964bfae532377d4813bbfdb7b5d0db3f91f"
     },
     {
       "table": "public_water_advice",
       "title": "บทวิเคราะห์ประกอบการติดตามน้ำ AI",
       "status": "ready",
       "count": 35,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 29491,
-      "sha256": "6028bd79a9776f2c588c61ae4f0b7059548b731d45ea71b628ea36e7e2773101"
+      "sha256": "ffd19078b03dfb0520f18a20733c86cd171060ee0848a3da5bf5e5f5312930a0"
     },
     {
       "table": "public_disease_watch",
       "title": "โรคและแมลงที่ควรเฝ้าระวัง",
       "status": "ready",
       "count": 443,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 1006678,
-      "sha256": "e81d17751824cc0819c61b5202063a924281ada95a25033ec2e6ebb75ce4526e"
+      "sha256": "ca14f5e13684a8d1c9cf271a36a67ab0736b4bab0a8519e8dc2c73c606065947"
     },
     {
       "table": "public_disease_reports",
       "title": "รอบวิเคราะห์โรคพืช AI",
       "status": "ready",
       "count": 88,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 187365,
-      "sha256": "44c17eeddf9e317e58c5d8e55d2495c8fec6237472d8269c2fcaa1c743e8cd58"
+      "sha256": "320f93fa5b1d0c1d54f6402278febc0097a4cf5f6aa06094eee87cdb4d195314"
     },
     {
       "table": "public_weather",
       "title": "ข้อมูลอากาศที่ระบบเก็บ",
       "status": "ready",
       "count": 91,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 37744,
-      "sha256": "f133b9050d4cad572aebdead9654b704821249efc069eebba57cf86c8f21cd1a"
+      "sha256": "e0b74f7bcb40ea7bb98de41f5b4dcffd8bf449de44e4366216ac06b6780355e6"
     },
     {
       "table": "public_hotspots",
       "title": "จุดความร้อนที่ดาวเทียมตรวจพบ",
       "status": "ready",
       "count": 1134,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 480632,
-      "sha256": "e57bda432bb64ea3ae05bb84fd67871459e88fda383d60302c8a3c036ab10fcc"
+      "sha256": "80045e9a9bcb6caeb5340fffe18dc068ce7bedcf0b7bbcd76db471ad20d25584"
     },
     {
       "table": "public_water",
       "title": "ระดับน้ำรายสถานี",
       "status": "ready",
       "count": 23,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
-      "bytes": 9514,
-      "sha256": "7c0fb8027ae3accd4cd9e0134530d18f1eefe8d3f9aa5f8a62d633daaf14352d"
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
+      "bytes": 9515,
+      "sha256": "b06426137503c8ea9a89a3b24803ccdfb496ce508fb92c692fc741c6e85bf2dd"
     },
     {
       "table": "public_rain_forecast",
       "title": "ฝนคาดการณ์รายอำเภอ",
       "status": "ready",
       "count": 49,
-      "fetchedAt": "2026-10-16T15:32:44.491Z",
+      "fetchedAt": "2026-10-16T16:45:46.112Z",
       "bytes": 12345,
-      "sha256": "081f44792be1127a2ad7df8638c64074490ec349528925009db051bd810098f6"
+      "sha256": "378dc9d2040cc152ebcc8dd0a8d3b2a2108664f6c719073cf25e8084277c6dc8"
     }
   ]
 }
