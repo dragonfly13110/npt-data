@@ -390,7 +390,14 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
     snapshotFetchedAt: manifest.fetchedAt,
     sources,
     evidence,
-    inputHash: hash(JSON.stringify({ version: VERSION, day, evidence }))
+    inputHash: hash(
+      JSON.stringify({
+        version: VERSION,
+        day,
+        snapshotFetchedAt: manifest.fetchedAt,
+        evidence
+      })
+    )
   };
 }
 function responseSchema() {
