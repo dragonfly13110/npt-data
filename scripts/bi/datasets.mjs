@@ -93,7 +93,7 @@ const definitions = [
   [
     'certifications',
     'การรับรองมาตรฐานพืช',
-    'crop_name,plot_type,plot_district,plot_subdistrict,area_rai,production_volume_kg,cert_date,exp_date,created_at',
+    'certification_standard,certification_status,crop_name,plot_type,plot_district,plot_subdistrict,area_rai,production_volume_kg,cert_date,exp_date,created_at',
   ],
   [
     'crop_production',
