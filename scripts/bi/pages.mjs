@@ -7,6 +7,7 @@ import { PUBLIC_POWERBI_DATASETS, readPowerbiPage } from './datasets.mjs';
 import {
   PUBLIC_SITUATION_DATASETS,
   collectPublicSituation,
+  mergeWaterHistory,
 } from './public-situation.mjs';
 
 export const PAGES_TABLES = [
@@ -181,6 +182,12 @@ async function main() {
       snapshot.tables,
       await collectPublicSituation(client, snapshot.fetchedAt)
     );
+    const historyFile = path.resolve('data/bi/public_water_history.json');
+    if (fs.existsSync(historyFile))
+      snapshot.tables.public_water_history = mergeWaterHistory(
+        JSON.parse(fs.readFileSync(historyFile, 'utf8')),
+        snapshot.tables.public_water_history
+      );
     const files = Object.entries(snapshot.tables).map(([name, table]) => {
       const content = JSON.stringify(table) + '\n';
       const bytes = Buffer.byteLength(content);

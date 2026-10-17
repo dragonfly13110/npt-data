@@ -22,6 +22,24 @@ const districtNames = {
   7307: 'พุทธมณฑล',
 };
 
+const waterTypes = {
+  station_code: 'text',
+  station_name: 'text',
+  district_code: 'text',
+  district: 'text',
+  latitude: 'number',
+  longitude: 'number',
+  observed_at: 'text',
+  water_level: 'number',
+  unit: 'text',
+  source: 'text',
+  freshness: 'text',
+  bank_msl: 'number',
+  status_label: 'text',
+  status_color: 'text',
+  quality_flag: 'text',
+};
+
 // These flat fields are the public contract. Never publish raw AI JSON or station payloads.
 export const PUBLIC_SITUATION_DATASETS = {
   public_water_advice: {
@@ -78,19 +96,11 @@ export const PUBLIC_SITUATION_DATASETS = {
   },
   public_water: {
     title: 'ระดับน้ำรายสถานี',
-    types: {
-      station_code: 'text',
-      station_name: 'text',
-      district_code: 'text',
-      district: 'text',
-      latitude: 'number',
-      longitude: 'number',
-      observed_at: 'text',
-      water_level: 'number',
-      unit: 'text',
-      source: 'text',
-      freshness: 'text',
-    },
+    types: waterTypes,
+  },
+  public_water_history: {
+    title: 'ประวัติระดับน้ำรายสถานี',
+    types: waterTypes,
   },
   public_rain_forecast: {
     title: 'ฝนคาดการณ์รายอำเภอ',
@@ -154,15 +164,123 @@ export function flattenDiseaseForecasts(reports) {
   });
 }
 
+function genuineWaterRow(row) {
+  // These NPT-* rows are fixed supplementary values in the web adapter, not sensor observations.
+  return (
+    String(row.provinceCode) === '73' &&
+    row.variable === 'WaterLevel' &&
+    row.stationCode &&
+    !String(row.stationCode).startsWith('NPT-')
+  );
+}
+
+function flattenWaterRow(row, now) {
+  const explicitZone = /(?:Z|[+-]\d{2}:\d{2})$/.test(row.observedAt || '');
+  const age = explicitZone ? now.getTime() - Date.parse(row.observedAt) : NaN;
+  const definitelyOld =
+    /^\d{4}-\d{2}-\d{2}/.test(row.observedAt || '') &&
+    row.observedAt.slice(0, 10) <
+      new Date(now.getTime() - 3 * 86400000).toISOString().slice(0, 10);
+  const freshness =
+    Number.isFinite(age) && age >= 0
+      ? age > 48 * 3600000
+        ? 'ข้อมูลเก่า'
+        : 'ภายใน 48 ชั่วโมง'
+      : definitelyOld
+        ? 'ข้อมูลเก่า'
+        : 'ตรวจสอบเวลาต้นทาง';
+  const bank = /MSL/i.test(row.unit || '') ? number(row.minBankMsl) : null;
+  const value = number(row.value);
+  const status =
+    value === null
+      ? ['ไม่มีค่าตรวจวัด', '#94a3b8']
+      : freshness === 'ข้อมูลเก่า'
+        ? ['ข้อมูลเก่า', '#94a3b8']
+        : bank !== null
+          ? value > bank
+            ? ['สูงกว่าตลิ่ง', '#d94841']
+            : ['ไม่สูงกว่าตลิ่ง', '#31865b']
+          : ['ไม่มีเกณฑ์ตลิ่ง', '#2984b4'];
+  return {
+    station_code: String(row.stationCode),
+    station_name: text(row.stationName),
+    district_code: text(row.amphoeCode),
+    district: districtNames[row.amphoeCode] || text(row.amphoeName),
+    latitude: number(row.latitude),
+    longitude: number(row.longitude),
+    observed_at: text(row.observedAt),
+    water_level: value,
+    unit: text(row.unit),
+    source: text(row.source),
+    freshness,
+    bank_msl: bank,
+    status_label: status[0],
+    status_color: status[1],
+    quality_flag: text(row.qualityFlag),
+  };
+}
+
+export function flattenWaterHistory(payload, now = new Date()) {
+  const rows = [
+    ...(payload.historical || []),
+    ...(payload.observed || []),
+  ].filter(genuineWaterRow);
+  return [
+    ...new Map(
+      rows.map((row) => [
+        [row.source, row.stationCode, row.observedAt, row.unit].join('|'),
+        flattenWaterRow(row, now),
+      ])
+    ).values(),
+  ];
+}
+
+export function mergeWaterHistory(previous, current) {
+  for (const snapshot of [previous, current]) {
+    if (
+      snapshot.schemaVersion !== 1 ||
+      snapshot.table !== 'public_water_history' ||
+      !Array.isArray(snapshot.data) ||
+      snapshot.count !== snapshot.data.length
+    )
+      throw new Error('Invalid water history snapshot');
+  }
+  const rows = [...previous.data, ...current.data]
+    .map((row) =>
+      Object.fromEntries(
+        Object.entries(waterTypes).map(([key, type]) => {
+          const value = row[key] ?? null;
+          if (
+            value !== null &&
+            (typeof value !== (type === 'text' ? 'string' : 'number') ||
+              (type === 'number' && !Number.isFinite(value)))
+          )
+            throw new Error('Invalid water history field');
+          return [key, value];
+        })
+      )
+    )
+    .filter((row) => row.source && row.station_code && row.observed_at);
+  const data = [
+    ...new Map(
+      rows.map((row) => [
+        [row.source, row.station_code, row.observed_at, row.unit].join('|'),
+        row,
+      ])
+    ).values(),
+  ];
+  return {
+    ...current,
+    status: data.length ? 'ready' : 'empty',
+    count: data.length,
+    data,
+  };
+}
+
 export function flattenWaterSituation(payload, now = new Date()) {
   const stations = new Map();
   for (const row of payload.observed || []) {
-    if (
-      String(row.provinceCode) !== '73' ||
-      row.variable !== 'WaterLevel' ||
-      !row.stationCode
-    )
-      continue;
+    if (!genuineWaterRow(row)) continue;
     const previous = stations.get(row.stationCode);
     // Source timestamps are retained verbatim; do not silently invent a time zone.
     const zoned = (value) =>
@@ -174,28 +292,7 @@ export function flattenWaterSituation(payload, now = new Date()) {
         : String(row.observedAt || '') > String(previous?.observedAt || '');
     if (!previous || newer) stations.set(row.stationCode, row);
   }
-  return [...stations.values()].map((row) => {
-    const explicitZone = /(?:Z|[+-]\d{2}:\d{2})$/.test(row.observedAt || '');
-    const age = explicitZone ? now.getTime() - Date.parse(row.observedAt) : NaN;
-    return {
-      station_code: String(row.stationCode),
-      station_name: text(row.stationName),
-      district_code: text(row.amphoeCode),
-      district: districtNames[row.amphoeCode] || text(row.amphoeName),
-      latitude: number(row.latitude),
-      longitude: number(row.longitude),
-      observed_at: text(row.observedAt),
-      water_level: number(row.value),
-      unit: text(row.unit),
-      source: text(row.source),
-      freshness:
-        Number.isFinite(age) && age >= 0
-          ? age > 48 * 3600000
-            ? 'ข้อมูลเก่า'
-            : 'ภายใน 48 ชั่วโมง'
-          : 'ตรวจสอบเวลาต้นทาง',
-    };
-  });
+  return [...stations.values()].map((row) => flattenWaterRow(row, now));
 }
 
 export function flattenRainForecast(payload) {
@@ -268,13 +365,11 @@ export async function collectPublicSituation(
   const cutoff = new Date(now.getTime() - 90 * 86400000)
     .toISOString()
     .slice(0, 10);
-  const reports = (
-    await readAll(client, {
-      table: 'ai_disease_forecasts',
-      key: 'forecast_date',
-      columns: ['forecast_date', 'summary', 'details', 'updated_at'],
-    })
-  ).filter((row) => row.forecast_date >= cutoff);
+  const reports = await readAll(client, {
+    table: 'ai_disease_forecasts',
+    key: 'forecast_date',
+    columns: ['forecast_date', 'summary', 'details', 'updated_at'],
+  });
   const weather = await readAll(client, PUBLIC_POWERBI_DATASETS.daily_weather);
   const hotspots = await readAll(client, {
     ...PUBLIC_POWERBI_DATASETS.fire_hotspots,
@@ -341,6 +436,7 @@ export async function collectPublicSituation(
         ) || null,
     })),
     public_water: flattenWaterSituation(payload, now),
+    public_water_history: flattenWaterHistory(payload, now),
     public_rain_forecast: flattenRainForecast(payload),
   };
   return Object.fromEntries(
