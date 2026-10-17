@@ -377,19 +377,43 @@ export async function collectPublicSituation(
       PUBLIC_SITUATION_DATASETS.public_hotspots.types
     ).filter((column) => column !== 'district_code'),
   });
-  const response = await fetcher(
-    'https://npt-dashboard.netlify.app/api/public-risk-map-current',
-    { signal: AbortSignal.timeout(60000) }
-  );
-  if (!response.ok) throw new Error('Public water service unavailable');
+  let response;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      response = await fetcher(
+        'https://npt-dashboard.netlify.app/api/public-risk-map-current',
+        { signal: AbortSignal.timeout(60000) }
+      );
+      if (response.ok) break;
+    } catch (e) {
+      if (attempt === 3) throw e;
+      await new Promise((r) => setTimeout(r, 2000));
+    }
+  }
+  if (!response?.ok)
+    throw new Error(
+      `Public water service unavailable (${response?.status || 'network error'})`
+    );
   const payload = await response.json();
   if (!Array.isArray(payload.observed) || !Array.isArray(payload.forecast))
     throw new Error('Invalid public water response');
-  const adviceResponse = await fetcher(
-    'https://npt-dashboard.netlify.app/api/public-risk-map-ai-latest',
-    { signal: AbortSignal.timeout(60000) }
-  );
-  if (!adviceResponse.ok) throw new Error('Public water analysis unavailable');
+  let adviceResponse;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      adviceResponse = await fetcher(
+        'https://npt-dashboard.netlify.app/api/public-risk-map-ai-latest',
+        { signal: AbortSignal.timeout(60000) }
+      );
+      if (adviceResponse.ok) break;
+    } catch (e) {
+      if (attempt === 3) throw e;
+      await new Promise((r) => setTimeout(r, 2000));
+    }
+  }
+  if (!adviceResponse?.ok)
+    throw new Error(
+      `Public water analysis unavailable (${adviceResponse?.status || 'network error'})`
+    );
   const advice = (await adviceResponse.json()).data;
   const data = {
     public_water_advice: flattenWaterAdvice(advice),

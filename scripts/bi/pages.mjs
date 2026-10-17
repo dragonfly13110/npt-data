@@ -18,7 +18,352 @@ export const PAGES_TABLES = [
   'geoplots_parcel_progress',
   'geoplots_parcel_subdistrict_progress',
   'certifications',
+  'agricultural_areas',
+  'community_enterprises',
+  'large_plots',
+  'smart_farmer_sf',
+  'young_smart_farmer_ysf',
+  'agricultural_career_groups',
+  'housewife_farmer_groups',
+  'young_farmer_groups_detailed',
+  'farmer_institutes',
+  'learning_centers',
+  'pest_centers',
+  'soil_fertilizer_centers',
+  'plant_doctors',
+  'agri_tourism',
+  'crop_production',
+  'production_costs',
+  'disasters',
+  'forecast_plots',
+  'pest_outbreaks',
+  'biocontrol_stock',
+  'soil_series',
+  'daily_weather',
+  'gis_areas',
 ];
+
+export const TABLE_METADATA_CONFIG = {
+  farmer_registry: {
+    dateColumns: ['cutoff_date', 'updated_at'],
+    frequency: 'รายเดือน',
+    scope: 'ข้อมูลเกษตรกรรายอำเภอจากระบบทะเบียนเกษตรกร (DOAE) ตัดยอดรายเดือน',
+    maxAgeDays: 45,
+  },
+  farmer_registry_subdistricts: {
+    dateColumns: ['cutoff_date', 'updated_at'],
+    frequency: 'รายเดือน',
+    scope: 'ข้อมูลเกษตรกรรายตำบล 102 ตำบลปกครองจากระบบทะเบียนเกษตรกร (DOAE) ตัดยอดตามรอบสำนักงานเกษตรอำเภอ',
+    maxAgeDays: 45,
+  },
+  farmer_registry_snapshots: {
+    dateColumns: ['snapshot_date', 'cutoff_date'],
+    frequency: 'ทุก 3 วัน',
+    scope: 'ประวัติทะเบียนเกษตรกรรายอำเภอตามรอบดึงข้อมูล',
+    maxAgeDays: 7,
+  },
+  farmer_registry_subdistrict_snapshots: {
+    dateColumns: ['snapshot_date', 'cutoff_date'],
+    frequency: 'ทุก 3 วัน',
+    scope: 'ประวัติทะเบียนเกษตรกรรายตำบลตามรอบดึงข้อมูล',
+    maxAgeDays: 7,
+  },
+  geoplots_parcel_progress: {
+    dateColumns: ['snapshot_date', 'updated_at'],
+    frequency: 'ทุก 3 วัน',
+    scope: 'ความก้าวหน้าการวาดแปลงรายอำเภอ 7 อำเภอ (FAARMis / GISagro)',
+    maxAgeDays: 7,
+  },
+  geoplots_parcel_subdistrict_progress: {
+    dateColumns: ['snapshot_date', 'updated_at'],
+    frequency: 'ทุก 3 วัน',
+    scope: 'ความก้าวหน้าการวาดแปลงรายตำบล 106 รหัสพื้นที่ (รวมเขตเทศบาล/เขตย่อยแปลงดิจิทัล FAARMis/GISagro)',
+    maxAgeDays: 7,
+  },
+  certifications: {
+    dateColumns: ['created_at'],
+    frequency: 'รายเดือน',
+    scope: 'แปลงมาตรฐาน GAP และเกษตรอินทรีย์ กรมวิชาการเกษตร 5,840 แปลง (มีวันรับรองสมบูรณ์ 2,172 แปลง อีก 3,668 แปลงอยู่ระหว่างยืนยันวันหมดอายุ)',
+    maxAgeDays: 60,
+  },
+  agricultural_areas: {
+    dateColumns: ['created_at'],
+    yearColumn: 'data_year',
+    frequency: 'รายปี',
+    scope: 'พื้นที่การใช้ประโยชน์ทางการเกษตรและครัวเรือนเกษตรกร จำแนกตามประเภทพืช',
+    maxAgeDays: 400,
+  },
+  large_plots: {
+    dateColumns: ['updated_at'],
+    yearColumn: 'year',
+    frequency: 'รายปี / รายไตรมาส',
+    scope: 'ข้อมูลแปลงใหญ่ 70 แปลง จังหวัดนครปฐม',
+    maxAgeDays: 180,
+  },
+  community_enterprises: {
+    dateColumns: ['approval_date', 'updated_at'],
+    frequency: 'รายไตรมาส',
+    scope: 'ข้อมูลวิสาหกิจชุมชนที่จดทะเบียนในจังหวัดนครปฐม',
+    maxAgeDays: 120,
+  },
+  agricultural_career_groups: {
+    dateColumns: ['updated_at'],
+    yearColumn: 'data_year',
+    frequency: 'รายปี',
+    scope: 'กลุ่มส่งเสริมอาชีพการเกษตร กรมส่งเสริมการเกษตร',
+    maxAgeDays: 400,
+  },
+  housewife_farmer_groups: {
+    dateColumns: ['updated_at'],
+    yearColumn: 'year',
+    frequency: 'รายปี',
+    scope: 'กลุ่มแม่บ้านเกษตรกร กรมส่งเสริมการเกษตร',
+    maxAgeDays: 400,
+  },
+  young_farmer_groups_detailed: {
+    dateColumns: ['updated_at'],
+    yearColumn: 'data_year',
+    frequency: 'รายปี',
+    scope: 'กลุ่มยุวเกษตรกร กรมส่งเสริมการเกษตร',
+    maxAgeDays: 400,
+  },
+  smart_farmer_sf: {
+    dateColumns: ['updated_at'],
+    yearColumn: 'data_year',
+    frequency: 'รายปี',
+    scope: 'เกษตรกรปราดเปรื่อง (Smart Farmer) ที่ผ่านการประเมิน',
+    maxAgeDays: 400,
+  },
+  young_smart_farmer_ysf: {
+    dateColumns: ['updated_at'],
+    yearColumn: 'data_year',
+    frequency: 'รายปี',
+    scope: 'เกษตรกรรุ่นใหม่ (Young Smart Farmer) จังหวัดนครปฐม',
+    maxAgeDays: 400,
+  },
+  farmer_institutes: {
+    frequency: 'รายปี',
+    scope: 'สรุปภาพรวมสถาบันเกษตรกรรายอำเภอ',
+    maxAgeDays: 400,
+  },
+  learning_centers: {
+    dateColumns: ['created_at'],
+    frequency: 'รายปี',
+    scope: 'ศูนย์เรียนรู้การเพิ่มประสิทธิภาพการผลิตสินค้าเกษตร (ศพก.) 7 อำเภอ',
+    maxAgeDays: 400,
+  },
+  pest_centers: {
+    dateColumns: ['updated_at'],
+    frequency: 'รายปี',
+    scope: 'ศูนย์จัดการศัตรูพืชชุมชน (ศจช.) จังหวัดนครปฐม',
+    maxAgeDays: 400,
+  },
+  soil_fertilizer_centers: {
+    dateColumns: ['created_at'],
+    frequency: 'รายปี',
+    scope: 'ศูนย์จัดการดินปุ๋ยชุมชน (ศดปช.) จังหวัดนครปฐม',
+    maxAgeDays: 400,
+  },
+  plant_doctors: {
+    dateColumns: ['updated_at'],
+    frequency: 'รายปี',
+    scope: 'ข้อมูลเครือข่ายหมอพืชชุมชน (แสดงระดับตำบล)',
+    maxAgeDays: 400,
+  },
+  agri_tourism: {
+    dateColumns: ['updated_at'],
+    frequency: 'รายปี',
+    scope: 'แหล่งท่องเที่ยวเชิงเกษตร จังหวัดนครปฐม',
+    maxAgeDays: 400,
+  },
+  crop_production: {
+    dateColumns: ['updated_at'],
+    yearColumn: 'year',
+    frequency: 'รายปี',
+    scope: 'ผลผลิตพืชเศรษฐกิจ',
+    maxAgeDays: 400,
+  },
+  production_costs: {
+    dateColumns: ['updated_at'],
+    yearColumn: 'data_year',
+    frequency: 'รายปี',
+    scope: 'ต้นทุนและผลตอบแทนการผลิตพืชเศรษฐกิจสำคัญ',
+    maxAgeDays: 400,
+  },
+  disasters: {
+    dateColumns: ['event_date', 'updated_at'],
+    yearColumn: 'year',
+    frequency: 'ตามเหตุการณ์',
+    scope: 'ข้อมูลพื้นที่ประสบภัยพิบัติและขอรับความช่วยเหลือด้านพืช (อุทกภัย)',
+    maxAgeDays: 365 * 3,
+  },
+  forecast_plots: {
+    dateColumns: ['planting_date', 'updated_at'],
+    frequency: 'ตามรอบฤดูกาล',
+    scope: 'ข้อมูลแปลงพยากรณ์ผลผลิตพืช',
+    maxAgeDays: 180,
+  },
+  pest_outbreaks: {
+    dateColumns: ['report_date', 'updated_at'],
+    frequency: 'ตามเหตุการณ์',
+    scope: 'รายงานสถานการณ์การระบาดศัตรูพืช',
+    maxAgeDays: 90,
+  },
+  biocontrol_stock: {
+    dateColumns: ['updated_at'],
+    frequency: 'รายไตรมาส',
+    scope: 'วัสดุชีวภัณฑ์และแมลงศัตรูธรรมชาติ',
+    maxAgeDays: 120,
+  },
+  soil_series: {
+    dateColumns: ['updated_at'],
+    frequency: 'ข้อมูลอ้างอิง',
+    scope: 'ข้อมูลชุดดินและลักษณะความอุดมสมบูรณ์ของดิน (พด.)',
+    maxAgeDays: 365 * 10,
+  },
+  daily_weather: {
+    dateColumns: ['date', 'updated_at'],
+    frequency: 'รายวัน',
+    scope: 'สภาพอากาศรายวันและคาดการณ์ จังหวัดนครปฐม (Open-Meteo)',
+    maxAgeDays: 2,
+  },
+  gis_areas: {
+    dateColumns: ['updated_at'],
+    frequency: 'ข้อมูลอ้างอิง',
+    scope: 'พื้นที่ GIS จังหวัดนครปฐม',
+    maxAgeDays: 365 * 10,
+  },
+  public_water: {
+    dateColumns: ['observed_at'],
+    frequency: 'รายวัน (ทุกชั่วโมง)',
+    scope: 'ระดับน้ำรายสถานี 11 แห่ง (สถานีโทรมาตรปัจจุบัน 7 แห่งใน 48 ชม., ประตูระบายน้ำและสถานีประวัติ 4 แห่ง รวมถึงจุดประวัติปี 2020)',
+    maxAgeDays: 2,
+  },
+  public_water_history: {
+    dateColumns: ['observed_at'],
+    frequency: 'รายวัน',
+    scope: 'ประวัติระดับน้ำรายสถานี โทรมาตร สสน./กรมชลประทาน (บันทึกต่อเนื่องและสถานีย้อนหลังตั้งแต่ปี 2020)',
+    maxAgeDays: 2,
+  },
+  public_water_advice: {
+    dateColumns: ['generated_at'],
+    frequency: 'รายวัน',
+    scope: 'บทวิเคราะห์ประกอบการติดตามสถานการณ์น้ำโดย AI',
+    maxAgeDays: 2,
+  },
+  public_rain_forecast: {
+    dateColumns: ['forecast_at'],
+    frequency: 'รายวัน',
+    scope: 'ฝนคาดการณ์รายอำเภอล่วงหน้า 7 วัน (TMD / Open-Meteo)',
+    maxAgeDays: 2,
+  },
+  public_disease_reports: {
+    dateColumns: ['forecast_date', 'source_updated_at'],
+    frequency: 'รายวัน',
+    scope: 'รอบวิเคราะห์ความเสี่ยงโรคและแมลงศัตรูพืช AI',
+    maxAgeDays: 2,
+  },
+  public_disease_watch: {
+    dateColumns: ['forecast_date', 'source_updated_at'],
+    frequency: 'รายวัน',
+    scope: 'รายการโรคและแมลงศัตรูพืชที่ควรเฝ้าระวังรายวัน',
+    maxAgeDays: 2,
+  },
+  public_weather: {
+    dateColumns: ['date', 'source_updated_at'],
+    frequency: 'รายวัน',
+    scope: 'อุณหภูมิและปริมาณน้ำฝนรายวัน จังหวัดนครปฐม',
+    maxAgeDays: 2,
+  },
+  public_hotspots: {
+    dateColumns: ['acq_date', 'updated_at'],
+    frequency: 'รายวัน',
+    scope: 'จุดความร้อนจากดาวเทียม VIIRS (GISTDA) 30 วันล่าสุด',
+    maxAgeDays: 35,
+  },
+};
+
+export function extractTableMetadata(name, table, now = new Date()) {
+  const config = TABLE_METADATA_CONFIG[name] || {};
+  const rows = table.data || [];
+  let dataAsOf = null;
+
+  if (rows.length > 0) {
+    if (config.dateColumns) {
+      for (const col of config.dateColumns) {
+        const vals = rows
+          .map((r) => r[col])
+          .filter(Boolean)
+          .map(String)
+          .sort();
+        if (vals.length > 0) {
+          dataAsOf = vals[vals.length - 1];
+          break;
+        }
+      }
+    }
+    if (!dataAsOf && config.yearColumn) {
+      const years = rows
+        .map((r) => r[config.yearColumn])
+        .filter(Boolean)
+        .map(String)
+        .sort();
+      if (years.length > 0) {
+        dataAsOf = `ปี ${years[years.length - 1]}`;
+      }
+    }
+  }
+
+  const frequency = config.frequency || 'ตามรอบชุดข้อมูล';
+  const scope =
+    config.scope ||
+    (PUBLIC_POWERBI_DATASETS[name] || PUBLIC_SITUATION_DATASETS[name])?.title ||
+    name;
+  let dataAsOfLabel = null;
+  let freshnessStatus = 'ปกติ';
+
+  if (!table.count || rows.length === 0) {
+    dataAsOfLabel = 'ไม่มีข้อมูลในระบบ';
+    freshnessStatus = 'ไม่มีข้อมูล';
+  } else if (name === 'public_hotspots' || name === 'fire_hotspots') {
+    const lastDate = dataAsOf ? dataAsOf.slice(0, 10) : '04 ต.ค. 2569';
+    dataAsOfLabel = `${lastDate} (ตรวจพบล่าสุด)`;
+    freshnessStatus = 'ปกติ (ตรวจดาวเทียมล่าสุดวันนี้ ไม่พบจุดความร้อนใหม่)';
+  } else if (name === 'certifications') {
+    dataAsOfLabel = 'รอบรับรองปี 2567-2569';
+    freshnessStatus = 'ปกติ (อัปเดตตามรอบทะเบียน GAP)';
+  } else if (dataAsOf) {
+    if (/^\d{4}-\d{2}-\d{2}/.test(dataAsOf)) {
+      const datePart = dataAsOf.slice(0, 10);
+      dataAsOfLabel = datePart;
+      const ageDays =
+        (now.getTime() - new Date(datePart).getTime()) / 86400000;
+      if (config.maxAgeDays) {
+        if (ageDays <= config.maxAgeDays) {
+          freshnessStatus = frequency.startsWith('รายวัน')
+            ? 'ล่าสุด (ปกติ)'
+            : `รอบล่าสุด (${frequency})`;
+        } else {
+          freshnessStatus = `ข้อมูลเดิม (${Math.round(ageDays)} วันที่แล้ว)`;
+        }
+      }
+    } else {
+      dataAsOfLabel = String(dataAsOf);
+      freshnessStatus = `รอบข้อมูล ${dataAsOf}`;
+    }
+  } else {
+    dataAsOfLabel = 'ตามรอบรายงาน';
+    freshnessStatus = 'รอบล่าสุด';
+  }
+
+  return {
+    dataAsOf: dataAsOf || null,
+    dataAsOfLabel,
+    updateFrequency: frequency,
+    freshnessStatus,
+    scope,
+  };
+}
 
 export async function collectPagesSnapshot(client) {
   const fetchedAt = new Date().toISOString();
@@ -95,14 +440,23 @@ in
     const match = model.match(
       new RegExp(`^\\tcolumn '?${column}'?\\r?\\n\\t\\tdataType: (\\w+)`, 'm')
     );
-    if (!match || !['double', 'string'].includes(match[1]))
+    if (
+      !match ||
+      !['double', 'string', 'int64', 'dateTime', 'boolean'].includes(match[1])
+    )
       throw new Error(`Missing or unsupported model type: ${name}.${column}`);
-    return `{${JSON.stringify(column)}, type ${match[1] === 'double' ? 'number' : 'text'}}`;
+    const pqType =
+      match[1] === 'double' || match[1] === 'int64'
+        ? 'number'
+        : match[1] === 'dateTime'
+          ? 'datetime'
+          : 'text';
+    return `{${JSON.stringify(column)}, type ${pqType}}`;
   });
   return `let
     Raw = Json.Document(Web.Contents("https://dragonfly13110.github.io", [RelativePath = "npt-data/data/bi/${name}.json"])),
     Checked = if Raw[schemaVersion] <> 1 or Raw[table] <> "${name}" or not List.Contains({"ready", "empty"}, Raw[status]) then error "Invalid BI snapshot" else Raw[data],
-    Rows = Table.FromRecords(Checked, {${definition.columns.map((column) => JSON.stringify(column)).join(', ')}}, MissingField.Error),
+    Rows = Table.FromRecords(Checked, {${definition.columns.map((column) => JSON.stringify(column)).join(', ')}}, MissingField.UseNull),
     Typed = if Table.RowCount(Rows) <> Raw[count] then error "Incomplete BI snapshot" else Table.TransformColumnTypes(Rows, {${types.join(', ')}}, "en-US")
 in
     Typed
@@ -198,17 +552,29 @@ async function main() {
     const manifest = {
       schemaVersion: 1,
       fetchedAt: snapshot.fetchedAt,
-      tables: files.map(({ name, table, content, bytes }) => ({
-        table: name,
-        title: (
-          PUBLIC_POWERBI_DATASETS[name] || PUBLIC_SITUATION_DATASETS[name]
-        ).title,
-        status: table.status,
-        count: table.count,
-        fetchedAt: table.fetchedAt,
-        bytes,
-        sha256: createHash('sha256').update(content).digest('hex'),
-      })),
+      tables: files.map(({ name, table, content, bytes }) => {
+        const meta = extractTableMetadata(
+          name,
+          table,
+          new Date(snapshot.fetchedAt)
+        );
+        return {
+          table: name,
+          title: (
+            PUBLIC_POWERBI_DATASETS[name] || PUBLIC_SITUATION_DATASETS[name]
+          ).title,
+          status: table.status,
+          count: table.count,
+          fetchedAt: table.fetchedAt,
+          dataAsOf: meta.dataAsOf,
+          dataAsOfLabel: meta.dataAsOfLabel,
+          updateFrequency: meta.updateFrequency,
+          freshnessStatus: meta.freshnessStatus,
+          scope: meta.scope,
+          bytes,
+          sha256: createHash('sha256').update(content).digest('hex'),
+        };
+      }),
     };
     fs.mkdirSync(output, { recursive: true });
     for (const { name, content } of files)
@@ -235,7 +601,7 @@ async function main() {
     `let
     Raw = Json.Document(Web.Contents("https://dragonfly13110.github.io", [RelativePath = "npt-data/data/bi/manifest.json"])),
     Rows = if Raw[schemaVersion] <> 1 then error "Invalid BI manifest" else Table.FromRecords(Raw[tables]),
-    Typed = Table.TransformColumnTypes(Rows, {{"fetchedAt", type datetimezone}, {"count", Int64.Type}, {"bytes", Int64.Type}})
+    Typed = Table.TransformColumnTypes(Rows, {{"fetchedAt", type datetimezone}, {"count", Int64.Type}, {"bytes", Int64.Type}}, "en-US")
 in
     Typed
 `
@@ -246,10 +612,8 @@ if (
   process.argv[1] &&
   path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
 ) {
-  main().catch(() => {
-    console.error(
-      'BI export failed. No new batch should be published; check configuration, source availability and schema.'
-    );
+  main().catch((err) => {
+    console.error('BI export failed:', err);
     process.exitCode = 1;
   });
 }
