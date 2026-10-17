@@ -162,7 +162,7 @@ function createKeyPool({
 
 // scripts/powerbi-agriculture/daily-briefing.mjs
 var BRIEFING_MODEL = "gemini-3.5-flash-lite";
-var VERSION = "bi-daily-v4";
+var VERSION = "bi-daily-v5";
 var names = [
   "public_water",
   "public_weather",
@@ -204,6 +204,18 @@ var dayInThailand = (now) => new Intl.DateTimeFormat("en-CA", {
 }).format(now);
 var pick = (row, columns) => Object.fromEntries(columns.map((key) => [key, row[key] ?? null]));
 var latest = (rows, key) => rows.map((r) => r[key]).filter(Boolean).sort().at(-1) || null;
+var registryProvinceNames = /* @__PURE__ */ new Set(["\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", "\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21"]);
+function latestRegistryProvince(rows) {
+  const years = rows.map((row) => Number(row.data_year)).filter(Number.isFinite);
+  if (!years.length) return { dataYear: null, row: null };
+  const dataYear = Math.max(...years);
+  return {
+    dataYear,
+    row: rows.find(
+      (row) => Number(row.data_year) === dataYear && registryProvinceNames.has(row.district)
+    ) || null
+  };
+}
 var countBy = (rows, key) => Object.fromEntries(
   [...new Set(rows.map((r) => r[key] || "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"))].sort().map((value) => [
     value,
@@ -267,6 +279,7 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
     const stamp = Date.parse(r.observed_at || "");
     return Number.isFinite(stamp) && stamp >= now.getTime() - 48 * 36e5 && stamp <= now.getTime() + 36e5;
   });
+  const registry = latestRegistryProvince(tables.farmer_registry);
   const evidence = [
     {
       id: "water",
@@ -338,10 +351,11 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
     {
       id: "registry",
       topic: topics[5],
-      date: latest(tables.farmer_registry, "cutoff_date"),
+      date: registry.row?.cutoff_date || null,
       tables: ["farmer_registry"],
-      facts: tables.farmer_registry.map(
-        (r) => pick(r, [
+      facts: {
+        data_year: registry.dataYear,
+        province: registry.row ? pick(registry.row, [
           "district",
           "data_year",
           "household_count",
@@ -349,8 +363,9 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
           "target",
           "total_updated_households",
           "cutoff_date"
-        ])
-      )
+        ]) : null,
+        note: registry.row ? "\u0E41\u0E16\u0E27\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E02\u0E2D\u0E07\u0E1B\u0E35\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14\u0E23\u0E27\u0E21\u0E22\u0E2D\u0E14\u0E23\u0E32\u0E22\u0E2D\u0E33\u0E40\u0E20\u0E2D\u0E41\u0E25\u0E49\u0E27 \u0E43\u0E0A\u0E49\u0E41\u0E16\u0E27\u0E19\u0E35\u0E49\u0E2D\u0E49\u0E32\u0E07\u0E2D\u0E34\u0E07\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14 \u0E44\u0E21\u0E48\u0E1A\u0E27\u0E01\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E2D\u0E33\u0E40\u0E20\u0E2D\u0E0B\u0E49\u0E33" : "\u0E44\u0E21\u0E48\u0E1E\u0E1A\u0E41\u0E16\u0E27\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E02\u0E2D\u0E07\u0E1B\u0E35\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14 \u0E08\u0E36\u0E07\u0E44\u0E21\u0E48\u0E23\u0E27\u0E21\u0E22\u0E2D\u0E14\u0E08\u0E32\u0E01\u0E41\u0E16\u0E27\u0E2D\u0E33\u0E40\u0E20\u0E2D\u0E41\u0E17\u0E19"
+      }
     },
     {
       id: "parcels",
@@ -665,6 +680,19 @@ function check(inputDir) {
   assert.throws(() => validateBriefing(result, input), /Unknown AI evidence/);
   assert.equal(expiryDate("31/02/2569"), null);
   assert.equal(expiryDate("16/10/2569"), "2026-10-16");
+  const latestRegistry = latestRegistryProvince([
+    { district: "\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", data_year: 2569, total_updated_households: 32e3 },
+    { district: "\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", data_year: 2570, total_updated_households: 763 },
+    { district: "\u0E40\u0E21\u0E37\u0E2D\u0E07\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", data_year: 2570, total_updated_households: 300 }
+  ]);
+  assert.equal(latestRegistry.dataYear, 2570);
+  assert.equal(latestRegistry.row.total_updated_households, 763);
+  assert.equal(
+    latestRegistryProvince([
+      { district: "\u0E40\u0E21\u0E37\u0E2D\u0E07\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", data_year: 2570, total_updated_households: 300 }
+    ]).row,
+    null
+  );
   console.log(
     "Daily briefing source, provenance, privacy and date checks passed"
   );
