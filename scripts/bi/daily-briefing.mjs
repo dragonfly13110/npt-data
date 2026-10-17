@@ -162,7 +162,7 @@ function createKeyPool({
 
 // scripts/powerbi-agriculture/daily-briefing.mjs
 var BRIEFING_MODEL = "gemini-3.5-flash-lite";
-var VERSION = "bi-daily-v5";
+var VERSION = "bi-daily-v6";
 var names = [
   "public_water",
   "public_weather",
@@ -620,6 +620,7 @@ async function generateBriefing({
   }
   const ai = await summarize(input, env);
   const generatedAt = now.toISOString();
+  const registry = input.evidence.find((e) => e.id === "registry").facts;
   const data = ai.sections.map((s, index) => {
     const evidence = input.evidence.filter(
       (e) => s.evidence_ids.includes(e.id)
@@ -628,7 +629,7 @@ async function generateBriefing({
       briefing_date: input.date,
       topic_order: index,
       topic: s.topic,
-      summary: s.summary.trim(),
+      summary: (s.topic === "\u0E17\u0E30\u0E40\u0E1A\u0E35\u0E22\u0E19\u0E40\u0E01\u0E29\u0E15\u0E23\u0E01\u0E23" && registry.province?.target != null ? `\u0E40\u0E1B\u0E49\u0E32\u0E2B\u0E21\u0E32\u0E22\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E1B\u0E35 ${registry.data_year}: ${Number(registry.province.target).toLocaleString("th-TH")} \u0E04\u0E23\u0E31\u0E27\u0E40\u0E23\u0E37\u0E2D\u0E19 \u2022 ` : "") + s.summary.trim(),
       next_steps: s.next_steps.trim(),
       limitations: s.limitations.trim(),
       source_dates: evidence.map(
@@ -681,15 +682,27 @@ function check(inputDir) {
   assert.equal(expiryDate("31/02/2569"), null);
   assert.equal(expiryDate("16/10/2569"), "2026-10-16");
   const latestRegistry = latestRegistryProvince([
-    { district: "\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", data_year: 2569, total_updated_households: 32e3 },
-    { district: "\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", data_year: 2570, total_updated_households: 763 },
+    {
+      district: "\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21",
+      data_year: 2569,
+      total_updated_households: 32e3
+    },
+    {
+      district: "\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E31\u0E14\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21",
+      data_year: 2570,
+      total_updated_households: 763
+    },
     { district: "\u0E40\u0E21\u0E37\u0E2D\u0E07\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", data_year: 2570, total_updated_households: 300 }
   ]);
   assert.equal(latestRegistry.dataYear, 2570);
   assert.equal(latestRegistry.row.total_updated_households, 763);
   assert.equal(
     latestRegistryProvince([
-      { district: "\u0E40\u0E21\u0E37\u0E2D\u0E07\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21", data_year: 2570, total_updated_households: 300 }
+      {
+        district: "\u0E40\u0E21\u0E37\u0E2D\u0E07\u0E19\u0E04\u0E23\u0E1B\u0E10\u0E21",
+        data_year: 2570,
+        total_updated_households: 300
+      }
     ]).row,
     null
   );
