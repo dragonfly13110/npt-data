@@ -108,7 +108,7 @@ const definitions = [
   [
     'disasters',
     'อุทกภัยและพื้นที่เสียหาย',
-    'disaster_type,district,subdistrict,year,activity_group,crop_type,variety,planted_area_rai,affected_area_rai,affected_households,damaged_area,affected_farmers,event_date,updated_at',
+    'disaster_type,district,subdistrict,year,activity_group,crop_type,variety,planted_area_rai,affected_area_rai,affected_households,damaged_area,affected_farmers,event_date,updated_at,source_row_id,village_no,utm_zone,utm_x,utm_y',
   ],
   [
     'forecast_plots',
@@ -143,13 +143,13 @@ const definitions = [
   [
     'geoplots_parcel_progress',
     'ความก้าวหน้าวาดแปลงรายอำเภอ',
-    'district_code,district,target_plots,drawn_plots,remaining_target_plots,progress_percent,snapshot_date,updated_at',
+    'district_code,district,data_year,target_round,target_plots,drawn_plots,remaining_target_plots,progress_percent,snapshot_date,updated_at',
     'district_code',
   ],
   [
     'geoplots_parcel_subdistrict_progress',
     'ความก้าวหน้าวาดแปลงรายตำบล',
-    'subdistrict_code,subdistrict,district_code,district,target_plots,drawn_plots,progress_percent,snapshot_date,updated_at',
+    'subdistrict_code,subdistrict,district_code,district,data_year,target_round,target_plots,drawn_plots,progress_percent,snapshot_date,updated_at',
     'subdistrict_code',
   ],
   [

@@ -162,7 +162,7 @@ function createKeyPool({
 
 // scripts/powerbi-agriculture/daily-briefing.mjs
 var BRIEFING_MODEL = "gemini-3.5-flash-lite";
-var VERSION = "bi-daily-v6";
+var VERSION = "bi-daily-v7";
 var names = [
   "public_water",
   "public_weather",
@@ -373,10 +373,13 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
       id: "parcels",
       topic: topics[6],
       date: latest(tables.geoplots_parcel_progress, "snapshot_date"),
+      dateLabel: "\u0E01\u0E32\u0E23\u0E27\u0E32\u0E14\u0E41\u0E1B\u0E25\u0E07 (\u0E27\u0E31\u0E19\u0E17\u0E35\u0E48\u0E14\u0E36\u0E07\u0E08\u0E32\u0E01 GEOPLOTS)",
       tables: ["geoplots_parcel_progress"],
       facts: tables.geoplots_parcel_progress.map(
         (r) => pick(r, [
           "district",
+          "data_year",
+          "target_round",
           "target_plots",
           "drawn_plots",
           "remaining_target_plots",
