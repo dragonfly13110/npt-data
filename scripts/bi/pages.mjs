@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { PUBLIC_POWERBI_DATASETS, readPowerbiPage } from './datasets.mjs';
+import { MARKET_DATASETS } from './market-outbreaks.mjs';
 import {
   PUBLIC_SITUATION_DATASETS,
   collectPublicSituation,
@@ -53,7 +54,8 @@ export const TABLE_METADATA_CONFIG = {
   farmer_registry_subdistricts: {
     dateColumns: ['cutoff_date', 'updated_at'],
     frequency: 'รายเดือน',
-    scope: 'ข้อมูลเกษตรกรรายตำบล 102 ตำบลปกครองจากระบบทะเบียนเกษตรกร (DOAE) ตัดยอดตามรอบสำนักงานเกษตรอำเภอ',
+    scope:
+      'ข้อมูลเกษตรกรรายตำบล 102 ตำบลปกครองจากระบบทะเบียนเกษตรกร (DOAE) ตัดยอดตามรอบสำนักงานเกษตรอำเภอ',
     maxAgeDays: 45,
   },
   farmer_registry_snapshots: {
@@ -77,20 +79,23 @@ export const TABLE_METADATA_CONFIG = {
   geoplots_parcel_subdistrict_progress: {
     dateColumns: ['snapshot_date', 'updated_at'],
     frequency: 'ทุก 3 วัน',
-    scope: 'ความก้าวหน้าการวาดแปลงรายตำบล 106 รหัสพื้นที่ (รวมเขตเทศบาล/เขตย่อยแปลงดิจิทัล FAARMis/GISagro)',
+    scope:
+      'ความก้าวหน้าการวาดแปลงรายตำบล 106 รหัสพื้นที่ (รวมเขตเทศบาล/เขตย่อยแปลงดิจิทัล FAARMis/GISagro)',
     maxAgeDays: 7,
   },
   certifications: {
     dateColumns: ['created_at'],
     frequency: 'รายเดือน',
-    scope: 'แปลงมาตรฐาน GAP และเกษตรอินทรีย์ กรมวิชาการเกษตร 5,840 แปลง (มีวันรับรองสมบูรณ์ 2,172 แปลง อีก 3,668 แปลงอยู่ระหว่างยืนยันวันหมดอายุ)',
+    scope:
+      'แปลงมาตรฐาน GAP และเกษตรอินทรีย์ กรมวิชาการเกษตร 5,840 แปลง (มีวันรับรองสมบูรณ์ 2,172 แปลง อีก 3,668 แปลงอยู่ระหว่างยืนยันวันหมดอายุ)',
     maxAgeDays: 60,
   },
   agricultural_areas: {
     dateColumns: ['created_at'],
     yearColumn: 'data_year',
     frequency: 'รายปี',
-    scope: 'พื้นที่การใช้ประโยชน์ทางการเกษตรและครัวเรือนเกษตรกร จำแนกตามประเภทพืช',
+    scope:
+      'พื้นที่การใช้ประโยชน์ทางการเกษตรและครัวเรือนเกษตรกร จำแนกตามประเภทพืช',
     maxAgeDays: 400,
   },
   large_plots: {
@@ -236,13 +241,15 @@ export const TABLE_METADATA_CONFIG = {
   public_water: {
     dateColumns: ['observed_at'],
     frequency: 'รายวัน (ทุกชั่วโมง)',
-    scope: 'ระดับน้ำรายสถานี 11 แห่ง (สถานีโทรมาตรปัจจุบัน 7 แห่งใน 48 ชม., ประตูระบายน้ำและสถานีประวัติ 4 แห่ง รวมถึงจุดประวัติปี 2020)',
+    scope:
+      'ระดับน้ำรายสถานี 11 แห่ง (สถานีโทรมาตรปัจจุบัน 7 แห่งใน 48 ชม., ประตูระบายน้ำและสถานีประวัติ 4 แห่ง รวมถึงจุดประวัติปี 2020)',
     maxAgeDays: 2,
   },
   public_water_history: {
     dateColumns: ['observed_at'],
     frequency: 'รายวัน',
-    scope: 'ประวัติระดับน้ำรายสถานี โทรมาตร สสน./กรมชลประทาน (บันทึกต่อเนื่องและสถานีย้อนหลังตั้งแต่ปี 2020)',
+    scope:
+      'ประวัติระดับน้ำรายสถานี โทรมาตร สสน./กรมชลประทาน (บันทึกต่อเนื่องและสถานีย้อนหลังตั้งแต่ปี 2020)',
     maxAgeDays: 2,
   },
   public_water_advice: {
@@ -336,8 +343,7 @@ export function extractTableMetadata(name, table, now = new Date()) {
     if (/^\d{4}-\d{2}-\d{2}/.test(dataAsOf)) {
       const datePart = dataAsOf.slice(0, 10);
       dataAsOfLabel = datePart;
-      const ageDays =
-        (now.getTime() - new Date(datePart).getTime()) / 86400000;
+      const ageDays = (now.getTime() - new Date(datePart).getTime()) / 86400000;
       if (config.maxAgeDays) {
         if (ageDays <= config.maxAgeDays) {
           freshnessStatus = frequency.startsWith('รายวัน')
@@ -576,6 +582,15 @@ async function main() {
         };
       }),
     };
+    // The independent market/PDF batch can fail while normal monitoring keeps updating.
+    // Retain its original dates and hashes until a complete replacement is available.
+    const previousManifest = path.resolve('data/bi/manifest.json');
+    if (fs.existsSync(previousManifest))
+      manifest.tables.push(
+        ...JSON.parse(fs.readFileSync(previousManifest, 'utf8')).tables.filter(
+          (t) => Object.hasOwn(MARKET_DATASETS, t.table)
+        )
+      );
     fs.mkdirSync(output, { recursive: true });
     for (const { name, content } of files)
       fs.writeFileSync(path.join(output, `${name}.json`), content);

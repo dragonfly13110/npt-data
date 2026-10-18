@@ -1,4 +1,5 @@
 import { PUBLIC_POWERBI_DATASETS, readPowerbiPage } from './datasets.mjs';
+import { MARKET_DATASETS } from './market-outbreaks.mjs';
 
 const text = (value) => (typeof value === 'string' ? value : null);
 const number = (value) =>
@@ -42,6 +43,7 @@ const waterTypes = {
 
 // These flat fields are the public contract. Never publish raw AI JSON or station payloads.
 export const PUBLIC_SITUATION_DATASETS = {
+  ...MARKET_DATASETS,
   public_water_advice: {
     title: 'บทวิเคราะห์ประกอบการติดตามน้ำ AI',
     types: {
