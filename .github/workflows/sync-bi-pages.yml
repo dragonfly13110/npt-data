@@ -58,11 +58,24 @@ jobs:
         if: github.event_name != 'push'
         with:
           python-version: '3.12'
-      - name: Install pinned PDF reader
+      - name: Install pinned PDF and satellite image readers
         if: github.event_name != 'push'
         continue-on-error: true
         run: python -m pip install --disable-pip-version-check -r scripts/bi/requirements.txt
         working-directory: site
+      - name: Check agro-environment collection
+        if: github.event_name != 'push'
+        run: node scripts/bi/agro-environment.test.mjs
+        working-directory: site
+      - name: Collect soil moisture, NDVI classes and flood reports
+        id: agro_environment
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: node scripts/bi/agro-environment.mjs --output output/bi-pages --districts scripts/bi/npt-districts.json
+        working-directory: site
+      - name: Report retained agro-environment source data
+        if: github.event_name != 'push' && steps.agro_environment.outcome == 'failure'
+        run: echo '::warning::Agro-environment collection failed. Previous files and their source dates are retained; missing data is not replaced with zero.'
       - name: Read official prices and reported outbreaks
         id: market_outbreaks
         if: github.event_name != 'push'

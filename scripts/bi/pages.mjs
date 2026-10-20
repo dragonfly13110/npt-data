@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { PUBLIC_POWERBI_DATASETS, readPowerbiPage } from './datasets.mjs';
 import { MARKET_DATASETS } from './market-outbreaks.mjs';
+import { AGRO_DATASETS } from './agro-environment.mjs';
 import {
   PUBLIC_SITUATION_DATASETS,
   collectPublicSituation,
@@ -588,7 +589,9 @@ async function main() {
     if (fs.existsSync(previousManifest))
       manifest.tables.push(
         ...JSON.parse(fs.readFileSync(previousManifest, 'utf8')).tables.filter(
-          (t) => Object.hasOwn(MARKET_DATASETS, t.table)
+          (t) =>
+            Object.hasOwn(MARKET_DATASETS, t.table) ||
+            Object.hasOwn(AGRO_DATASETS, t.table)
         )
       );
     fs.mkdirSync(output, { recursive: true });

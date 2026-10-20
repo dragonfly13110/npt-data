@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "fetchedAt": "2026-10-20T15:03:43.514Z",
+  "fetchedAt": "2026-10-20T15:18:12.507Z",
   "tables": [
     {
       "table": "farmer_registry",
@@ -575,6 +575,48 @@
       "scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน",
       "bytes": 352198,
       "sha256": "b870e7725251098998faa10aa46c318cd1a2c69327cd4f722fd48d7c8d47afea"
+    },
+    {
+      "table": "public_soil_water",
+      "title": "ความชื้นดินและ ET₀ จากแบบจำลอง",
+      "count": 98,
+      "status": "ready",
+      "fetchedAt": "2026-10-20T15:17:51.327Z",
+      "dataAsOf": "2026-10-26",
+      "dataAsOfLabel": "2026-10-26",
+      "updateFrequency": "ตรวจต้นทางตามรอบส่งออก",
+      "freshnessStatus": "ตรวจวันข้อมูลและข้อจำกัดในหน้า BI",
+      "scope": "ข้อมูลสรุปนครปฐม ไม่มีข้อมูลรายบุคคล",
+      "bytes": 42139,
+      "sha256": "24e8f37c1562d9a1159850eae434489fbd77204c4bbf99a8f84c81a9b71174f6"
+    },
+    {
+      "table": "public_ndvi_classes",
+      "title": "ช่วงค่า NDVI จากภาพ NPT แยกอำเภอ",
+      "count": 140,
+      "status": "ready",
+      "fetchedAt": "2026-10-20T15:17:51.327Z",
+      "dataAsOf": "2026-10-17T03:54:26.536Z",
+      "dataAsOfLabel": "2026-10-17T03:54:26.536Z",
+      "updateFrequency": "ตรวจต้นทางตามรอบส่งออก",
+      "freshnessStatus": "ตรวจวันข้อมูลและข้อจำกัดในหน้า BI",
+      "scope": "ข้อมูลสรุปนครปฐม ไม่มีข้อมูลรายบุคคล",
+      "bytes": 56624,
+      "sha256": "104691010f452251310d2c10e66fb78e61df8ecb46af2d6e82500b526cac7cc2"
+    },
+    {
+      "table": "public_flood_monitor",
+      "title": "พื้นที่น้ำท่วมที่ GISTDA รายงาน",
+      "count": 21,
+      "status": "ready",
+      "fetchedAt": "2026-10-20T15:17:51.327Z",
+      "dataAsOf": null,
+      "dataAsOfLabel": "ต้นทางไม่ระบุวันข้อมูล",
+      "updateFrequency": "ตรวจต้นทางตามรอบส่งออก",
+      "freshnessStatus": "ไม่ระบุวันภาพ · วันดึงไม่ใช่วันข้อมูล",
+      "scope": "ข้อมูลสรุปนครปฐม ไม่มีข้อมูลรายบุคคล",
+      "bytes": 7929,
+      "sha256": "501118c3afd46c7904e307c1f8b15ffb93ad34d78e08bb5dac05ab8ffc23ebf1"
     }
   ]
 }
