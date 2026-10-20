@@ -48,17 +48,17 @@ const definitions = [
   [
     'agricultural_career_groups',
     'กลุ่มส่งเสริมอาชีพ',
-    'data_year,group_name,district,subdistrict,member_count,activity,main_activity,production_standard,potential_level,updated_at',
+    'data_year,group_name,district,subdistrict,member_count,activity,main_activity,production_standard,potential_level,updated_at,latitude:lat,longitude:lon',
   ],
   [
     'housewife_farmer_groups',
     'กลุ่มแม่บ้านเกษตรกร',
-    'year,group_name,district,subdistrict,member_count,activity,production_standard,potential_level,model_group,updated_at',
+    'year,group_name,district,subdistrict,member_count,activity,production_standard,potential_level,model_group,updated_at,latitude:lat,longitude:lon',
   ],
   [
     'young_farmer_groups_detailed',
     'กลุ่มยุวเกษตรกร',
-    'data_year,group_name,district,subdistrict,member_count,activity,potential_level,model_group,updated_at',
+    'data_year,group_name,district,subdistrict,member_count,activity,potential_level,model_group,updated_at,latitude:lat,longitude:lon',
   ],
   [
     'farmer_institutes',
@@ -68,17 +68,17 @@ const definitions = [
   [
     'learning_centers',
     'ศูนย์เรียนรู้การเพิ่มประสิทธิภาพการผลิตสินค้าเกษตร',
-    'name,featured_product,district,subdistrict,network_centers_count,knowledge_course,created_at',
+    'name,featured_product,district,subdistrict,network_centers_count,knowledge_course,created_at,latitude:custom_fields->>latitude,longitude:custom_fields->>longitude',
   ],
   [
     'pest_centers',
     'ศูนย์จัดการศัตรูพืชชุมชน',
-    'center_name,district,subdistrict,member_count,established_year_th,grade_level,main_crop_type,updated_at',
+    'center_name,district,subdistrict,member_count,established_year_th,grade_level,main_crop_type,updated_at,latitude,longitude',
   ],
   [
     'soil_fertilizer_centers',
     'ศูนย์จัดการดินปุ๋ยชุมชน',
-    'center_name,district,subdistrict,member_count,established_year_th,grade_level,main_crop_type,group_type,created_at',
+    'center_name,district,subdistrict,member_count,established_year_th,grade_level,main_crop_type,group_type,created_at,latitude,longitude',
   ],
   [
     'plant_doctors',
@@ -88,7 +88,7 @@ const definitions = [
   [
     'agri_tourism',
     'แหล่งท่องเที่ยวเกษตร',
-    'spot_name,district,spot_type,updated_at',
+    'spot_name,district,spot_type,updated_at,latitude,longitude',
   ],
   [
     'certifications',
@@ -166,7 +166,18 @@ export const PUBLIC_POWERBI_DATASETS = Object.fromEntries(
       table,
       title,
       key,
-      columns: [...new Set([key, ...selection.split(',')])],
+      sourceFields: Object.fromEntries(
+        selection
+          .split(',')
+          .filter((field) => field.includes(':'))
+          .map((field) => [field.split(':')[0], field])
+      ),
+      columns: [
+        ...new Set([
+          key,
+          ...selection.split(',').map((field) => field.split(':')[0]),
+        ]),
+      ],
     },
   ])
 );
@@ -196,7 +207,12 @@ export function parsePowerbiPage(params) {
 export async function readPowerbiPage(client, { definition, offset, limit }) {
   const { data, error, count } = await client
     .from(definition.table)
-    .select(definition.columns.join(','), { count: 'exact' })
+    .select(
+      definition.columns
+        .map((column) => definition.sourceFields?.[column] || column)
+        .join(','),
+      { count: 'exact' }
+    )
     .order(definition.key, { ascending: true })
     .range(offset, offset + limit - 1);
   if (error || !Array.isArray(data) || !Number.isSafeInteger(count))
@@ -206,7 +222,24 @@ export async function readPowerbiPage(client, { definition, offset, limit }) {
   // Select and output allowlists both apply, even if a database response gains fields.
   const rows = data.map((row) =>
     Object.fromEntries(
-      definition.columns.map((column) => [column, row[column] ?? null])
+      definition.columns.map((column) => {
+        const raw = row[column];
+        if (column === 'latitude' || column === 'longitude') {
+          const value =
+            (typeof raw === 'number' || typeof raw === 'string') &&
+            String(raw).trim() !== ''
+              ? Number(raw)
+              : NaN;
+          return [
+            column,
+            Number.isFinite(value) &&
+            Math.abs(value) <= (column === 'latitude' ? 90 : 180)
+              ? value
+              : null,
+          ];
+        }
+        return [column, raw ?? null];
+      })
     )
   );
   return {

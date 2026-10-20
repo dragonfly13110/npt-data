@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "fetchedAt": "2026-10-20T07:52:23.773Z",
+  "fetchedAt": "2026-10-20T13:18:26.934Z",
   "tables": [
     {
       "table": "farmer_registry",
@@ -175,42 +175,42 @@
       "title": "กลุ่มส่งเสริมอาชีพ",
       "status": "ready",
       "count": 445,
-      "fetchedAt": "2026-10-20T07:52:23.773Z",
+      "fetchedAt": "2026-10-20T13:18:26.514Z",
       "dataAsOf": "2026-05-13T15:09:20.885338+00:00",
       "dataAsOfLabel": "2026-05-13",
       "updateFrequency": "รายปี",
       "freshnessStatus": "รอบล่าสุด (รายปี)",
       "scope": "กลุ่มส่งเสริมอาชีพการเกษตร กรมส่งเสริมการเกษตร",
-      "bytes": 254450,
-      "sha256": "af30ef9214d60c051b399e5087f6ba82f1c8da63156689ec75b490a2ac17404a"
+      "bytes": 273227,
+      "sha256": "b460b588a8ef5076132d08088dd4ec8e40f8e4e24bfd2bf2a8a84e8954e3249a"
     },
     {
       "table": "housewife_farmer_groups",
       "title": "กลุ่มแม่บ้านเกษตรกร",
       "status": "ready",
       "count": 254,
-      "fetchedAt": "2026-10-20T07:52:23.773Z",
+      "fetchedAt": "2026-10-20T13:18:26.693Z",
       "dataAsOf": "2026-05-12T17:45:33.181753+00:00",
       "dataAsOfLabel": "2026-05-12",
       "updateFrequency": "รายปี",
       "freshnessStatus": "รอบล่าสุด (รายปี)",
       "scope": "กลุ่มแม่บ้านเกษตรกร กรมส่งเสริมการเกษตร",
-      "bytes": 129663,
-      "sha256": "dc1dfbb9a5936f423484a022da1d8c404d5d63c4e0b315ee6b16266441aaf364"
+      "bytes": 142428,
+      "sha256": "38e7b337dabe0dd9971fab6cbbeabcb043879796878be46c2218616b6ad0abd8"
     },
     {
       "table": "young_farmer_groups_detailed",
       "title": "กลุ่มยุวเกษตรกร",
       "status": "ready",
       "count": 341,
-      "fetchedAt": "2026-10-20T07:52:23.773Z",
+      "fetchedAt": "2026-10-20T13:18:26.934Z",
       "dataAsOf": "2026-07-17T06:24:17.310751+00:00",
       "dataAsOfLabel": "2026-07-17",
       "updateFrequency": "รายปี",
       "freshnessStatus": "รอบล่าสุด (รายปี)",
       "scope": "กลุ่มยุวเกษตรกร กรมส่งเสริมการเกษตร",
-      "bytes": 169026,
-      "sha256": "ff77856e11be6139e277a4eee456057ebc60e6bb85f63b2198cc06471998e139"
+      "bytes": 184024,
+      "sha256": "00d533fecbfd324685f1f64d2787de75998b8bfa6d89c075e4d70b7f97b0eca4"
     },
     {
       "table": "farmer_institutes",
@@ -231,42 +231,42 @@
       "title": "ศูนย์เรียนรู้การเพิ่มประสิทธิภาพการผลิตสินค้าเกษตร",
       "status": "ready",
       "count": 7,
-      "fetchedAt": "2026-10-20T07:52:23.773Z",
+      "fetchedAt": "2026-10-20T13:18:25.694Z",
       "dataAsOf": "2026-03-18T10:34:54.603307+00:00",
       "dataAsOfLabel": "2026-03-18",
       "updateFrequency": "รายปี",
       "freshnessStatus": "รอบล่าสุด (รายปี)",
       "scope": "ศูนย์เรียนรู้การเพิ่มประสิทธิภาพการผลิตสินค้าเกษตร (ศพก.) 7 อำเภอ",
-      "bytes": 3765,
-      "sha256": "57523137e62e3a2c5962f3ea99016144b8866b35fe1de079d1a4f20eca93dd30"
+      "bytes": 4100,
+      "sha256": "3d12ea24d65647b31bb4c305e352ac9be71a25b78b2f97f796db3a24b508ffa6"
     },
     {
       "table": "pest_centers",
       "title": "ศูนย์จัดการศัตรูพืชชุมชน",
       "status": "ready",
       "count": 46,
-      "fetchedAt": "2026-10-20T07:52:23.773Z",
+      "fetchedAt": "2026-10-20T13:18:25.870Z",
       "dataAsOf": "2026-07-21T07:40:24.513+00:00",
       "dataAsOfLabel": "2026-07-21",
       "updateFrequency": "รายปี",
       "freshnessStatus": "รอบล่าสุด (รายปี)",
       "scope": "ศูนย์จัดการศัตรูพืชชุมชน (ศจช.) จังหวัดนครปฐม",
-      "bytes": 18828,
-      "sha256": "92885e05c68e87c4177d97d51d715e3399d4b7fd77a7b0be4a8658fbc7f51db5"
+      "bytes": 20965,
+      "sha256": "ce3cf96e7b9d5af9af6aa49c097c53cd892ac5967910a697d9d88e0f18f4c1c8"
     },
     {
       "table": "soil_fertilizer_centers",
       "title": "ศูนย์จัดการดินปุ๋ยชุมชน",
       "status": "ready",
       "count": 20,
-      "fetchedAt": "2026-10-20T07:52:23.773Z",
+      "fetchedAt": "2026-10-20T13:18:26.025Z",
       "dataAsOf": "2026-03-18T08:24:46.362794+00:00",
       "dataAsOfLabel": "2026-03-18",
       "updateFrequency": "รายปี",
       "freshnessStatus": "รอบล่าสุด (รายปี)",
       "scope": "ศูนย์จัดการดินปุ๋ยชุมชน (ศดปช.) จังหวัดนครปฐม",
-      "bytes": 7026,
-      "sha256": "c878118f84ed9279ee8c152847f32e1bc6d71f2ae2ac3b39724b3350d92564e0"
+      "bytes": 7928,
+      "sha256": "665b2e9fe86d7358fa09e0626327587fac795fdf56cd2f69b5f41a73e71f88b3"
     },
     {
       "table": "plant_doctors",
@@ -287,14 +287,14 @@
       "title": "แหล่งท่องเที่ยวเกษตร",
       "status": "ready",
       "count": 23,
-      "fetchedAt": "2026-10-20T07:52:23.773Z",
+      "fetchedAt": "2026-10-20T13:18:26.187Z",
       "dataAsOf": "2026-07-16T05:15:55.482093+00:00",
       "dataAsOfLabel": "2026-07-16",
       "updateFrequency": "รายปี",
       "freshnessStatus": "รอบล่าสุด (รายปี)",
       "scope": "แหล่งท่องเที่ยวเชิงเกษตร จังหวัดนครปฐม",
-      "bytes": 7878,
-      "sha256": "eade9d00bc1c45e40f63063c769770053f272916ea448e699f663c7e54d3b34b"
+      "bytes": 8731,
+      "sha256": "a46ae5c88a0dca19e22044749fbcc77514c2b08877741988f42173556eb04b8c"
     },
     {
       "table": "crop_production",

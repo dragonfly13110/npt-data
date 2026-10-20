@@ -462,7 +462,7 @@ in
   return `let
     Raw = Json.Document(Web.Contents("https://dragonfly13110.github.io", [RelativePath = "npt-data/data/bi/${name}.json"])),
     Checked = if Raw[schemaVersion] <> 1 or Raw[table] <> "${name}" or not List.Contains({"ready", "empty"}, Raw[status]) then error "Invalid BI snapshot" else Raw[data],
-    Rows = Table.FromRecords(Checked, {${definition.columns.map((column) => JSON.stringify(column)).join(', ')}}, MissingField.UseNull),
+    Rows = ${definition.columns.includes('latitude') ? 'if not List.AllTrue(List.Transform(Checked, each Record.HasFields(_, {"latitude", "longitude"}))) then error "Published snapshot is missing coordinate columns; update the public exporter" else ' : ''}Table.FromRecords(Checked, {${definition.columns.map((column) => JSON.stringify(column)).join(', ')}}, MissingField.UseNull),
     Typed = if Table.RowCount(Rows) <> Raw[count] then error "Incomplete BI snapshot" else Table.TransformColumnTypes(Rows, {${types.join(', ')}}, "en-US")
 in
     Typed

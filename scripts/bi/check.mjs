@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { collectPagesSnapshot } from './pages.mjs';
+import { PUBLIC_POWERBI_DATASETS, readPowerbiPage } from './datasets.mjs';
 import { flattenDiseaseForecasts, flattenWaterSituation, flattenRainForecast, flattenWaterAdvice } from './public-situation.mjs';
 
 const result = { data: [{ id: 'one', phone: 'private' }], count: 1, error: null };
@@ -17,4 +18,11 @@ assert.equal(water[0].freshness, 'ข้อมูลเก่า');
 assert.equal(flattenRainForecast({ forecast: [{ provinceCode: '73', variable: 'ForecastRain', value: null }] })[0].rain_mm, null);
 assert.throws(() => flattenWaterAdvice(undefined));
 assert.deepEqual(flattenWaterAdvice(null), []);
+result.data = [{ id: 1, latitude: '13.8', longitude: '100.1', custom_fields: { phone: 'private' } }];
+const venues = await readPowerbiPage(client, { definition: PUBLIC_POWERBI_DATASETS.learning_centers, offset: 0, limit: 1000 });
+assert.equal(venues.data[0].latitude, 13.8);
+assert.equal(venues.data[0].longitude, 100.1);
+assert.equal(venues.data[0].custom_fields, undefined);
+assert.equal(PUBLIC_POWERBI_DATASETS.learning_centers.sourceFields.latitude, 'latitude:custom_fields->>latitude');
+assert.equal(PUBLIC_POWERBI_DATASETS.agricultural_career_groups.sourceFields.longitude, 'longitude:lon');
 console.log('Public BI privacy, failed-source, AI and missing-value checks passed');
