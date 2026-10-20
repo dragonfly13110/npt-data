@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    # 09:17 Asia/Bangkok; avoid the busy start of the hour.
-    - cron: '17 2 * * *'
+    # 09:17, 12:17 and 17:17 Asia/Bangkok; later runs can upgrade a fallback edition.
+    - cron: '17 2,5,10 * * *'
   workflow_dispatch:
 
 permissions:
@@ -39,18 +39,28 @@ jobs:
         run: node scripts/bi/check.mjs
         working-directory: site
       - name: Export complete batch
+        id: export_snapshot
         if: github.event_name != 'push'
+        continue-on-error: true
         env:
           SUPABASE_URL: ${{ secrets.BI_SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.BI_SUPABASE_ANON_KEY }}
         run: node scripts/bi/pages.mjs --no-queries
         working-directory: site
+      - name: Use retained source batch when collection fails
+        if: github.event_name != 'push' && steps.export_snapshot.outcome == 'failure'
+        working-directory: site
+        run: |
+          mkdir -p output/bi-pages
+          cp data/bi/*.json output/bi-pages/
+          echo '::warning::Source collection failed. Daily briefing will disclose the retained source dates.'
       - uses: actions/setup-python@v5
         if: github.event_name != 'push'
         with:
           python-version: '3.12'
       - name: Install pinned PDF reader
         if: github.event_name != 'push'
+        continue-on-error: true
         run: python -m pip install --disable-pip-version-check -r scripts/bi/requirements.txt
         working-directory: site
       - name: Read official prices and reported outbreaks
@@ -65,14 +75,10 @@ jobs:
       - name: Summarize public data in plain Thai
         id: briefing
         if: github.event_name != 'push'
-        continue-on-error: true
         env:
           BI_GEMINI_API_KEYS: ${{ secrets.BI_GEMINI_API_KEYS }}
-        run: node scripts/bi/daily-briefing.mjs --input output/bi-pages --output data/bi/daily-briefing
+        run: node scripts/bi/daily-briefing.mjs --input output/bi-pages --fallback-input data/bi --output data/bi/daily-briefing
         working-directory: site
-      - name: Report retained AI summary
-        if: github.event_name != 'push' && steps.briefing.outcome == 'failure'
-        run: echo '::warning::Daily AI summary failed. Previous published summary and its original date are retained.'
       - name: Save only BI JSON files
         if: github.event_name != 'push'
         shell: bash
