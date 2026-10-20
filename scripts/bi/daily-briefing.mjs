@@ -268,6 +268,9 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
     tables.public_disease_reports.filter((r) => r.report_status === "complete"),
     "forecast_date"
   );
+  const currentDiseaseWatch = tables.public_disease_watch.filter(
+    (r) => r.forecast_date === forecastDate
+  );
   const observedWeather = tables.public_weather.filter((r) => r.date <= day).sort((a, b) => a.date.localeCompare(b.date)).slice(-7);
   const recentHotspots = tables.public_hotspots.filter(
     (r) => r.acq_date >= cutoff.toISOString().slice(0, 10) && r.acq_date <= day
@@ -288,6 +291,7 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
       tables: ["public_water"],
       facts: {
         reportingStations: currentWater.length,
+        byStatus: countBy(currentWater, "status_label"),
         stations: currentWater.map(
           (r) => pick(r, [
             "station_name",
@@ -325,7 +329,9 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
       date: forecastDate,
       tables: ["public_disease_reports", "public_disease_watch"],
       facts: {
-        reports: tables.public_disease_watch.filter((r) => r.forecast_date === forecastDate).map(
+        reportCount: currentDiseaseWatch.length,
+        byRisk: countBy(currentDiseaseWatch, "risk_level"),
+        reports: currentDiseaseWatch.map(
           (r) => pick(r, [
             "crop",
             "disease_name",
@@ -629,6 +635,14 @@ function failureReason(error) {
     return error.message.split("\n")[0].slice(0, 180);
   return error?.code === "NO_HEALTHY_KEY" ? "No healthy API key available" : error?.name || "Error";
 }
+var topicInputHash = (input, topic) => hash(
+  JSON.stringify({
+    version: VERSION,
+    date: input.date,
+    topic,
+    evidence: topic === topics[0] ? input.evidence : input.evidence.filter((e) => e.topic === topic)
+  })
+);
 async function summarizeByTopic(input, env, fetcher, previous) {
   const workers = Math.min(3, briefingKeys(env).length);
   const pools = Array.from(
@@ -644,14 +658,21 @@ async function summarizeByTopic(input, env, fetcher, previous) {
   );
   const runTopic = async (index, pool, completedSections) => {
     const topic = topics[index];
-    const cached = previous?.data?.find(
+    const inputHash = topicInputHash(input, topic);
+    const cached = previous && topicInputHash(previous, topic) === inputHash && previous.data?.find(
       (row) => row.topic === topic && row.model === BRIEFING_MODEL
     );
     if (cached && index > 0) {
       try {
         validateBriefing({ sections: [cached] }, input, [topic]);
         sections[index] = cached;
-        results[index] = { topic, method: "ai", attempts: 0, cached: true };
+        results[index] = {
+          topic,
+          method: "ai",
+          attempts: 0,
+          cached: true,
+          inputHash
+        };
         return;
       } catch {
       }
@@ -667,7 +688,7 @@ async function summarizeByTopic(input, env, fetcher, previous) {
           completedSections
         );
         sections[index] = { ...result.section, model: BRIEFING_MODEL };
-        results[index] = { topic, method: "ai", attempts: attempt };
+        results[index] = { topic, method: "ai", attempts: attempt, inputHash };
         if (result.usage) usage.push(result.usage);
         console.log(
           `Briefing topic ${topic}: AI accepted on attempt ${attempt}.`
@@ -679,7 +700,13 @@ async function summarizeByTopic(input, env, fetcher, previous) {
       }
     }
     sections[index] = { ...sections[index], model: fallback.model };
-    results[index] = { topic, method: fallback.model, attempts: 2, reason };
+    results[index] = {
+      topic,
+      method: fallback.model,
+      attempts: 2,
+      reason,
+      inputHash
+    };
   };
   let next = 1;
   await Promise.all(
@@ -840,7 +867,7 @@ async function generateBriefing({
   let previous;
   if (fs.existsSync(latestFile)) {
     const old = read(latestFile);
-    if (old.inputHash === input.inputHash && old.promptVersion === VERSION)
+    if (old.date === input.date && old.promptVersion === VERSION)
       previous = old;
     if (old.inputHash === input.inputHash && old.model === BRIEFING_MODEL && old.promptVersion === VERSION)
       return { status: "unchanged", date: input.date };
@@ -912,6 +939,16 @@ async function generateBriefing({
 function check(inputDir) {
   const input = loadBriefingInput(inputDir);
   assert.equal(sourceBriefing(input).sections.length, 8);
+  const water = input.evidence.find((e) => e.id === "water").facts;
+  assert.equal(
+    Object.values(water.byStatus).reduce((a, b) => a + b, 0),
+    water.reportingStations
+  );
+  const disease = input.evidence.find((e) => e.id === "disease").facts;
+  assert.equal(
+    Object.values(disease.byRisk).reduce((a, b) => a + b, 0),
+    disease.reportCount
+  );
   assert(
     input.evidence.find((e) => e.id === "weather").facts.rain.every(
       (r) => r.rain_mm == null || r.rain_mm === Number(r.rain_mm.toFixed(2))
