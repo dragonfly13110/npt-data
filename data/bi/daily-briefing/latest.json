@@ -2,124 +2,139 @@
   "schemaVersion": 1,
   "table": "public_daily_briefing",
   "status": "ready",
-  "fetchedAt": "2026-10-20T07:48:15.176Z",
+  "fetchedAt": "2026-10-20T07:53:15.107Z",
   "date": "2026-10-20",
-  "model": "mixed-ai-source",
-  "generationMethod": "mixed-ai-source",
+  "model": "gemini-3.5-flash-lite",
+  "generationMethod": "ai",
   "sectionResults": [
     {
       "topic": "ภาพรวม",
       "method": "ai",
-      "attempts": 1
+      "attempts": 1,
+      "inputHash": "518fee521aa2b072f3d532bc8865c7b2a33bd1e2ac0d73cdb643a928a2515a5f"
     },
     {
       "topic": "น้ำ",
-      "method": "source-summary",
-      "attempts": 2,
-      "reason": "Unsupported AI number in น้ำ/summary: 5"
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "ab187fea6bfbd2e4e3ef96aa4092085e90de1b8d88e7f11e74b89818908ecd12"
     },
     {
       "topic": "อากาศและฝน",
       "method": "ai",
-      "attempts": 1
+      "attempts": 0,
+      "cached": true,
+      "inputHash": "42bb331dfa0138d63accd1350e927e928241e72f86fe9c1bd6a47ef20a55f303"
     },
     {
       "topic": "โรคและแมลง",
-      "method": "source-summary",
-      "attempts": 2,
-      "reason": "Unsupported AI number in โรคและแมลง/summary: 3"
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "f93a56d1c7c1fe225ab1cdb0f7ba27dc4b7abeac415ec9d8bce62d42c8ea783a"
     },
     {
       "topic": "จุดความร้อน",
       "method": "ai",
-      "attempts": 1
+      "attempts": 0,
+      "cached": true,
+      "inputHash": "7d4192db6d53c3f4ad9b706588eba34802fe1d318389688201c17e0dffbcef93"
     },
     {
       "topic": "ทะเบียนเกษตรกร",
       "method": "ai",
-      "attempts": 1
+      "attempts": 0,
+      "cached": true,
+      "inputHash": "2f297c5272f4c3cc86b4ce746c08065c8d53d3914e027ae9026179108fc7d6c6"
     },
     {
       "topic": "การวาดแปลง",
       "method": "ai",
-      "attempts": 1
+      "attempts": 0,
+      "cached": true,
+      "inputHash": "1485aa7f2089d8de30debdc712eba0de76a966271266a55e7c1de0440f096065"
     },
     {
       "topic": "มาตรฐานสินค้า",
       "method": "ai",
-      "attempts": 1
+      "attempts": 0,
+      "cached": true,
+      "inputHash": "d33af220f70acb01ce02a862c2bab77b0139684b2837e3925df64e17afadaff9"
     }
   ],
   "backfilled": false,
   "promptVersion": "bi-daily-v10",
-  "inputHash": "95fb9b3167f5dba7d65c3ef11ad5b828c8141141e92d0ddf7c7a2b5f731e1a02",
-  "sourceSnapshotFetchedAt": "2026-10-20T07:47:30.770Z",
+  "inputHash": "dbdef068a40ac0d0333cad39a20e5a7395c956479a3953c547dd80af3b145f0f",
+  "sourceSnapshotFetchedAt": "2026-10-20T07:52:23.773Z",
   "sources": [
     {
       "table": "public_water",
       "count": 11,
-      "sha256": "987d3bf5152f31bd7e9ce03163c63fd97f33e78171bd673be28baded98e5fa23",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "7930ce67dc54b4db892abb84eddb3cf2d75dabc8568dca4055f5eeb03e082eb7",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     },
     {
       "table": "public_weather",
       "count": 91,
-      "sha256": "adc5876f8a5833e939675cd89f3555b367db6091db327efa722798274cd12c3c",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "20646e37d9b03fc766eff5103c6205c333b6c3d2c8dad85d22621e0eb6e166df",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     },
     {
       "table": "public_rain_forecast",
       "count": 49,
-      "sha256": "3843ea752a0b838ac5afd8ee486763b07ca91bb71b83fc913990bc16f88c02a0",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "76fc7cea4b1350d4dd9440e9e73b4f3b51f77e22a7aff8fb7b3ab5992d77c084",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     },
     {
       "table": "public_disease_reports",
       "count": 144,
-      "sha256": "358f5448a5d0c0e6b686803c2315071d710a807e236b8b385e8ec48e724e8576",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "d1aff94e5dc614fdcd03db34c9013672f7c5edb862ac02454c1842505b5b2d30",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     },
     {
       "table": "public_disease_watch",
       "count": 740,
-      "sha256": "a466707202c916736b30fbc331f6107f29eceb8c4dd96a6b203ac2cc55736f0a",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "b9dee828bac9c92035ca3c84bef8c53df508c8c5f6f3e085e0a76022b5f9ab09",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     },
     {
       "table": "public_hotspots",
       "count": 1134,
-      "sha256": "388ad81913e189b2bbdb4571a47332e6126d128bc90b6546fabd4fb593a061a9",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "4a95cfca6f47d14a7f2a52f1ec081e461badc6c425fecc211c2af2cd9fc00317",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     },
     {
       "table": "farmer_registry",
       "count": 16,
-      "sha256": "3e1f5ce80f40cbe4b7c33528e460e6cffbbd0aff9b89fe611d687d0fdda85f92",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "68ddde1545e51756ea9401aabce340000f77c65f5e5d3ae5675debabee7f0fc5",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     },
     {
       "table": "geoplots_parcel_progress",
       "count": 7,
-      "sha256": "a81ad64b7f1387ed6089e91dd56391b7349bf402074faa7d0196f91c5af32105",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "62593784e70c9287aff7d7b1804923eab27651960c800c6a77ad4ebd5e6d37ab",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     },
     {
       "table": "certifications",
       "count": 5640,
-      "sha256": "d0f87931f8753170730fa6a128004d9d6cf209f0d6d8fafd939ffc86d3d5f904",
-      "fetchedAt": "2026-10-20T07:47:30.770Z"
+      "sha256": "58d028dde416dc49c202cbe4675c37ea510ce8215787aab6bcbd289db611a746",
+      "fetchedAt": "2026-10-20T07:52:23.773Z"
     }
   ],
   "evidence": [
     {
       "id": "water",
       "topic": "น้ำ",
-      "date": "2026-10-20T07:40:00.000Z",
+      "date": "2026-10-20T07:45:00.000Z",
       "tables": [
         "public_water"
       ],
       "facts": {
         "reportingStations": 8,
+        "byStatus": {
+          "สูงกว่าตลิ่ง": 5,
+          "ไม่สูงกว่าตลิ่ง": 3
+        },
         "stations": [
           {
             "station_name": "วัดบางไผ่นารถ",
@@ -134,7 +149,7 @@
           {
             "station_name": "บางเลน",
             "district": "บางเลน",
-            "observed_at": "2026-10-20T07:30:00.000Z",
+            "observed_at": "2026-10-20T07:40:00.000Z",
             "water_level": 2.92,
             "unit": "m(MSL)",
             "status_label": "สูงกว่าตลิ่ง",
@@ -154,8 +169,8 @@
           {
             "station_name": "สะพานนครชัยศรี",
             "district": "นครชัยศรี",
-            "observed_at": "2026-10-20T07:30:00.000Z",
-            "water_level": 2.04,
+            "observed_at": "2026-10-20T07:40:00.000Z",
+            "water_level": 2.05,
             "unit": "m(MSL)",
             "status_label": "สูงกว่าตลิ่ง",
             "quality_flag": null,
@@ -174,7 +189,7 @@
           {
             "station_name": "ศาลาดิน",
             "district": "พุทธมณฑล",
-            "observed_at": "2026-10-20T07:30:00.000Z",
+            "observed_at": "2026-10-20T07:40:00.000Z",
             "water_level": 0.81,
             "unit": "m(MSL)",
             "status_label": "ไม่สูงกว่าตลิ่ง",
@@ -184,7 +199,7 @@
           {
             "station_name": "คลองนราภิรมย์ (บางเลน)",
             "district": "บางเลน",
-            "observed_at": "2026-10-20T07:30:00.000Z",
+            "observed_at": "2026-10-20T07:40:00.000Z",
             "water_level": 1.98,
             "unit": "m(MSL)",
             "status_label": "ไม่สูงกว่าตลิ่ง",
@@ -194,7 +209,7 @@
           {
             "station_name": "ปตร.คลองทวีวัฒนา",
             "district": "พุทธมณฑล",
-            "observed_at": "2026-10-20T07:40:00.000Z",
+            "observed_at": "2026-10-20T07:45:00.000Z",
             "water_level": 0.62,
             "unit": "m(MSL)",
             "status_label": "ไม่สูงกว่าตลิ่ง",
@@ -637,6 +652,11 @@
         "public_disease_watch"
       ],
       "facts": {
+        "reportCount": 5,
+        "byRisk": {
+          "ปานกลาง": 2,
+          "สูง": 3
+        },
         "reports": [
           {
             "crop": "ข้าว",
@@ -822,73 +842,37 @@
   ],
   "usage": [
     {
-      "promptTokenCount": 4878,
-      "candidatesTokenCount": 355,
-      "totalTokenCount": 5233,
+      "promptTokenCount": 2374,
+      "candidatesTokenCount": 214,
+      "totalTokenCount": 2588,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 4878
+          "tokenCount": 2374
         }
       ],
       "serviceTier": "standard"
     },
     {
-      "promptTokenCount": 669,
-      "candidatesTokenCount": 222,
-      "totalTokenCount": 891,
+      "promptTokenCount": 1406,
+      "candidatesTokenCount": 492,
+      "totalTokenCount": 1898,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 669
+          "tokenCount": 1406
         }
       ],
       "serviceTier": "standard"
     },
     {
-      "promptTokenCount": 692,
-      "candidatesTokenCount": 174,
-      "totalTokenCount": 866,
+      "promptTokenCount": 9885,
+      "candidatesTokenCount": 354,
+      "totalTokenCount": 10239,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 692
-        }
-      ],
-      "serviceTier": "standard"
-    },
-    {
-      "promptTokenCount": 704,
-      "candidatesTokenCount": 184,
-      "totalTokenCount": 888,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 704
-        }
-      ],
-      "serviceTier": "standard"
-    },
-    {
-      "promptTokenCount": 1084,
-      "candidatesTokenCount": 295,
-      "totalTokenCount": 1379,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 1084
-        }
-      ],
-      "serviceTier": "standard"
-    },
-    {
-      "promptTokenCount": 9448,
-      "candidatesTokenCount": 419,
-      "totalTokenCount": 9867,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 9448
+          "tokenCount": 9885
         }
       ],
       "serviceTier": "standard"
@@ -900,10 +884,10 @@
       "briefing_date": "2026-10-20",
       "topic_order": 0,
       "topic": "ภาพรวม",
-      "summary": "วันที่ 2026-10-20 มีสถานีน้ำรายงาน 8 สถานี เช่น วัดบางไผ่นารถ อำเภอบางเลน ระดับน้ำ 2.67 m(MSL) สูงกว่าตลิ่ง ทะเบียนเกษตรกรปี 2570 ณ วันที่ 2026-10-19 จังหวัดนครปฐมมีครัวเรือนเป้าหมาย 32500 ครัวเรือน มีครัวเรือนทั้งหมด 35851 ครัวเรือน และปรับปรุงแล้ว 830 ครัวเรือน มาตรฐานสินค้าวันที่ 2026-10-20 มี 5640 รายการ หมดอายุ 38 รายการ ใกล้หมดอายุ 11 รายการ และวันหมดอายุใช้งานไม่ได้ 3668 รายการ จุดความร้อนสะสม 5 จุด ระหว่างวันที่ 2026-09-21 ถึง 2026-10-20 พบในบางเลน 3 จุด กำแพงแสน 1 จุด และเมืองนครปฐม 1 จุด การวาดแปลงปี 2570 รอบที่ 1 ณ วันที่ 2026-10-20 บางเลนวาดแล้ว 1 แปลงจากเป้าหมาย 910 แปลง ส่วนอำเภออื่นยังไม่มีการวาดแปลง และมีสถานีน้ำเก่าหรือไม่มีเวลา 3 สถานี",
-      "next_steps": "ควรติดตามสถานะระดับน้ำในพื้นที่อำเภอบางเลนและนครชัยศรีที่มีรายงานสูงกว่าตลิ่ง ตรวจสอบความถูกต้องของวันหมดอายุในชุดข้อมูลมาตรฐานสินค้าที่มีรายการวันหมดอายุหายไป และติดตามความก้าวหน้าการวาดแปลงในอำเภอที่ยังมีความคืบหน้าร้อยละ 0",
+      "summary": "สถานการณ์น้ำวันที่ 2026-10-20 มีสถานีรายงาน 8 สถานี พบระดับน้ำสูงกว่าตลิ่ง 5 สถานี เช่น วัดบางไผ่นารถและบางเลน อำเภอบางเลน ที่ว่าการและสะพานนครชัยศรี อำเภอนครชัยศรี และร.ร.บ้านสามพราน อำเภอสามพราน ด้านโรคพืชพบ 5 รายการเสี่ยงสูงและปานกลาง เช่น โรคไหม้ข้าว โรคเน่าดำกล้วยไม้ และโรคเน่าเละพืชผัก ทะเบียนเกษตรกรปี 2570 ณ วันที่ 2026-10-19 มีครัวเรือนเป้าหมาย 32500 ครัวเรือน และการวาดแปลงบางเลนวาดแล้ว 1 แปลงจากเป้าหมาย 910 แปลง ณ วันที่ 2026-10-20",
+      "next_steps": "ควรตรวจสอบพื้นที่ลุ่มต่ำใกล้สถานีน้ำที่สูงกว่าตลิ่งและแปลงปลูกพืชที่พบความเสี่ยงโรคพืช พร้อมติดตามความก้าวหน้าการวาดแปลงในอำเภอที่ยังมีความคืบหน้าร้อยละ 0",
       "limitations": "ข้อมูลแต่ละหัวข้อมีวันอ้างอิงต่างกัน ผล AI ใช้ประกอบการตรวจสอบและระบุความครบถ้วนของข้อมูล",
-      "source_dates": "น้ำ: 2026-10-20T07:40:00.000Z • อากาศและฝน: 2026-10-20 • โรคและแมลง: 2026-10-20 • จุดความร้อน: 2026-10-04 • ทะเบียนเกษตรกร: 2026-10-19 • การวาดแปลง (วันที่ดึงจาก GEOPLOTS): 2026-10-20 • มาตรฐานสินค้า (วันอ้างอิงคำนวณหมดอายุ): 2026-10-20",
+      "source_dates": "น้ำ: 2026-10-20T07:45:00.000Z • อากาศและฝน: 2026-10-20 • โรคและแมลง: 2026-10-20 • จุดความร้อน: 2026-10-04 • ทะเบียนเกษตรกร: 2026-10-19 • การวาดแปลง (วันที่ดึงจาก GEOPLOTS): 2026-10-20 • มาตรฐานสินค้า (วันอ้างอิงคำนวณหมดอายุ): 2026-10-20",
       "evidence_ids": [
         "water",
         "weather",
@@ -914,23 +898,23 @@
         "certifications"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
-      "generated_at": "2026-10-20T07:48:15.176Z",
-      "model": "mixed-ai-source"
+      "generated_at": "2026-10-20T07:53:15.107Z",
+      "model": "gemini-3.5-flash-lite"
     },
     {
       "briefing_date": "2026-10-20",
       "topic_order": 1,
       "topic": "น้ำ",
-      "summary": "มีสถานีน้ำที่รายงานภายในช่วงตรวจสอบ 8 สถานี เช่น วัดบางไผ่นารถ อำเภอบางเลน ระดับน้ำ 2.67 m(MSL) สถานะตามต้นทาง: สูงกว่าตลิ่ง สถานีที่ข้อมูลเก่าหรือไม่มีเวลา 3 สถานี",
-      "next_steps": "ตรวจเวลาวัดและหน่วยของสถานีใกล้พื้นที่ เก็บสถานีที่ข้อมูลเก่าไว้ติดตามแยกจากค่าปัจจุบัน",
-      "limitations": "ฉบับสำรองจากข้อมูลต้นทาง • ใช้เฉพาะค่าที่มีเวลาตรวจวัดใน 48 ชั่วโมง สถานีเก่าหรือไม่มีเวลาไม่นับเป็นสถานการณ์ปัจจุบัน",
-      "source_dates": "น้ำ: 2026-10-20T07:40:00.000Z",
+      "summary": "ข้อมูลจาก ThaiWater สสน. และสำนักการระบายน้ำ ณ วันที่ 2026-10-20 มีสถานีรายงานรวม 8 สถานี พบสถานีที่มีระดับน้ำสูงกว่าตลิ่ง 5 สถานี ได้แก่ วัดบางไผ่นารถ อำเภอบางเลน วัดระดับน้ำ 2.67 เมตร เมื่อ 2026-10-20T06:00:00.000Z บางเลน อำเภอบางเลน วัดระดับน้ำ 2.92 เมตร เมื่อ 2026-10-20T07:40:00.000Z ที่ว่าการอ.นครชัยศรี อำเภอนครชัยศรี วัดระดับน้ำ 2.22 เมตร เมื่อ 2026-10-20T06:00:00.000Z สะพานนครชัยศรี อำเภอนครชัยศรี วัดระดับน้ำ 2.05 เมตร เมื่อ 2026-10-20T07:40:00.000Z และร.ร.บ้านสามพราน อำเภอสามพราน วัดระดับน้ำ 1.59 เมตร เมื่อ 2026-10-20T06:00:00.000Z และพบสถานีที่ไม่สูงกว่าตลิ่ง 3 สถานี ได้แก่ ศาลาดิน อำเภอพุทธมณฑล วัดระดับน้ำ 0.81 เมตร คลองนราภิรมย์ อำเภอบางเลน วัดระดับน้ำ 1.98 เมตร และปตร.คลองทวีวัฒนา อำเภอพุทธมณฑล วัดระดับน้ำ 0.62 เมตร ข้อมูลชุดนี้มีสถานีเก่าหรือไม่มีเวลา 3 สถานี หลักฐานยังไม่ได้ระบุรายละเอียดผลกระทบในพื้นที่เกษตร",
+      "next_steps": "ควรตรวจสอบสถานการณ์น้ำในพื้นที่อำเภอบางเลน อำเภอนครชัยศรี และอำเภอสามพราน เนื่องจากมีสถานีที่ระดับน้ำสูงกว่าตลิ่ง เพื่อดูผลกระทบต่อพื้นที่เกษตร และควรตรวจสอบสถานีที่เก่าหรือไม่มีเวลาในชุดข้อมูลเพื่อความครบถ้วน",
+      "limitations": "ใช้เฉพาะค่าที่มีเวลาตรวจวัดใน 48 ชั่วโมง สถานีเก่าหรือไม่มีเวลาไม่นับเป็นสถานการณ์ปัจจุบัน",
+      "source_dates": "น้ำ: 2026-10-20T07:45:00.000Z",
       "evidence_ids": [
         "water"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
-      "generated_at": "2026-10-20T07:48:15.176Z",
-      "model": "source-summary"
+      "generated_at": "2026-10-20T07:53:15.107Z",
+      "model": "gemini-3.5-flash-lite"
     },
     {
       "briefing_date": "2026-10-20",
@@ -944,23 +928,23 @@
         "weather"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_weather.json",
-      "generated_at": "2026-10-20T07:48:15.176Z",
+      "generated_at": "2026-10-20T07:53:15.107Z",
       "model": "gemini-3.5-flash-lite"
     },
     {
       "briefing_date": "2026-10-20",
       "topic_order": 3,
       "topic": "โรคและแมลง",
-      "summary": "ผลเฝ้าระวังระดับจังหวัดรอบ 2026-10-20: ข้าว: โรคไหม้ข้าว ระดับเฝ้าระวังสูง และ กล้วยไม้: โรคเน่าดำ หรือ โรคเน่าเข้าไส้กล้วยไม้ ระดับเฝ้าระวังสูง เป็นผลประเมินของ AI ควรตรวจอาการจริงในแปลงประกอบ",
-      "next_steps": "สำรวจอาการของพืชในพื้นที่ที่ดูแล และตรวจคำแนะนำของเจ้าหน้าที่เมื่อพบอาการผิดปกติ",
-      "limitations": "ฉบับสำรองจากข้อมูลต้นทาง • ผล AI เฝ้าระวังระดับจังหวัด ยังไม่ยืนยันโรคระบาดหรือความเสี่ยงรายแปลง",
+      "summary": "รายงานโรคและแมลงรวม 5 รายการ ในวันที่ 2026-10-20 ระดับความเสี่ยงสูง 3 รายการ ได้แก่ โรคไหม้ข้าวในข้าว โรคเน่าดำกล้วยไม้ และโรคเน่าเละในพืชผัก ระดับความเสี่ยงปานกลาง 2 รายการ ได้แก่ โรคแคงเกอร์ในส้มโอและโรคแอนแทรคโนสฝรั่ง ผลเป็น AI เฝ้าระวังระดับจังหวัดและยังไม่ยืนยันโรคระบาด",
+      "next_steps": "ควรตรวจแปลงนา กล้วยไม้ แปลงผัก สวนส้มโอ และสวนฝรั่งตามความถี่ที่ระบุ เพื่อเฝ้าระวังความชื้นและอาการผิดปกติจากฝนตกชุก เนื่องจากเป็นผล AI เฝ้าระวังระดับจังหวัดและยังไม่ยืนยันการระบาด",
+      "limitations": "ผล AI เฝ้าระวังระดับจังหวัด ยังไม่ยืนยันโรคระบาดหรือความเสี่ยงรายแปลง",
       "source_dates": "โรคและแมลง: 2026-10-20",
       "evidence_ids": [
         "disease"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_disease_reports.json",
-      "generated_at": "2026-10-20T07:48:15.176Z",
-      "model": "source-summary"
+      "generated_at": "2026-10-20T07:53:15.107Z",
+      "model": "gemini-3.5-flash-lite"
     },
     {
       "briefing_date": "2026-10-20",
@@ -974,7 +958,7 @@
         "hotspots"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_hotspots.json",
-      "generated_at": "2026-10-20T07:48:15.176Z",
+      "generated_at": "2026-10-20T07:53:15.107Z",
       "model": "gemini-3.5-flash-lite"
     },
     {
@@ -989,7 +973,7 @@
         "registry"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/farmer_registry.json",
-      "generated_at": "2026-10-20T07:48:15.176Z",
+      "generated_at": "2026-10-20T07:53:15.107Z",
       "model": "gemini-3.5-flash-lite"
     },
     {
@@ -1004,7 +988,7 @@
         "parcels"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/geoplots_parcel_progress.json",
-      "generated_at": "2026-10-20T07:48:15.176Z",
+      "generated_at": "2026-10-20T07:53:15.107Z",
       "model": "gemini-3.5-flash-lite"
     },
     {
@@ -1019,7 +1003,7 @@
         "certifications"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/certifications.json",
-      "generated_at": "2026-10-20T07:48:15.176Z",
+      "generated_at": "2026-10-20T07:53:15.107Z",
       "model": "gemini-3.5-flash-lite"
     }
   ]
