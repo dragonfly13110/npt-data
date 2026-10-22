@@ -17,6 +17,70 @@ export const PRICE_SOURCES = [
   'ตลาดสี่มุมเมือง',
   'กรมการค้าภายใน',
 ];
+const nabcCrops = new Set([
+  'กุ้งขาว',
+  'ไก่',
+  'ข้าวเปลือกเจ้า',
+  'ข้าวหอมมะลิ',
+  'ข้าวโพดเลี้ยงสัตว์',
+  'ไข่ไก่',
+  'ยางพารา',
+  'ปาล์มน้ำมัน',
+  'มะนาว',
+  'มะพร้าว',
+  'มันฝรั่ง',
+  'สับปะรดโรงงาน',
+  'สุกร',
+  'มันสำปะหลัง',
+  'ทุเรียน',
+  'เงาะโรงเรียน',
+  'มังคุด',
+]);
+const ditProducts = new Set(Object.values(ALLOWED_PRODUCTS).flat());
+const preparedGoods =
+  /น้ำพริก|พริกแกง|ลูกชิ้น|ปูอัด|ปลาเส้น|ปลาร้า|กระเพาะปลา|ซอส|ผงชูรส|ผงปรุงรส|น้ำมันพืช|น้ำตาล|น้ำส้มสายชู|บะหมี่|วุ้นเส้น|ก๋วยเตี๋ยว|ก๋วยจั๊บ|เกี๊ยว|ขนมจีน|เต้าหู้|กะปิ|กะทิ|เยี่ยวม้า|(?<!กระ)ดอง|เค็ม|(?<!อ)ย่าง|นึ่ง|เผา(?!ะ)|พะโล้|แช่บ๊วย|กระป๋อง|ปลอม|พลาสติก|ดอกไม้จันทน์|^น้ำย่านาง/;
+const animalProduct =
+  /^(?:ปลา|กุ้ง|หมึก|ปลาหมึก|ปู|หอย|กบ|ไก่|เป็ด|สุกร|หมู|หัวหมู|เนื้อ|ไข่(?:ไก่|เป็ด|นกกระทา)|นก$|จิ้งหรีด|จิ้งโกร่ง|สะดิ้ง|ดักแด้)|(?:หมู|ไก่|เนื้อ|เป็ด)(?:\s|$)/;
+const cropInMixedMarket =
+  /^(?:ข้าวสาร|ข้าวเปลือก|ข้าวโพด|งา|ถั่ว|ดอกไม้จีน|หน่อไม้|เห็ด|กระเทียม|หอม|พริก|มันสำปะหลัง|เผือก|มันฝรั่ง|กระเจี๊ยบ|มะขาม|มะนาว)/;
+const freshFlower =
+  /^(?:กล้วยไม้|ดาวเรือง|ดอก|กุหลาบ|มะลิ|บัว|สร้อยทอง|เบญจมาศ|คัตเตอร์|มัม|เยอบีร่า|แกลดิโอลัส|ลิลลี่|คาร์เนชั่น|หน้าวัว|ซ่อนกลิ่น|ใบเตย|ใบตอง|บานไม่รู้โรย|สแตติส|สแตติซ)/;
+
+export function isAgriculturalProduct(row) {
+  // shortcut: mixed-market names use reviewed commodity patterns; review new categories before admitting them.
+  const name = String(row.product_name || '').trim(),
+    category = String(row.product_category || '').trim();
+  if (
+    !name ||
+    preparedGoods.test(name) ||
+    /ปี๊บ/.test(name) ||
+    (/ต้ม/.test(name) && !/^ชุดต้มยำ/.test(name))
+  )
+    return false;
+  switch (row.source_name || PRICE_SOURCES[0]) {
+    case 'สศก. / NABC':
+      return nabcCrops.has(category);
+    case 'กรมการค้าภายใน':
+      return ditProducts.has(row.source_product_id);
+    case 'ตลาดสี่มุมเมือง':
+      if (['ผัก', 'ผลไม้', 'พืชไร่'].includes(category)) return true;
+      if (category === 'ดอกไม้ สังฆภัณฑ์') return freshFlower.test(name);
+      return (
+        ['ของสด ของชำ', 'ของแห้ง ของดอง'].includes(category) &&
+        (animalProduct.test(name) || cropInMixedMarket.test(name))
+      );
+    case 'ตลาดไท':
+      if (
+        /ตลาด(?:ผักและสมุนไพร|ผลไม้|พืชไร่|ดอกไม้|ปลาและอาหารทะเล|โปรตีน|เนื้อสัตว์)/.test(
+          category
+        )
+      )
+        return true;
+      return animalProduct.test(name) || cropInMixedMarket.test(name);
+    default:
+      return false;
+  }
+}
 const day = (date) =>
   new Date(date).toLocaleDateString('en-CA', { timeZone: 'Asia/Bangkok' });
 const get = async (url, options = {}) => {
@@ -85,6 +149,19 @@ export function parseTalaadThai(html, now) {
     'Missing Talaad Thai public price section'
   );
   return items.flatMap((item) => {
+    const category =
+      item.categories
+        ?.map((c) => c.title?.th)
+        .filter(Boolean)
+        .join(' / ') || 'สินค้ายอดนิยม';
+    if (
+      !isAgriculturalProduct({
+        source_name: 'ตลาดไท',
+        product_category: category,
+        product_name: item.title?.th,
+      })
+    )
+      return [];
     const record = item.pricingData?.latestPriceDiffProductSnapShot?.data;
     if (!record?.current?.date || !item.unit || !item.title?.th) return [];
     return [record.prev, record.current]
@@ -92,11 +169,7 @@ export function parseTalaadThai(html, now) {
       .map((p) =>
         priceRow({
           data_date: p.date.slice(0, 10),
-          product_category:
-            item.categories
-              ?.map((c) => c.title?.th)
-              .filter(Boolean)
-              .join(' / ') || 'สินค้ายอดนิยม',
+          product_category: category,
           product_name: item.title.th,
           source_name: 'ตลาดไท',
           source_product_id: String(item.id),
@@ -125,7 +198,11 @@ export function parseSimummuang(items, now, rejected = []) {
         p.price?.action_date &&
         p.th?.name &&
         p.prod_unit_id?.th?.name &&
-        !/สังฆภัณฑ์/.test(p.prod_category_id?.th?.name || '')
+        isAgriculturalProduct({
+          source_name: 'ตลาดสี่มุมเมือง',
+          product_category: p.prod_category_id?.th?.name,
+          product_name: p.th.name,
+        })
     )
     .flatMap((p) =>
       [
@@ -290,7 +367,7 @@ export function mergePriceHistory(previous, fresh, now) {
   const cutoff = day(new Date(now.getTime() - 90 * 86400000)),
     latest = day(now),
     map = new Map();
-  const input = [...previous, ...fresh];
+  const input = [...previous, ...fresh].filter(isAgriculturalProduct);
   const sourceDates = new Map();
   for (const row of input) {
     const source = row.source_name || PRICE_SOURCES[0];
@@ -371,7 +448,9 @@ export async function collectMultiMarket(previous = {}, now = new Date()) {
     () => simummuang(now, rejected),
     () => dit(now),
   ];
-  const results = await Promise.allSettled(collectors.map((fn) => fn()));
+  const results = await Promise.allSettled(
+    collectors.map(async (fn) => (await fn()).filter(isAgriculturalProduct))
+  );
   const sources = results.map((r, i) => {
     const success = r.status === 'fulfilled' && r.value.length > 0;
     return {
@@ -411,6 +490,8 @@ export async function collectMultiMarket(previous = {}, now = new Date()) {
   return {
     schemaVersion: 1,
     table,
+    productScope:
+      'สินค้าเกษตร: พืช ปศุสัตว์ ประมง และผลผลิตแห้งขั้นต้น ไม่รวมอาหารสำเร็จรูปหรือของใช้',
     status: 'ready',
     count: data.length,
     fetchedAt: now.toISOString(),

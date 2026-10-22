@@ -5,9 +5,85 @@ import {
   mergePriceHistory,
   priceRow,
   boundPriceHistory,
+  isAgriculturalProduct,
 } from './market-sources.mjs';
 import { validateLandUse } from './government-open-data.mjs';
 const now = new Date('2026-10-22T05:00:00Z');
+for (const name of [
+  'หมึกกระดอง',
+  'เห็ดเผาะ',
+  'เห็ดเผาะฝ้าย',
+  'หัวหมูสด',
+  'กระเจี๊ยบเขียว',
+  'มะขามเปียกฝัก',
+  'กุ้งแห้งเนื้อ',
+  'ไข่ไก่ เบอร์1',
+  'ข้าวสาร',
+])
+  assert(
+    isAgriculturalProduct({
+      source_name: 'ตลาดสี่มุมเมือง',
+      product_category: 'ของสด ของชำ',
+      product_name: name,
+    }),
+    name
+  );
+for (const name of [
+  'ลูกชิ้นหมู',
+  'น้ำพริกแกงเผ็ด',
+  'ผักกาดดอง',
+  'หมึกกระดองดอง',
+  'หน่อไม้ปี๊บ',
+  'มะพร้าวเผา',
+  'ปลาทูนึ่ง',
+  'หัวหมูพะโล้',
+  'น้ำมันพืช',
+  'ซอสปรุงรส',
+  'บะหมี่กึ่งสำเร็จรูป',
+  'ขนมจีน',
+  'น้ำย่านาง',
+  'เก้าอี้',
+  'หลอดไฟ',
+  'เศษBB',
+])
+  assert(
+    !isAgriculturalProduct({
+      source_name: 'ตลาดสี่มุมเมือง',
+      product_category: 'ของสด ของชำ',
+      product_name: name,
+    }),
+    name
+  );
+assert(
+  isAgriculturalProduct({
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'กล้วยไม้หวายขาว',
+  })
+);
+for (const name of [
+  'ธูป',
+  'เทียน',
+  'ดอกไม้จันทน์',
+  'ดอกรักปลอม',
+  'พวงมาลัยพลาสติก',
+])
+  assert(
+    !isAgriculturalProduct({
+      source_name: 'ตลาดสี่มุมเมือง',
+      product_category: 'ดอกไม้ สังฆภัณฑ์',
+      product_name: name,
+    }),
+    name
+  );
+assert(
+  isAgriculturalProduct({
+    source_name: 'กรมการค้าภายใน',
+    source_product_id: 'W15041',
+    product_category: 'เครื่องเทศ/ของแห้ง',
+    product_name: 'พริกขี้หนูแห้ง อย่างดี',
+  })
+);
 const item = {
   _id: 'one',
   isActive: true,
@@ -81,6 +157,15 @@ assert.equal(
   65
 );
 assert.equal(mergePriceHistory(merged, [], now).length, 3);
+const oldGrocery = {
+  ...changed,
+  product_name: 'น้ำพริกแกงเผ็ด',
+  product_category: 'ของสด ของชำ',
+};
+assert.equal(
+  mergePriceHistory([oldGrocery, ...merged], [], now).length,
+  merged.length
+);
 assert.equal(
   mergePriceHistory(
     [
