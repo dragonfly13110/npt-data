@@ -65,8 +65,6 @@ const ALLOWED_PRODUCTS = {
   ],
 };
 
-
-
 function numeric(value) {
   const parsed = Number(String(value).replace(/,/g, '').trim());
   return Number.isFinite(parsed) ? parsed : null;

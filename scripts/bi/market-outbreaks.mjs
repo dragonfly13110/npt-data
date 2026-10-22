@@ -348,23 +348,27 @@ export async function collectReports(now = new Date()) {
   };
 }
 
-export async function collectMarketOutbreaks(now = new Date(), { reportsOnly = false } = {}) {
+export async function collectMarketOutbreaks(
+  now = new Date(),
+  { reportsOnly = false } = {}
+) {
   const prices = reportsOnly ? null : await collectPrices(now);
   const reports = await collectReports(now);
   return Object.fromEntries(
-    Object.entries({ ...(prices ? { public_agricultural_prices: prices } : {}), ...reports }).map(
-      ([name, data]) => [
-        name,
-        {
-          schemaVersion: 1,
-          table: name,
-          status: data.length ? 'ready' : 'empty',
-          count: data.length,
-          fetchedAt: now.toISOString(),
-          data,
-        },
-      ]
-    )
+    Object.entries({
+      ...(prices ? { public_agricultural_prices: prices } : {}),
+      ...reports,
+    }).map(([name, data]) => [
+      name,
+      {
+        schemaVersion: 1,
+        table: name,
+        status: data.length ? 'ready' : 'empty',
+        count: data.length,
+        fetchedAt: now.toISOString(),
+        data,
+      },
+    ])
   );
 }
 
@@ -391,7 +395,9 @@ if (
     const output = path.resolve(
       outputIndex >= 0 ? process.argv[outputIndex + 1] : 'output/bi-pages'
     );
-    const tables = await collectMarketOutbreaks(new Date(), { reportsOnly: process.argv.includes('--reports-only') });
+    const tables = await collectMarketOutbreaks(new Date(), {
+      reportsOnly: process.argv.includes('--reports-only'),
+    });
     for (const table of Object.values(tables))
       assert(
         Buffer.byteLength(JSON.stringify(table, null, 2) + '\n') <=
