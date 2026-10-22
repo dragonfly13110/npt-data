@@ -81,6 +81,22 @@ assert.equal(
   65
 );
 assert.equal(mergePriceHistory(merged, [], now).length, 3);
+assert.equal(
+  mergePriceHistory(
+    [
+      { ...changed, data_date: '2026-01-01' },
+      { ...changed, data_date: '2026-01-02' },
+    ],
+    [],
+    now
+  ).length,
+  1
+);
+assert.equal(
+  mergePriceHistory([], [{ ...changed, data_date: '2026-10-23' }], now).length,
+  0
+);
+assert.throws(() => priceRow({ ...changed, data_date: '2026-02-30' }));
 const another = { ...changed, grade: 'ใหญ่' };
 assert.equal(mergePriceHistory([changed], [another], now).length, 2);
 assert.throws(() => priceRow({ ...changed, price_min: -1 }));

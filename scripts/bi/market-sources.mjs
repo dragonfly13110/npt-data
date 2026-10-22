@@ -41,7 +41,8 @@ export function priceRow(row) {
     assert(typeof row[key] === 'string' && row[key].trim(), `Missing ${key}`);
   assert(
     /^\d{4}-\d{2}-\d{2}$/.test(row.data_date) &&
-      !Number.isNaN(Date.parse(row.data_date)),
+      !Number.isNaN(Date.parse(row.data_date)) &&
+      new Date(row.data_date).toISOString().slice(0, 10) === row.data_date,
     'Invalid price date'
   );
   const low = amount(row.price_min),
@@ -289,7 +290,17 @@ export function mergePriceHistory(previous, fresh, now) {
   const cutoff = day(new Date(now.getTime() - 90 * 86400000)),
     latest = day(now),
     map = new Map();
-  for (const raw of [...previous, ...fresh]) {
+  const input = [...previous, ...fresh];
+  const sourceDates = new Map();
+  for (const row of input) {
+    const source = row.source_name || PRICE_SOURCES[0];
+    if (
+      row.data_date <= latest &&
+      row.data_date > (sourceDates.get(source) || '')
+    )
+      sourceDates.set(source, row.data_date);
+  }
+  for (const raw of input) {
     if (raw.price_min == null && raw.price_max == null && raw.day_price == null)
       continue;
     const source = raw.source_name || PRICE_SOURCES[0];
@@ -301,7 +312,11 @@ export function mergePriceHistory(previous, fresh, now) {
       price_min: raw.price_min ?? raw.day_price,
       price_max: raw.price_max ?? raw.day_price,
     });
-    if (r.data_date >= cutoff && r.data_date <= latest)
+    // Keep the latest stale source batch even after the normal history window expires.
+    if (
+      (r.data_date >= cutoff || r.data_date === sourceDates.get(source)) &&
+      r.data_date <= latest
+    )
       map.set(JSON.stringify([r.series_key, r.data_date]), r);
   }
   return [...map.values()].sort(
