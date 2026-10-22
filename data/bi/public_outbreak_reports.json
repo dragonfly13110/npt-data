@@ -3,8 +3,19 @@
   "table": "public_outbreak_reports",
   "status": "ready",
   "count": 20,
-  "fetchedAt": "2026-10-18T17:12:54.266Z",
+  "fetchedAt": "2026-10-22T07:33:45.030Z",
   "data": [
+    {
+      "report_id": "13880",
+      "report_group": "พืชไร่",
+      "report_date": "2026-10-14",
+      "title": "สถานการณ์การระบาดศัตรูพืชไร่ วันที่ 14 ตุลาคม 2569",
+      "published_at": "2026-10-20T11:22:11",
+      "source_modified_at": "2026-10-20T11:22:13",
+      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/10/SUMCrop_pest-2569_10_14.pdf",
+      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-482/",
+      "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
+    },
     {
       "report_id": "13821",
       "report_group": "พืชไร่",
@@ -50,14 +61,14 @@
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
-      "report_id": "13171",
-      "report_group": "พืชไร่",
-      "report_date": "2026-07-22",
-      "title": "สถานการณ์การระบาดศัตรูพืชไร่ วันที่ 22 กรกฎาคม 2569",
-      "published_at": "2026-07-24T21:52:48",
-      "source_modified_at": "2026-07-24T21:52:49",
-      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/07/SUMCrop_pest-2569_7_22.pdf",
-      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-462/",
+      "report_id": "13883",
+      "report_group": "ไม้ยืนต้น",
+      "report_date": "2026-10-14",
+      "title": "สถานการณ์การระบาดศัตรูไม้ยืนต้น วันที่ 14 ตุลาคม 2569",
+      "published_at": "2026-10-20T11:22:59",
+      "source_modified_at": "2026-10-20T11:23:02",
+      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/10/SUMTree_pest_2569_10_14.pdf",
+      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-483/",
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
@@ -105,14 +116,14 @@
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
-      "report_id": "13174",
-      "report_group": "ไม้ยืนต้น",
-      "report_date": "2026-07-22",
-      "title": "สถานการณ์การระบาดศัตรูไม้ยืนต้น วันที่ 22 กรกฎาคม 2569",
-      "published_at": "2026-07-24T21:54:54",
-      "source_modified_at": "2026-07-24T21:54:55",
-      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/07/SUMTree_pest_2569_07_22.pdf",
-      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-463/",
+      "report_id": "13886",
+      "report_group": "ข้าว",
+      "report_date": "2026-10-14",
+      "title": "สถานการณ์การระบาดศัตรูข้าว วันที่ 14 ตุลาคม 2569",
+      "published_at": "2026-10-20T11:24:39",
+      "source_modified_at": "2026-10-20T11:24:42",
+      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/10/SUMRice_pest_2569_10_14.pdf",
+      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-484/",
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
@@ -160,14 +171,14 @@
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
-      "report_id": "13177",
-      "report_group": "ข้าว",
-      "report_date": "2026-07-22",
-      "title": "สถานการณ์การระบาดศัตรูข้าว วันที่ 22 กรกฎาคม 2569",
-      "published_at": "2026-07-24T21:56:43",
-      "source_modified_at": "2026-07-24T21:56:44",
-      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/07/SUMRice_pest_2569_07_22.pdf",
-      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-464/",
+      "report_id": "13889",
+      "report_group": "ไม้ผล",
+      "report_date": "2026-10-14",
+      "title": "สถานการณ์การระบาดศัตรูไม้ผล วันที่ 14 ตุลาคม 2569",
+      "published_at": "2026-10-20T11:25:32",
+      "source_modified_at": "2026-10-20T11:25:35",
+      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/10/SUMFruit-tree_pest__2569_10_14.pdf",
+      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-485/",
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
@@ -212,17 +223,6 @@
       "source_modified_at": "2026-08-17T17:42:35",
       "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/08/SUMFruit-tree_pest__2569_8_12.pdf",
       "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-469/",
-      "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
-    },
-    {
-      "report_id": "13180",
-      "report_group": "ไม้ผล",
-      "report_date": "2026-07-22",
-      "title": "สถานการณ์การระบาดศัตรูไม้ผล วันที่ 22 กรกฎาคม 2569",
-      "published_at": "2026-07-24T21:57:50",
-      "source_modified_at": "2026-07-24T21:57:51",
-      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/07/SUMFruit-tree_pest__2569_7_22.pdf",
-      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-465/",
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     }
   ]
