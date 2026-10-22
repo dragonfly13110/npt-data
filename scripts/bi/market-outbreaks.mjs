@@ -21,6 +21,12 @@ export const MARKET_DATASETS = {
       series_key: 'text',
       source_url: 'text',
       spatial_scope: 'text',
+      source_name: 'text',
+      source_product_id: 'text',
+      grade: 'text',
+      price_min: 'number',
+      price_max: 'number',
+      collected_at: 'text',
     },
   },
   public_outbreak_reports: {
@@ -193,6 +199,12 @@ export async function collectPrices(now = new Date()) {
         rows.push({
           ...row,
           day_price: price,
+          source_name: 'สศก. / NABC',
+          source_product_id: row.product_name,
+          grade: 'ตามชื่อสินค้าต้นทาง',
+          price_min: price,
+          price_max: price,
+          collected_at: now.toISOString(),
           series_key,
           price_type: 'ราคารับซื้อรายวัน ณ ตลาดสำคัญ',
           source_url: url,
@@ -336,11 +348,11 @@ export async function collectReports(now = new Date()) {
   };
 }
 
-export async function collectMarketOutbreaks(now = new Date()) {
-  const prices = await collectPrices(now);
+export async function collectMarketOutbreaks(now = new Date(), { reportsOnly = false } = {}) {
+  const prices = reportsOnly ? null : await collectPrices(now);
   const reports = await collectReports(now);
   return Object.fromEntries(
-    Object.entries({ public_agricultural_prices: prices, ...reports }).map(
+    Object.entries({ ...(prices ? { public_agricultural_prices: prices } : {}), ...reports }).map(
       ([name, data]) => [
         name,
         {
@@ -379,7 +391,7 @@ if (
     const output = path.resolve(
       outputIndex >= 0 ? process.argv[outputIndex + 1] : 'output/bi-pages'
     );
-    const tables = await collectMarketOutbreaks(new Date());
+    const tables = await collectMarketOutbreaks(new Date(), { reportsOnly: process.argv.includes('--reports-only') });
     for (const table of Object.values(tables))
       assert(
         Buffer.byteLength(JSON.stringify(table, null, 2) + '\n') <=
@@ -393,7 +405,7 @@ if (
     if (fs.existsSync(manifestFile)) {
       const manifest = read(manifestFile);
       manifest.tables = manifest.tables.filter(
-        (t) => !MARKET_DATASETS[t.table]
+        (t) => !Object.hasOwn(tables, t.table)
       );
       for (const [name, table] of Object.entries(tables)) {
         const content = fs.readFileSync(path.join(output, name + '.json'));

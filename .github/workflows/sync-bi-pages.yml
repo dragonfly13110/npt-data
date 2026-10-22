@@ -80,11 +80,24 @@ jobs:
         id: market_outbreaks
         if: github.event_name != 'push'
         continue-on-error: true
-        run: node scripts/bi/market-outbreaks.mjs --output output/bi-pages
+        run: node scripts/bi/market-outbreaks.mjs --reports-only --output output/bi-pages
         working-directory: site
       - name: Report retained prices and outbreak data
         if: github.event_name != 'push' && steps.market_outbreaks.outcome == 'failure'
         run: echo '::warning::Official price/outbreak batch failed. Previous JSON, source dates and hashes are retained; no empty replacement is published.'
+      - name: Collect prices from four independent sources
+        id: multi_market
+        continue-on-error: true
+        if: github.event_name != 'push'
+        working-directory: site
+        run: |
+          node scripts/bi/market-sources.test.mjs
+          mkdir -p output/bi-pages
+          cp data/bi/public_agricultural_prices.json output/bi-pages/public_agricultural_prices.json
+          node scripts/bi/market-sources.mjs --output output/bi-pages
+      - name: Report retained multi-market prices
+        if: github.event_name != 'push' && steps.multi_market.outcome == 'failure'
+        run: echo '::warning::Multi-market collection failed. Previous prices and source dates are retained.'
       - name: Summarize public data in plain Thai
         id: briefing
         if: github.event_name != 'push'
