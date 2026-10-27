@@ -3,7 +3,7 @@
   "table": "public_reported_outbreaks",
   "status": "ready",
   "count": 362,
-  "fetchedAt": "2026-10-26T16:48:23.577Z",
+  "fetchedAt": "2026-10-27T07:50:08.764Z",
   "data": [
     {
       "report_id": "13880",
