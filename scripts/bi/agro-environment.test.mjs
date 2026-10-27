@@ -1,7 +1,16 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { flattenSoilWater, flattenFlood } from './agro-environment.mjs';
+import {
+  flattenSoilWater,
+  flattenFlood,
+  sameSceneTime,
+  collectAgroEnvironment,
+} from './agro-environment.mjs';
+
+assert(sameSceneTime('2026-10-25T04:04:24.250Z', '2026-10-25T04:04:24.25Z'));
+assert(!sameSceneTime('2026-10-25T04:04:24.250Z', '2026-10-25T04:04:25.25Z'));
+assert(!sameSceneTime(null, '2026-10-25T04:04:24.25Z'));
 
 const districts = [{ district_code: '7301', district: 'เมืองนครปฐม' }];
 const weather = [
@@ -71,6 +80,30 @@ const flood = flattenFlood(
 assert.equal(flood.flood_rai, 2);
 assert.equal(flood.source_date, null);
 assert.match(flood.source_status, /ไม่ระบุวันภาพ/);
+const districtsGeo = {
+  features: Array.from({ length: 7 }, (_, i) => ({
+    properties: { amp_code: String(7301 + i), amp_th: `district ${i}` },
+    geometry: {
+      coordinates: [
+        [
+          [100, 13],
+          [100.1, 13.1],
+        ],
+      ],
+    },
+  })),
+};
+const partial = await collectAgroEnvironment({
+  districtsGeo,
+  now: new Date('2026-10-20T05:00:00Z'),
+  fetcher: async (url) =>
+    String(url).includes('api.open-meteo.com')
+      ? { ok: true, json: async () => Array(7).fill(weather[0]) }
+      : { ok: false, status: 503 },
+});
+assert.equal(partial.public_soil_water.count, 7);
+assert.equal(partial.public_ndvi_classes, undefined);
+assert.equal(partial.public_flood_monitor, undefined);
 execFileSync(
   process.env.PYTHON || 'python',
   [fileURLToPath(new URL('./ndvi-image-stats.py', import.meta.url)), '--check'],

@@ -56,6 +56,12 @@ const number = (x) => (typeof x === 'number' && Number.isFinite(x) ? x : null);
 const read = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const directory = path.dirname(fileURLToPath(import.meta.url));
 
+export function sameSceneTime(actual, expected) {
+  const a = Date.parse(actual);
+  const b = Date.parse(expected);
+  return Number.isFinite(a) && Number.isFinite(b) && a === b;
+}
+
 async function json(url, fetcher) {
   const response = await fetcher(url, { signal: AbortSignal.timeout(45000) });
   if (!response.ok) throw Error('Source HTTP ' + response.status);
@@ -230,9 +236,11 @@ export async function collectAgroEnvironment({
         bbox?.length === 4 && bbox.every(Number.isFinite),
         'Missing raster georeference'
       );
-      assert.equal(
-        response.headers.get('x-satellite-acquired-at'),
-        scene.datetime,
+      assert(
+        sameSceneTime(
+          response.headers.get('x-satellite-acquired-at'),
+          scene.datetime
+        ),
         'NDVI scene mismatch'
       );
       fs.writeFileSync(
@@ -263,20 +271,32 @@ export async function collectAgroEnvironment({
         }))
       );
     }
+  } catch (error) {
+    delete data.public_ndvi_classes;
+    console.warn(
+      `NDVI collection failed; retain previous snapshot: ${error.message}`
+    );
   } finally {
     assert(
       path.resolve(scratch).startsWith(path.join(os.tmpdir(), 'npt-ndvi-'))
     );
     fs.rmSync(scratch, { recursive: true, force: true });
   }
-  data.public_flood_monitor = [];
-  for (const period of ['1day', '7days', '30days']) {
-    const payload = await json(
-      'https://disaster.gistda.or.th/app-api/proxy/resources/flood/' + period,
-      fetcher
-    );
-    data.public_flood_monitor.push(
-      ...flattenFlood(payload, areas, period, fetchedAt)
+  try {
+    data.public_flood_monitor = [];
+    for (const period of ['1day', '7days', '30days']) {
+      const payload = await json(
+        'https://disaster.gistda.or.th/app-api/proxy/resources/flood/' + period,
+        fetcher
+      );
+      data.public_flood_monitor.push(
+        ...flattenFlood(payload, areas, period, fetchedAt)
+      );
+    }
+  } catch (error) {
+    delete data.public_flood_monitor;
+    console.warn(
+      `Flood collection failed; retain previous snapshot: ${error.message}`
     );
   }
   return Object.fromEntries(
