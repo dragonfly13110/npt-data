@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": "public_daily_briefing",
   "status": "ready",
-  "fetchedAt": "2026-10-27T15:55:13.914Z",
-  "date": "2026-10-27",
+  "fetchedAt": "2026-10-28T05:55:56.347Z",
+  "date": "2026-10-28",
   "model": "source-unavailable",
   "generationMethod": "source-unavailable",
   "sectionResults": [
@@ -50,7 +50,7 @@
   ],
   "backfilled": false,
   "promptVersion": "bi-daily-v10",
-  "inputHash": "718ed7fa8db947d539092b8ca4aa82a7f59a7dc1fe829ca2672fdb6698dff82f",
+  "inputHash": "b4a0dc3ae9d90dd6730c982cf585dd7e974a943a6422592c6a0187ac4abf1c9d",
   "sourceSnapshotFetchedAt": null,
   "sources": [],
   "evidence": [
@@ -124,7 +124,7 @@
   "count": 8,
   "data": [
     {
-      "briefing_date": "2026-10-27",
+      "briefing_date": "2026-10-28",
       "topic_order": 0,
       "topic": "ภาพรวม",
       "summary": "ฉบับแจ้งสถานะประจำวัน: ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังรายงานตัวเลขสถานการณ์วันนี้ไม่ได้ จะปรับฉบับนี้เมื่อมีข้อมูลที่ตรวจสอบได้",
@@ -141,11 +141,11 @@
         "certifications"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
-      "generated_at": "2026-10-27T15:55:13.914Z",
+      "generated_at": "2026-10-28T05:55:56.347Z",
       "model": "source-unavailable"
     },
     {
-      "briefing_date": "2026-10-27",
+      "briefing_date": "2026-10-28",
       "topic_order": 1,
       "topic": "น้ำ",
       "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
@@ -156,11 +156,11 @@
         "water"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
-      "generated_at": "2026-10-27T15:55:13.914Z",
+      "generated_at": "2026-10-28T05:55:56.347Z",
       "model": "source-unavailable"
     },
     {
-      "briefing_date": "2026-10-27",
+      "briefing_date": "2026-10-28",
       "topic_order": 2,
       "topic": "อากาศและฝน",
       "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
@@ -171,11 +171,11 @@
         "weather"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_weather.json",
-      "generated_at": "2026-10-27T15:55:13.914Z",
+      "generated_at": "2026-10-28T05:55:56.347Z",
       "model": "source-unavailable"
     },
     {
-      "briefing_date": "2026-10-27",
+      "briefing_date": "2026-10-28",
       "topic_order": 3,
       "topic": "โรคและแมลง",
       "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
@@ -186,11 +186,11 @@
         "disease"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_disease_reports.json",
-      "generated_at": "2026-10-27T15:55:13.914Z",
+      "generated_at": "2026-10-28T05:55:56.347Z",
       "model": "source-unavailable"
     },
     {
-      "briefing_date": "2026-10-27",
+      "briefing_date": "2026-10-28",
       "topic_order": 4,
       "topic": "จุดความร้อน",
       "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
@@ -201,11 +201,11 @@
         "hotspots"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_hotspots.json",
-      "generated_at": "2026-10-27T15:55:13.914Z",
+      "generated_at": "2026-10-28T05:55:56.347Z",
       "model": "source-unavailable"
     },
     {
-      "briefing_date": "2026-10-27",
+      "briefing_date": "2026-10-28",
       "topic_order": 5,
       "topic": "ทะเบียนเกษตรกร",
       "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
@@ -216,11 +216,11 @@
         "registry"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/farmer_registry.json",
-      "generated_at": "2026-10-27T15:55:13.914Z",
+      "generated_at": "2026-10-28T05:55:56.347Z",
       "model": "source-unavailable"
     },
     {
-      "briefing_date": "2026-10-27",
+      "briefing_date": "2026-10-28",
       "topic_order": 6,
       "topic": "การวาดแปลง",
       "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
@@ -231,11 +231,11 @@
         "parcels"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/geoplots_parcel_progress.json",
-      "generated_at": "2026-10-27T15:55:13.914Z",
+      "generated_at": "2026-10-28T05:55:56.347Z",
       "model": "source-unavailable"
     },
     {
-      "briefing_date": "2026-10-27",
+      "briefing_date": "2026-10-28",
       "topic_order": 7,
       "topic": "มาตรฐานสินค้า",
       "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
@@ -246,7 +246,7 @@
         "certifications"
       ],
       "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/certifications.json",
-      "generated_at": "2026-10-27T15:55:13.914Z",
+      "generated_at": "2026-10-28T05:55:56.347Z",
       "model": "source-unavailable"
     }
   ]

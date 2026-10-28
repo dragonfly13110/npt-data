@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "table": "public_daily_briefing",
+  "status": "ready",
+  "fetchedAt": "2026-10-28T05:55:56.347Z",
+  "date": "2026-10-28",
+  "model": "source-unavailable",
+  "generationMethod": "source-unavailable",
+  "sectionResults": [
+    {
+      "topic": "ภาพรวม",
+      "method": "source-unavailable",
+      "attempts": 0
+    },
+    {
+      "topic": "น้ำ",
+      "method": "source-unavailable",
+      "attempts": 0
+    },
+    {
+      "topic": "อากาศและฝน",
+      "method": "source-unavailable",
+      "attempts": 0
+    },
+    {
+      "topic": "โรคและแมลง",
+      "method": "source-unavailable",
+      "attempts": 0
+    },
+    {
+      "topic": "จุดความร้อน",
+      "method": "source-unavailable",
+      "attempts": 0
+    },
+    {
+      "topic": "ทะเบียนเกษตรกร",
+      "method": "source-unavailable",
+      "attempts": 0
+    },
+    {
+      "topic": "การวาดแปลง",
+      "method": "source-unavailable",
+      "attempts": 0
+    },
+    {
+      "topic": "มาตรฐานสินค้า",
+      "method": "source-unavailable",
+      "attempts": 0
+    }
+  ],
+  "backfilled": false,
+  "promptVersion": "bi-daily-v10",
+  "inputHash": "b4a0dc3ae9d90dd6730c982cf585dd7e974a943a6422592c6a0187ac4abf1c9d",
+  "sourceSnapshotFetchedAt": null,
+  "sources": [],
+  "evidence": [
+    {
+      "id": "water",
+      "topic": "น้ำ",
+      "date": null,
+      "tables": [
+        "public_water"
+      ],
+      "facts": {}
+    },
+    {
+      "id": "weather",
+      "topic": "อากาศและฝน",
+      "date": null,
+      "tables": [
+        "public_weather",
+        "public_rain_forecast"
+      ],
+      "facts": {}
+    },
+    {
+      "id": "disease",
+      "topic": "โรคและแมลง",
+      "date": null,
+      "tables": [
+        "public_disease_reports",
+        "public_disease_watch"
+      ],
+      "facts": {}
+    },
+    {
+      "id": "hotspots",
+      "topic": "จุดความร้อน",
+      "date": null,
+      "tables": [
+        "public_hotspots"
+      ],
+      "facts": {}
+    },
+    {
+      "id": "registry",
+      "topic": "ทะเบียนเกษตรกร",
+      "date": null,
+      "tables": [
+        "farmer_registry"
+      ],
+      "facts": {}
+    },
+    {
+      "id": "parcels",
+      "topic": "การวาดแปลง",
+      "date": null,
+      "tables": [
+        "geoplots_parcel_progress"
+      ],
+      "facts": {}
+    },
+    {
+      "id": "certifications",
+      "topic": "มาตรฐานสินค้า",
+      "date": null,
+      "tables": [
+        "certifications"
+      ],
+      "facts": {}
+    }
+  ],
+  "usage": null,
+  "count": 8,
+  "data": [
+    {
+      "briefing_date": "2026-10-28",
+      "topic_order": 0,
+      "topic": "ภาพรวม",
+      "summary": "ฉบับแจ้งสถานะประจำวัน: ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังรายงานตัวเลขสถานการณ์วันนี้ไม่ได้ จะปรับฉบับนี้เมื่อมีข้อมูลที่ตรวจสอบได้",
+      "next_steps": "ตรวจวันข้อมูลของหัวข้อที่จะนำไปใช้ และยืนยันรายละเอียดกับหน่วยงานต้นทางก่อนตัดสินใจ",
+      "limitations": "ยังไม่มีข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังยืนยันสถานการณ์และความครบถ้วนของข้อมูลไม่ได้",
+      "source_dates": "น้ำ: ไม่ระบุวันต้นทาง • อากาศและฝน: ไม่ระบุวันต้นทาง • โรคและแมลง: ไม่ระบุวันต้นทาง • จุดความร้อน: ไม่ระบุวันต้นทาง • ทะเบียนเกษตรกร: ไม่ระบุวันต้นทาง • การวาดแปลง: ไม่ระบุวันต้นทาง • มาตรฐานสินค้า: ไม่ระบุวันต้นทาง",
+      "evidence_ids": [
+        "water",
+        "weather",
+        "disease",
+        "hotspots",
+        "registry",
+        "parcels",
+        "certifications"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
+      "generated_at": "2026-10-28T05:55:56.347Z",
+      "model": "source-unavailable"
+    },
+    {
+      "briefing_date": "2026-10-28",
+      "topic_order": 1,
+      "topic": "น้ำ",
+      "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
+      "next_steps": "ตรวจเวลาวัดและหน่วยของสถานีใกล้พื้นที่ เก็บสถานีที่ข้อมูลเก่าไว้ติดตามแยกจากค่าปัจจุบัน",
+      "limitations": "ยังไม่มีข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังยืนยันสถานการณ์และความครบถ้วนของข้อมูลไม่ได้",
+      "source_dates": "น้ำ: ไม่ระบุวันต้นทาง",
+      "evidence_ids": [
+        "water"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
+      "generated_at": "2026-10-28T05:55:56.347Z",
+      "model": "source-unavailable"
+    },
+    {
+      "briefing_date": "2026-10-28",
+      "topic_order": 2,
+      "topic": "อากาศและฝน",
+      "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
+      "next_steps": "เทียบพยากรณ์ฝนของอำเภอกับสภาพแปลงจริงก่อนกำหนดวันทำงาน",
+      "limitations": "ยังไม่มีข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังยืนยันสถานการณ์และความครบถ้วนของข้อมูลไม่ได้",
+      "source_dates": "อากาศและฝน: ไม่ระบุวันต้นทาง",
+      "evidence_ids": [
+        "weather"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_weather.json",
+      "generated_at": "2026-10-28T05:55:56.347Z",
+      "model": "source-unavailable"
+    },
+    {
+      "briefing_date": "2026-10-28",
+      "topic_order": 3,
+      "topic": "โรคและแมลง",
+      "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
+      "next_steps": "สำรวจอาการของพืชในพื้นที่ที่ดูแล และตรวจคำแนะนำของเจ้าหน้าที่เมื่อพบอาการผิดปกติ",
+      "limitations": "ยังไม่มีข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังยืนยันสถานการณ์และความครบถ้วนของข้อมูลไม่ได้",
+      "source_dates": "โรคและแมลง: ไม่ระบุวันต้นทาง",
+      "evidence_ids": [
+        "disease"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_disease_reports.json",
+      "generated_at": "2026-10-28T05:55:56.347Z",
+      "model": "source-unavailable"
+    },
+    {
+      "briefing_date": "2026-10-28",
+      "topic_order": 4,
+      "topic": "จุดความร้อน",
+      "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
+      "next_steps": "ตรวจวันและตำแหน่งจุดที่ใกล้พื้นที่ เพื่อแยกจุดตรวจพบซ้ำและยืนยันสภาพพื้นที่จริง",
+      "limitations": "ยังไม่มีข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังยืนยันสถานการณ์และความครบถ้วนของข้อมูลไม่ได้",
+      "source_dates": "จุดความร้อน: ไม่ระบุวันต้นทาง",
+      "evidence_ids": [
+        "hotspots"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_hotspots.json",
+      "generated_at": "2026-10-28T05:55:56.347Z",
+      "model": "source-unavailable"
+    },
+    {
+      "briefing_date": "2026-10-28",
+      "topic_order": 5,
+      "topic": "ทะเบียนเกษตรกร",
+      "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
+      "next_steps": "ตรวจปีทะเบียนและวันตัดยอดของอำเภอก่อนนำยอดไปเทียบกับเป้าหมาย",
+      "limitations": "ยังไม่มีข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังยืนยันสถานการณ์และความครบถ้วนของข้อมูลไม่ได้",
+      "source_dates": "ทะเบียนเกษตรกร: ไม่ระบุวันต้นทาง",
+      "evidence_ids": [
+        "registry"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/farmer_registry.json",
+      "generated_at": "2026-10-28T05:55:56.347Z",
+      "model": "source-unavailable"
+    },
+    {
+      "briefing_date": "2026-10-28",
+      "topic_order": 6,
+      "topic": "การวาดแปลง",
+      "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
+      "next_steps": "ตรวจรอบรายงานของอำเภอ และยืนยันงานที่ทำหลังวันดึงข้อมูลกับผู้รับผิดชอบ",
+      "limitations": "ยังไม่มีข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังยืนยันสถานการณ์และความครบถ้วนของข้อมูลไม่ได้",
+      "source_dates": "การวาดแปลง: ไม่ระบุวันต้นทาง",
+      "evidence_ids": [
+        "parcels"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/geoplots_parcel_progress.json",
+      "generated_at": "2026-10-28T05:55:56.347Z",
+      "model": "source-unavailable"
+    },
+    {
+      "briefing_date": "2026-10-28",
+      "topic_order": 7,
+      "topic": "มาตรฐานสินค้า",
+      "summary": "ยังไม่มีชุดข้อมูลต้นทางที่ผ่านการตรวจสอบสำหรับฉบับนี้ จึงยังสรุปสถานการณ์ของหัวข้อนี้ไม่ได้",
+      "next_steps": "ตรวจวันหมดอายุและสถานะใบรับรองจากต้นทางก่อนแจ้งเตือนผู้เกี่ยวข้อง",
+      "limitations": "ยังไม่มีข้อมูลต้นทางที่ผ่านการตรวจสอบ จึงยังยืนยันสถานการณ์และความครบถ้วนของข้อมูลไม่ได้",
+      "source_dates": "มาตรฐานสินค้า: ไม่ระบุวันต้นทาง",
+      "evidence_ids": [
+        "certifications"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/certifications.json",
+      "generated_at": "2026-10-28T05:55:56.347Z",
+      "model": "source-unavailable"
+    }
+  ]
+}
