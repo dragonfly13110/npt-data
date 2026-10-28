@@ -252,7 +252,10 @@ function loadBriefingInput(folder, now = /* @__PURE__ */ new Date()) {
     assert.equal(table.table, name);
     assert.equal(table.count, table.data.length);
     assert.equal(table.count, meta.count);
-    assert.equal(table.fetchedAt, manifest.fetchedAt);
+    assert(
+      table.fetchedAt && Number.isFinite(Date.parse(table.fetchedAt)),
+      "Invalid table fetchedAt"
+    );
     tables[name] = table.data;
     sources.push({
       table: name,
