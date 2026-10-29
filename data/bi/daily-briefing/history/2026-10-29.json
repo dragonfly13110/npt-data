@@ -1,0 +1,1065 @@
+{
+  "schemaVersion": 1,
+  "table": "public_daily_briefing",
+  "status": "ready",
+  "fetchedAt": "2026-10-29T07:33:30.225Z",
+  "date": "2026-10-29",
+  "model": "gemini-3.5-flash-lite",
+  "generationMethod": "ai",
+  "sectionResults": [
+    {
+      "topic": "ภาพรวม",
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "02c34d95abbeebad869163bb624fc35984e559bd751b8b835ddab96223f22443"
+    },
+    {
+      "topic": "น้ำ",
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "e287cac5bccd4d4e1d73369a60bb2ef64782deef6769c1ec8d68d9d122cc33d1"
+    },
+    {
+      "topic": "อากาศและฝน",
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "78ee0197dee60e6592647e9837febbbb3d7b88d5f8cf9eb14b720924c2ef8283"
+    },
+    {
+      "topic": "โรคและแมลง",
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "8bd98e562cc66dd5b27d98fc52e9643df741ee0cc14d1ffad00717129794b38d"
+    },
+    {
+      "topic": "จุดความร้อน",
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "025d43aa71964dd36dd8559d4e8574477e56876238a604d413a786f9dfa4b4b0"
+    },
+    {
+      "topic": "ทะเบียนเกษตรกร",
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "947eedfbdd83df9d11e457be86bad9e7ca93f71af49ba140283ee6f0cf23e608"
+    },
+    {
+      "topic": "การวาดแปลง",
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "bf8c5d598fb5d662fe2b79bde5ed9d65803ad3e7751d7d5400e91ef1adc486de"
+    },
+    {
+      "topic": "มาตรฐานสินค้า",
+      "method": "ai",
+      "attempts": 1,
+      "inputHash": "80d8ac0ee98f98c161a7df65e513649d48e0ce0271e83311d0c60257fe60cbe3"
+    }
+  ],
+  "backfilled": false,
+  "promptVersion": "bi-daily-v10",
+  "inputHash": "2bfa7466f7dedccfb201b5b8a2df692f77528304cdc4b5c6493afe196f7f225c",
+  "sourceSnapshotFetchedAt": "2026-10-29T07:31:51.883Z",
+  "sources": [
+    {
+      "table": "public_water",
+      "count": 11,
+      "sha256": "f5bf97544bb1e495d6cdd059beaf97841a2319ede4045e9015b4f3c3e7d9868b",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    },
+    {
+      "table": "public_weather",
+      "count": 91,
+      "sha256": "7d0ad2384fd0c6792531137363b1f2c52d11b030d019bdf2bb3ce138d0843ecb",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    },
+    {
+      "table": "public_rain_forecast",
+      "count": 49,
+      "sha256": "25d41bfd2b1778aadd74af73c0cc909e82ed9a2cfe20a2d259af18365de7527c",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    },
+    {
+      "table": "public_disease_reports",
+      "count": 151,
+      "sha256": "fc1bb40c8a7bc0c014307ba0681d5f5c8126d45b3231701d62f0a4d01938cb78",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    },
+    {
+      "table": "public_disease_watch",
+      "count": 772,
+      "sha256": "cfc51fd17604dc81ad58215bd377f33996596f2c8a4dd0fc3b8d456b15375155",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    },
+    {
+      "table": "public_hotspots",
+      "count": 1135,
+      "sha256": "2115a1da431186b0b24f9e79b363201af70184c78161ff968be6ad14d0fd0c93",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    },
+    {
+      "table": "farmer_registry",
+      "count": 16,
+      "sha256": "1c272bd8aa33a951355698784f91a40fe35adbacdfda23166ff4bbc39983a52c",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    },
+    {
+      "table": "geoplots_parcel_progress",
+      "count": 7,
+      "sha256": "f025cc30e1f2f04ce49c1527789cf8128a74e49468b2694b19acca65005a7001",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    },
+    {
+      "table": "certifications",
+      "count": 5640,
+      "sha256": "f1cbfcb0d96d5caecb2624cd9f76fbb3009540aff9a43161f08d0de46f8c2e11",
+      "fetchedAt": "2026-10-29T07:30:20.466Z"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "water",
+      "topic": "น้ำ",
+      "date": "2026-10-29T07:25:00.000Z",
+      "tables": [
+        "public_water"
+      ],
+      "facts": {
+        "reportingStations": 8,
+        "byStatus": {
+          "สูงกว่าตลิ่ง": 5,
+          "ไม่สูงกว่าตลิ่ง": 3
+        },
+        "stations": [
+          {
+            "station_name": "วัดบางไผ่นารถ",
+            "district": "บางเลน",
+            "observed_at": "2026-10-29T06:00:00.000Z",
+            "water_level": 2.54,
+            "unit": "m(MSL)",
+            "status_label": "สูงกว่าตลิ่ง",
+            "quality_flag": null,
+            "source": "ThaiWater (สสน.)"
+          },
+          {
+            "station_name": "ที่ว่าการอ.นครชัยศรี",
+            "district": "นครชัยศรี",
+            "observed_at": "2026-10-29T06:00:00.000Z",
+            "water_level": 2.39,
+            "unit": "m(MSL)",
+            "status_label": "สูงกว่าตลิ่ง",
+            "quality_flag": null,
+            "source": "ThaiWater (สสน.)"
+          },
+          {
+            "station_name": "บางเลน",
+            "district": "บางเลน",
+            "observed_at": "2026-10-29T07:20:00.000Z",
+            "water_level": 2.76,
+            "unit": "m(MSL)",
+            "status_label": "สูงกว่าตลิ่ง",
+            "quality_flag": null,
+            "source": "ThaiWater (สสน.)"
+          },
+          {
+            "station_name": "ร.ร.บ้านสามพราน",
+            "district": "สามพราน",
+            "observed_at": "2026-10-29T06:00:00.000Z",
+            "water_level": 1.89,
+            "unit": "m(MSL)",
+            "status_label": "สูงกว่าตลิ่ง",
+            "quality_flag": null,
+            "source": "ThaiWater (สสน.)"
+          },
+          {
+            "station_name": "สะพานนครชัยศรี",
+            "district": "นครชัยศรี",
+            "observed_at": "2026-10-29T07:10:00.000Z",
+            "water_level": 2.21,
+            "unit": "m(MSL)",
+            "status_label": "สูงกว่าตลิ่ง",
+            "quality_flag": null,
+            "source": "ThaiWater (สสน.)"
+          },
+          {
+            "station_name": "ศาลาดิน",
+            "district": "พุทธมณฑล",
+            "observed_at": "2026-10-29T07:20:00.000Z",
+            "water_level": 0.86,
+            "unit": "m(MSL)",
+            "status_label": "ไม่สูงกว่าตลิ่ง",
+            "quality_flag": null,
+            "source": "ThaiWater (สสน.)"
+          },
+          {
+            "station_name": "คลองนราภิรมย์ (บางเลน)",
+            "district": "บางเลน",
+            "observed_at": "2026-10-29T07:20:00.000Z",
+            "water_level": 1.98,
+            "unit": "m(MSL)",
+            "status_label": "ไม่สูงกว่าตลิ่ง",
+            "quality_flag": null,
+            "source": "ThaiWater (สสน.)"
+          },
+          {
+            "station_name": "ปตร.คลองทวีวัฒนา",
+            "district": "พุทธมณฑล",
+            "observed_at": "2026-10-29T07:25:00.000Z",
+            "water_level": 0.71,
+            "unit": "m(MSL)",
+            "status_label": "ไม่สูงกว่าตลิ่ง",
+            "quality_flag": null,
+            "source": "สำนักการระบายน้ำ / สสน."
+          }
+        ],
+        "staleOrUndatedStations": 3,
+        "note": "ใช้ค่าที่มีเวลาตรวจวัดภายใน 48 ชั่วโมงเท่านั้น สถานีที่เก่าหรือไม่มีเวลาไม่นับเป็นสถานการณ์ปัจจุบัน ไม่เปรียบเทียบระดับน้ำต่างหน่วยหรือระดับอ้างอิง และไม่เติมค่าที่ขาด"
+      }
+    },
+    {
+      "id": "weather",
+      "topic": "อากาศและฝน",
+      "date": "2026-10-29",
+      "tables": [
+        "public_weather",
+        "public_rain_forecast"
+      ],
+      "facts": {
+        "weather": [
+          {
+            "date": "2026-10-23",
+            "temperature_avg_c": 29.1,
+            "temperature_min_c": 25.5,
+            "temperature_max_c": 33.2,
+            "rain_mm": 1.4,
+            "source_updated_at": "2026-10-22T22:00:52.381745+00:00",
+            "area_scope": "ข้อมูลชุดจังหวัดจาก Open-Meteo มีทั้งย้อนหลังและคาดการณ์ ไม่ใช่สถานีตรวจวัดหรือรายแปลง"
+          },
+          {
+            "date": "2026-10-24",
+            "temperature_avg_c": 28.9,
+            "temperature_min_c": 25.7,
+            "temperature_max_c": 32.9,
+            "rain_mm": 3.1,
+            "source_updated_at": "2026-10-23T22:00:53.964928+00:00",
+            "area_scope": "ข้อมูลชุดจังหวัดจาก Open-Meteo มีทั้งย้อนหลังและคาดการณ์ ไม่ใช่สถานีตรวจวัดหรือรายแปลง"
+          },
+          {
+            "date": "2026-10-25",
+            "temperature_avg_c": 29.4,
+            "temperature_min_c": 26.4,
+            "temperature_max_c": 33.6,
+            "rain_mm": 0.1,
+            "source_updated_at": "2026-10-24T22:00:51.719392+00:00",
+            "area_scope": "ข้อมูลชุดจังหวัดจาก Open-Meteo มีทั้งย้อนหลังและคาดการณ์ ไม่ใช่สถานีตรวจวัดหรือรายแปลง"
+          },
+          {
+            "date": "2026-10-26",
+            "temperature_avg_c": 28,
+            "temperature_min_c": 23.9,
+            "temperature_max_c": 32.2,
+            "rain_mm": 4.8,
+            "source_updated_at": "2026-10-25T22:00:51.689743+00:00",
+            "area_scope": "ข้อมูลชุดจังหวัดจาก Open-Meteo มีทั้งย้อนหลังและคาดการณ์ ไม่ใช่สถานีตรวจวัดหรือรายแปลง"
+          },
+          {
+            "date": "2026-10-27",
+            "temperature_avg_c": 27.7,
+            "temperature_min_c": 24.4,
+            "temperature_max_c": 31.9,
+            "rain_mm": 0.6,
+            "source_updated_at": "2026-10-26T22:00:52.985325+00:00",
+            "area_scope": "ข้อมูลชุดจังหวัดจาก Open-Meteo มีทั้งย้อนหลังและคาดการณ์ ไม่ใช่สถานีตรวจวัดหรือรายแปลง"
+          },
+          {
+            "date": "2026-10-28",
+            "temperature_avg_c": 27,
+            "temperature_min_c": 23.9,
+            "temperature_max_c": 32.1,
+            "rain_mm": 4.2,
+            "source_updated_at": "2026-10-27T22:00:52.063049+00:00",
+            "area_scope": "ข้อมูลชุดจังหวัดจาก Open-Meteo มีทั้งย้อนหลังและคาดการณ์ ไม่ใช่สถานีตรวจวัดหรือรายแปลง"
+          },
+          {
+            "date": "2026-10-29",
+            "temperature_avg_c": 27.4,
+            "temperature_min_c": 25,
+            "temperature_max_c": 31.5,
+            "rain_mm": 2.3,
+            "source_updated_at": "2026-10-28T22:00:52.162268+00:00",
+            "area_scope": "ข้อมูลชุดจังหวัดจาก Open-Meteo มีทั้งย้อนหลังและคาดการณ์ ไม่ใช่สถานีตรวจวัดหรือรายแปลง"
+          }
+        ],
+        "rain": [
+          {
+            "district": "เมืองนครปฐม",
+            "forecast_at": "2026-10-29T07:00:00+07:00",
+            "rain_mm": 11,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "กำแพงแสน",
+            "forecast_at": "2026-10-29T07:00:00+07:00",
+            "rain_mm": 20.05,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "นครชัยศรี",
+            "forecast_at": "2026-10-29T07:00:00+07:00",
+            "rain_mm": 13.25,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "ดอนตูม",
+            "forecast_at": "2026-10-29T07:00:00+07:00",
+            "rain_mm": 20.35,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "บางเลน",
+            "forecast_at": "2026-10-29T07:00:00+07:00",
+            "rain_mm": 7.85,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "สามพราน",
+            "forecast_at": "2026-10-29T07:00:00+07:00",
+            "rain_mm": 8.8,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "พุทธมณฑล",
+            "forecast_at": "2026-10-29T07:00:00+07:00",
+            "rain_mm": 14.8,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "เมืองนครปฐม",
+            "forecast_at": "2026-10-30T07:00:00+07:00",
+            "rain_mm": 4.1,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "กำแพงแสน",
+            "forecast_at": "2026-10-30T07:00:00+07:00",
+            "rain_mm": 6.8,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "นครชัยศรี",
+            "forecast_at": "2026-10-30T07:00:00+07:00",
+            "rain_mm": 6.15,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "ดอนตูม",
+            "forecast_at": "2026-10-30T07:00:00+07:00",
+            "rain_mm": 6.9,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "บางเลน",
+            "forecast_at": "2026-10-30T07:00:00+07:00",
+            "rain_mm": 3.45,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "สามพราน",
+            "forecast_at": "2026-10-30T07:00:00+07:00",
+            "rain_mm": 9.25,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "พุทธมณฑล",
+            "forecast_at": "2026-10-30T07:00:00+07:00",
+            "rain_mm": 6.65,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "เมืองนครปฐม",
+            "forecast_at": "2026-10-31T07:00:00+07:00",
+            "rain_mm": 10.05,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "กำแพงแสน",
+            "forecast_at": "2026-10-31T07:00:00+07:00",
+            "rain_mm": 8.7,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "นครชัยศรี",
+            "forecast_at": "2026-10-31T07:00:00+07:00",
+            "rain_mm": 7.7,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "ดอนตูม",
+            "forecast_at": "2026-10-31T07:00:00+07:00",
+            "rain_mm": 6.25,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "บางเลน",
+            "forecast_at": "2026-10-31T07:00:00+07:00",
+            "rain_mm": 6.45,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "สามพราน",
+            "forecast_at": "2026-10-31T07:00:00+07:00",
+            "rain_mm": 5.95,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "พุทธมณฑล",
+            "forecast_at": "2026-10-31T07:00:00+07:00",
+            "rain_mm": 13.5,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "เมืองนครปฐม",
+            "forecast_at": "2026-11-01T07:00:00+07:00",
+            "rain_mm": 4.05,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "กำแพงแสน",
+            "forecast_at": "2026-11-01T07:00:00+07:00",
+            "rain_mm": 5.4,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "นครชัยศรี",
+            "forecast_at": "2026-11-01T07:00:00+07:00",
+            "rain_mm": 3.85,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "ดอนตูม",
+            "forecast_at": "2026-11-01T07:00:00+07:00",
+            "rain_mm": 9.5,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "บางเลน",
+            "forecast_at": "2026-11-01T07:00:00+07:00",
+            "rain_mm": 3.15,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "สามพราน",
+            "forecast_at": "2026-11-01T07:00:00+07:00",
+            "rain_mm": 3.75,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "พุทธมณฑล",
+            "forecast_at": "2026-11-01T07:00:00+07:00",
+            "rain_mm": 6.75,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "เมืองนครปฐม",
+            "forecast_at": "2026-11-02T07:00:00+07:00",
+            "rain_mm": 3.55,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "กำแพงแสน",
+            "forecast_at": "2026-11-02T07:00:00+07:00",
+            "rain_mm": 3.1,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "นครชัยศรี",
+            "forecast_at": "2026-11-02T07:00:00+07:00",
+            "rain_mm": 8.6,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "ดอนตูม",
+            "forecast_at": "2026-11-02T07:00:00+07:00",
+            "rain_mm": 6.3,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "บางเลน",
+            "forecast_at": "2026-11-02T07:00:00+07:00",
+            "rain_mm": 7.85,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "สามพราน",
+            "forecast_at": "2026-11-02T07:00:00+07:00",
+            "rain_mm": 2.9,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "พุทธมณฑล",
+            "forecast_at": "2026-11-02T07:00:00+07:00",
+            "rain_mm": 16,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "เมืองนครปฐม",
+            "forecast_at": "2026-11-03T07:00:00+07:00",
+            "rain_mm": 10.65,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "กำแพงแสน",
+            "forecast_at": "2026-11-03T07:00:00+07:00",
+            "rain_mm": 3.95,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "นครชัยศรี",
+            "forecast_at": "2026-11-03T07:00:00+07:00",
+            "rain_mm": 14.45,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "ดอนตูม",
+            "forecast_at": "2026-11-03T07:00:00+07:00",
+            "rain_mm": 5.5,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "บางเลน",
+            "forecast_at": "2026-11-03T07:00:00+07:00",
+            "rain_mm": 1.6,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "สามพราน",
+            "forecast_at": "2026-11-03T07:00:00+07:00",
+            "rain_mm": 14.4,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "พุทธมณฑล",
+            "forecast_at": "2026-11-03T07:00:00+07:00",
+            "rain_mm": 14.5,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "เมืองนครปฐม",
+            "forecast_at": "2026-11-04T07:00:00+07:00",
+            "rain_mm": 8.2,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "กำแพงแสน",
+            "forecast_at": "2026-11-04T07:00:00+07:00",
+            "rain_mm": 5.25,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "นครชัยศรี",
+            "forecast_at": "2026-11-04T07:00:00+07:00",
+            "rain_mm": 3,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "ดอนตูม",
+            "forecast_at": "2026-11-04T07:00:00+07:00",
+            "rain_mm": 4.2,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "บางเลน",
+            "forecast_at": "2026-11-04T07:00:00+07:00",
+            "rain_mm": 1.95,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "สามพราน",
+            "forecast_at": "2026-11-04T07:00:00+07:00",
+            "rain_mm": 10.75,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          },
+          {
+            "district": "พุทธมณฑล",
+            "forecast_at": "2026-11-04T07:00:00+07:00",
+            "rain_mm": 3.2,
+            "unit": "mm",
+            "source": "TMD NWP + ECMWF IFS HRES 9km (ensemble)"
+          }
+        ],
+        "note": "อากาศชุดจังหวัดจาก Open-Meteo มีทั้งย้อนหลังและคาดการณ์ ไม่ใช่ค่าจากสถานีตรวจวัด ห้ามรวมฝนข้ามวันหรือแบบจำลอง"
+      }
+    },
+    {
+      "id": "disease",
+      "topic": "โรคและแมลง",
+      "date": "2026-10-28",
+      "tables": [
+        "public_disease_reports",
+        "public_disease_watch"
+      ],
+      "facts": {
+        "reportCount": 5,
+        "byRisk": {
+          "ปานกลาง": 3,
+          "สูง": 2
+        },
+        "reports": [
+          {
+            "crop": "ข้าว",
+            "disease_name": "โรคไหม้ข้าว",
+            "risk_level": "สูง",
+            "symptoms": "ใบข้าวมีแผลจุดสีน้ำตาลคล้ายรูปตาหรือรูปกระสวย ตรงกลางแผลมีสีเทา ขอบแผลสีน้ำตาล • ในระยะแตกกอพบแผลช้ำสีน้ำตาลดำที่ข้อต่อใบและกาบใบ ใบมักหลุดร่วง • หากระบาดรุนแรงกล้าข้าวจะแห้งฟุบตายทั้งกอคล้ายถูกไฟไหม้",
+            "monitoring_actions": "เดินสำรวจแปลงนาอย่างสม่ำเสมออย่างน้อยสัปดาห์ละ 2 ครั้ง โดยเฉพาะในบริเวณที่อับลมหรือจุดที่ข้าวขึ้นหนาแน่น • ตรวจดูใบข้าวในระยะกล้าและแตกกอเพื่อหาแผลรูปตา • สังเกตแปลงนาในช่วงเช้าว่ามีน้ำค้างเกาะใบข้าวยาวนานเกินปกติหรือไม่",
+            "reasoning": "สภาพอากาศในช่วงปลายฝนต้นหนาวที่มีอุณหภูมิเฉลี่ยประมาณ 26°C และมีฝนตกปรอยๆ ต่อเนื่อง (พยากรณ์อากาศล่วงหน้า 7 วันมีฝนตกทุกวัน 0.9-5.4 มม.) ร่วมกับความชื้นสัมพัทธ์สูงในตอนกลางคืนและมีน้ำค้างยาวนานถึงตอนเช้า เป็นปัจจัยที่เอื้อต่อการงอกของสปอร์เชื้อรา Pyricularia oryzae ซึ่งเป็นสาเหตุของโรคไหม้ข้าวอย่างยิ่ง โดยเฉพาะในแปลงนาที่หว่านหนาแน่นและใส่ปุ๋ยไนโตรเจนสูง"
+          },
+          {
+            "crop": "กล้วยไม้",
+            "disease_name": "โรคเน่าดำกล้วยไม้",
+            "risk_level": "สูง",
+            "symptoms": "แผลช้ำน้ำสีน้ำตาลหรือดำที่ใบ ยอด หรือโคนต้น • ใบเหลืองและเน่าดำหลุดร่วงได้ง่าย หากดึงยอดจะหลุดติดมือขึ้นมาได้ง่าย (โรคแก้ผ้า) • รากเน่าแห้งสีน้ำตาลดำ",
+            "monitoring_actions": "เดินสำรวจโรงเรือนกล้วยไม้ทุกเช้า โดยเฉพาะบริเวณที่แขวนกระถางชิดกันหรือจุดที่ลมไม่พัดผ่าน • ตรวจดูบริเวณยอดและโคนต้นกล้วยไม้เพื่อหาอาการช้ำน้ำหรือจุดดำเล็กๆ • แยกต้นกล้วยไม้ที่นำเข้ามาใหม่เพื่อกักกันโรคก่อนนำเข้าโรงเรือน",
+            "reasoning": "กล้วยไม้ในจังหวัดนครปฐมมีความเสี่ยงสูงต่อโรคเน่าดำ (เกิดจากเชื้อรา Phytophthora palmivora) เนื่องจากสภาพอากาศที่มีฝนตกต่อเนื่องเกือบทุกวันตามพยากรณ์อากาศล่วงหน้า ทำให้ความชื้นสะสมในโรงเรือนสูงมากและไม่มีแสงแดดจัด ซึ่งเป็นเงื่อนไขที่เชื้อรากลุ่มนี้เจริญเติบโตและแพร่กระจายสปอร์ไปกับละอองน้ำได้รวดเร็วที่สุด"
+          },
+          {
+            "crop": "ส้มโอ",
+            "disease_name": "โรคแคงเกอร์ส้มโอ",
+            "risk_level": "ปานกลาง",
+            "symptoms": "แผลจุดนูนสีเหลืองอ่อนคล้ายฟองน้ำบนใบ ต่อมาเนื้อเยื่อแข็งเป็นสีน้ำตาลเข้ม ตรงกลางยุบตัว ขอบแผลยกตัว มีวงสีเหลืองล้อมรอบ • แผลสะเก็ดสีน้ำตาลขรุขระบนกิ่งและผลส้มโอ บางครั้งผลปริแตกและร่วง",
+            "monitoring_actions": "สำรวจใบอ่อน กิ่งอ่อน และผลอ่อนของส้มโออย่างสม่ำเสมอ • ตรวจหาการเข้าทำลายของหนอนชอนใบ (รอยเส้นทางคดเคี้ยวสีขาวบนใบอ่อน) ซึ่งเป็นช่องทางเข้าของโรค",
+            "reasoning": "ส้มโอเป็นพืชเศรษฐกิจสำคัญของนครปฐม สภาพอากาศที่มีฝนตกสลับลมกระโชกเบาๆ (ความเร็วลมย้อนหลังสูงสุด 16.4 กม./ชม.) และฝนตกต่อเนื่องล่วงหน้า เอื้อต่อการแพร่กระจายของเชื้อแบคทีเรีย Xanthomonas citri subsp. citri ผ่านละอองน้ำฝน นอกจากนี้รอยแผลจากการทำลายของหนอนชอนใบในช่วงแตกใบอ่อนยังเป็นช่องทางหลักให้เชื้อเข้าทำลาย"
+          },
+          {
+            "crop": "พืชผัก",
+            "disease_name": "โรคเน่าเละพืชผัก",
+            "risk_level": "ปานกลาง",
+            "symptoms": "แผลจุดฉ่ำน้ำขนาดเล็กบนใบหรือลำต้น ต่อมาแผลจะขยายลุกลามมีสีน้ำตาลหรือน้ำตาลเข้ม • เนื้อเยื่อพืชบริเวณแผลยุบตัวลง มีเมือกเยิ้มและส่งกลิ่นเหม็นเฉพาะตัว ต้นเน่ายุบตายทั้งต้น",
+            "monitoring_actions": "ตรวจแปลงปลูกผักอย่างสม่ำเสมอทุกวัน โดยเฉพาะบริเวณโคนต้นและใบที่สัมผัสดิน • สังเกตกลิ่นเหม็นเน่าในแปลงซึ่งเป็นสัญญาณเตือนของโรคนี้",
+            "reasoning": "พืชผัก (โดยเฉพาะผักตระกูลกะหล่ำและผักกาด) มีความเสี่ยงต่อโรคเน่าเละจากเชื้อแบคทีเรีย Pectobacterium carotovorum เนื่องจากสภาพอากาศที่มีฝนตกปรอยๆ และความชื้นสูงสลับกับอุณหภูมิเฉลี่ย 26°C ซึ่งเป็นสภาวะที่แบคทีเรียเจริญเติบโตได้ดีและเข้าทำลายพืชผ่านบาดแผลที่เกิดจากแมลงหรือการจัดการแปลง"
+          },
+          {
+            "crop": "ฝรั่ง",
+            "disease_name": "โรคแอนแทรคโนสฝรั่ง",
+            "risk_level": "ปานกลาง",
+            "symptoms": "จุดแผลแห้งเล็กๆ สีน้ำตาลบนผิวผลฝรั่ง ต่อมาขยายเป็นแผลวงกลมหรือวงรีซ้อนกันเป็นชั้นๆ ยุบตัวลง • ในสภาพชื้นสูงจะพบกลุ่มสปอร์สีส้มหรือชมพูเป็นหยดเยิ้มบริเวณแผล • ใบอ่อนมีจุดสีเทา/น้ำตาล ขอบแผลบิดเบี้ยว เนื้อใบกลางแผลบางและฉีกขาดเป็นรู",
+            "monitoring_actions": "ตรวจดูผลฝรั่งในทุกระยะการเจริญเติบโต โดยเฉพาะผลอ่อนที่เริ่มติดผล • สังเกตใบอ่อนและกิ่งแห้งในทรงพุ่มซึ่งอาจเป็นแหล่งสะสมของเชื้อรา",
+            "reasoning": "ฝรั่งในพื้นที่นครปฐมมีความเสี่ยงต่อโรคแอนแทรคโนส (เชื้อรา Colletotrichum spp.) เนื่องจากฝนที่ตกต่อเนื่องทำให้เกิดความชื้นสูงสะสมในทรงพุ่ม เชื้อราสามารถเข้าทำลายผลอ่อนและผลที่กำลังพัฒนาได้โดยตรงและแฝงตัวอยู่จนกระทั่งผลเริ่มแก่หรือสุกจึงแสดงอาการชัดเจน"
+          }
+        ],
+        "note": "ผล AI เฝ้าระวังระดับจังหวัด ไม่ยืนยันโรคระบาด และห้ามสร้างความเสี่ยงรายอำเภอขึ้นเอง"
+      }
+    },
+    {
+      "id": "hotspots",
+      "topic": "จุดความร้อน",
+      "date": "2026-10-23",
+      "tables": [
+        "public_hotspots"
+      ],
+      "facts": {
+        "start": "2026-09-30",
+        "end": "2026-10-29",
+        "detectedInDataset": 6,
+        "byDistrict": {
+          "กำแพงแสน": 1,
+          "บางเลน": 4,
+          "เมืองนครปฐม": 1
+        },
+        "note": "จำนวนจุดตรวจพบในชุดข้อมูลช่วงที่ระบุ ไม่ใช่จำนวนเหตุไฟไหม้หรือจำนวนเกษตรกร"
+      }
+    },
+    {
+      "id": "registry",
+      "topic": "ทะเบียนเกษตรกร",
+      "date": "2026-10-27",
+      "tables": [
+        "farmer_registry"
+      ],
+      "facts": {
+        "data_year": 2570,
+        "province": {
+          "district": "จังหวัดนครปฐม",
+          "data_year": 2570,
+          "household_count": 35873,
+          "net_total_households": 1005,
+          "target": 32500,
+          "total_updated_households": 989,
+          "cutoff_date": "2026-10-27"
+        },
+        "note": "แถวจังหวัดของปีล่าสุดรวมยอดรายอำเภอแล้ว ใช้แถวนี้อ้างอิงจังหวัด ไม่บวกข้อมูลอำเภอซ้ำ"
+      }
+    },
+    {
+      "id": "parcels",
+      "topic": "การวาดแปลง",
+      "date": "2026-10-29",
+      "dateLabel": "การวาดแปลง (วันที่ดึงจาก GEOPLOTS)",
+      "tables": [
+        "geoplots_parcel_progress"
+      ],
+      "facts": [
+        {
+          "district": "เมืองนครปฐม",
+          "data_year": 2570,
+          "target_round": 1,
+          "target_plots": 415,
+          "drawn_plots": 7,
+          "remaining_target_plots": 408,
+          "progress_percent": 1.69,
+          "snapshot_date": "2026-10-29"
+        },
+        {
+          "district": "กำแพงแสน",
+          "data_year": 2570,
+          "target_round": 1,
+          "target_plots": 955,
+          "drawn_plots": 0,
+          "remaining_target_plots": 955,
+          "progress_percent": 0,
+          "snapshot_date": "2026-10-29"
+        },
+        {
+          "district": "นครชัยศรี",
+          "data_year": 2570,
+          "target_round": 1,
+          "target_plots": 338,
+          "drawn_plots": 0,
+          "remaining_target_plots": 338,
+          "progress_percent": 0,
+          "snapshot_date": "2026-10-29"
+        },
+        {
+          "district": "ดอนตูม",
+          "data_year": 2570,
+          "target_round": 1,
+          "target_plots": 252,
+          "drawn_plots": 0,
+          "remaining_target_plots": 252,
+          "progress_percent": 0,
+          "snapshot_date": "2026-10-29"
+        },
+        {
+          "district": "บางเลน",
+          "data_year": 2570,
+          "target_round": 1,
+          "target_plots": 910,
+          "drawn_plots": 4,
+          "remaining_target_plots": 906,
+          "progress_percent": 0.44,
+          "snapshot_date": "2026-10-29"
+        },
+        {
+          "district": "สามพราน",
+          "data_year": 2570,
+          "target_round": 1,
+          "target_plots": 1289,
+          "drawn_plots": 0,
+          "remaining_target_plots": 1289,
+          "progress_percent": 0,
+          "snapshot_date": "2026-10-29"
+        },
+        {
+          "district": "พุทธมณฑล",
+          "data_year": 2570,
+          "target_round": 1,
+          "target_plots": 91,
+          "drawn_plots": 0,
+          "remaining_target_plots": 91,
+          "progress_percent": 0,
+          "snapshot_date": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "id": "certifications",
+      "topic": "มาตรฐานสินค้า",
+      "date": "2026-10-29",
+      "dateLabel": "มาตรฐานสินค้า (วันอ้างอิงคำนวณหมดอายุ)",
+      "tables": [
+        "certifications"
+      ],
+      "facts": {
+        "certificates": 5640,
+        "expiredBySourceDate": 49,
+        "expiringWithin30Days": 36,
+        "missingOrInvalidExpiryDate": 3668,
+        "note": "นับรายการใบรับรอง ไม่ใช่จำนวนเกษตรกร คำนวณโดยเทียบวันหมดอายุกับวันที่สรุป ไม่ใช่วันรับรองหรือวันที่ปรับปรุงต้นทาง ต้องตรวจสถานะจริงก่อนใช้ ไม่มีชื่อบุคคลหรือรหัสแปลง"
+      }
+    }
+  ],
+  "usage": [
+    {
+      "promptTokenCount": 2103,
+      "candidatesTokenCount": 186,
+      "totalTokenCount": 2289,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 2103
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 1406,
+      "candidatesTokenCount": 336,
+      "totalTokenCount": 1742,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1406
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 4880,
+      "candidatesTokenCount": 354,
+      "totalTokenCount": 5234,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 4880
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 669,
+      "candidatesTokenCount": 183,
+      "totalTokenCount": 852,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 669
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 705,
+      "candidatesTokenCount": 229,
+      "totalTokenCount": 934,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 705
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 1087,
+      "candidatesTokenCount": 344,
+      "totalTokenCount": 1431,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1087
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 692,
+      "candidatesTokenCount": 162,
+      "totalTokenCount": 854,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 692
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 9474,
+      "candidatesTokenCount": 411,
+      "totalTokenCount": 9885,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 9474
+        }
+      ],
+      "serviceTier": "standard"
+    }
+  ],
+  "count": 8,
+  "data": [
+    {
+      "briefing_date": "2026-10-29",
+      "topic_order": 0,
+      "topic": "ภาพรวม",
+      "summary": "ข้อมูลวันที่ 2026-10-29 พบสถานีวัดน้ำ 5 จาก 8 สถานีมีระดับน้ำสูงกว่าตลิ่ง เช่น สถานีวัดบางไผ่นารถและบางเลน อำเภอบางเลน สูง 2.54 และ 2.76 เมตรจากระดับน้ำทะเลปานกลาง ทะเบียนเกษตรกรปี 2570 อ้างอิงวันที่ 2026-10-27 ระบุเป้าหมาย 32500 ครัวเรือน มีครัวเรือนปรับปรุงข้อมูลแล้ว 989 ครัวเรือน ส่วนความก้าวหน้าการวาดแปลงวันที่ 2026-10-29 มีอำเภอเมืองนครปฐมวาดแล้ว 7 แปลง และอำเภอบางเลน 4 แปลง จากเป้าหมายรวมทุกอำเภอ ด้านมาตรฐานสินค้ามีใบรับรองทั้งหมด 5640 รายการ โดยมีรายการที่วันหมดอายุขาดหาย 3668 รายการ และตรวจพบจุดความร้อน 6 จุด ระหว่างวันที่ 30 กันยายน 2569 ถึง 29 ตุลาคม 2569",
+      "next_steps": "ควรตรวจสอบสถานการณ์น้ำในพื้นที่อำเภอบางเลนและนครชัยศรีเนื่องจากมีสถานีวัดน้ำสูงกว่าตลิ่ง ตรวจสอบแปลงเกษตรในอำเภอที่มีการวาดแปลงเพื่อเร่งรัดความก้าวหน้า และตรวจสอบสถานะจริงของใบรับรองมาตรฐานสินค้าที่มีวันหมดอายุขาดหาย",
+      "limitations": "ข้อมูลแต่ละหัวข้อมีวันอ้างอิงต่างกัน ผล AI ใช้ประกอบการตรวจสอบและระบุความครบถ้วนของข้อมูล",
+      "source_dates": "น้ำ: 2026-10-29T07:25:00.000Z • อากาศและฝน: 2026-10-29 • โรคและแมลง: 2026-10-28 • จุดความร้อน: 2026-10-23 • ทะเบียนเกษตรกร: 2026-10-27 • การวาดแปลง (วันที่ดึงจาก GEOPLOTS): 2026-10-29 • มาตรฐานสินค้า (วันอ้างอิงคำนวณหมดอายุ): 2026-10-29",
+      "evidence_ids": [
+        "water",
+        "weather",
+        "disease",
+        "hotspots",
+        "registry",
+        "parcels",
+        "certifications"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
+      "generated_at": "2026-10-29T07:33:30.225Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-29",
+      "topic_order": 1,
+      "topic": "น้ำ",
+      "summary": "ข้อมูลสถานีวัดน้ำ 8 สถานี วันที่ 2026-10-29 พบสถานีที่มีระดับน้ำสูงกว่าตลิ่ง 5 สถานี ได้แก่ วัดบางไผ่นารถ อำเภอบางเลน 2.54 เมตรจากระดับน้ำทะเลปานกลาง ที่ว่าการอ.นครชัยศรี อำเภอนครชัยศรี 2.39 เมตรจากระดับน้ำทะเลปานกลาง บางเลน อำเภอบางเลน 2.76 เมตรจากระดับน้ำทะเลปานกลาง ร.ร.บ้านสามพราน อำเภอสามพราน 1.89 เมตรจากระดับน้ำทะเลปานกลาง และสะพานนครชัยศรี อำเภอนครชัยศรี 2.21 เมตรจากระดับน้ำทะเลปานกลาง ส่วนสถานีที่ไม่สูงกว่าตลิ่งมี 3 สถานี ได้แก่ ศาลาดิน อำเภอพุทธมณฑล 0.86 เมตรจากระดับน้ำทะเลปานกลาง คลองนราภิรมย์ บางเลน อำเภอบางเลน 1.98 เมตรจากระดับน้ำทะเลปานกลาง และปตร.คลองทวีวัฒนา อำเภอพุทธมณฑล 0.71 เมตรจากระดับน้ำทะเลปานกลาง มีสถานีเก่าหรือไม่มีเวลา 3 สถานี",
+      "next_steps": "ควรตรวจสอบสถานีวัดน้ำในพื้นที่อำเภอบางเลน อำเภอนครชัยศรี และอำเภอสามพรานเนื่องจากมีระดับน้ำสูงกว่าตลิ่ง",
+      "limitations": "ใช้เฉพาะค่าที่มีเวลาตรวจวัดใน 48 ชั่วโมง สถานีเก่าหรือไม่มีเวลาไม่นับเป็นสถานการณ์ปัจจุบัน",
+      "source_dates": "น้ำ: 2026-10-29T07:25:00.000Z",
+      "evidence_ids": [
+        "water"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_water.json",
+      "generated_at": "2026-10-29T07:33:30.225Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-29",
+      "topic_order": 2,
+      "topic": "อากาศและฝน",
+      "summary": "ข้อมูลอากาศและฝนชุดจังหวัดจาก Open-Meteo ระหว่างวันที่ 2026-10-23 ถึง 2026-10-29 ระบุอุณหภูมิเฉลี่ย 27 ถึง 29.4 อาศาเซลเซียส และมีปริมาณฝนรายวัน 0.1 ถึง 4.8 มิลลิเมตร ข้อมูลนี้ไม่ใช่สถานีตรวจวัดหรือรายแปลง นอกจากนี้ยังมีข้อมูลพยากรณ์ปริมาณฝนรายอำเภอตั้งแต่วันที่ 2026-10-29 ถึง 2026-11-04 จากแบบจำลอง TMD NWP ร่วมกับ ECMWF IFS HRES โดยวันที่ 2026-10-29 อำเภอดอนตูมมีฝน 20.35 มิลลิเมตร และอำเภอกำแพงแสนมีฝน 20.05 มิลลิเมตร ยังไม่ทราบค่าจริงจากสถานีตรวจวัดในพื้นที่",
+      "next_steps": "ควรตรวจสอบข้อมูลพยากรณ์ฝนรายอำเภอจากชุดข้อมูล TMD NWP และ ECMWF ร่วมกับสภาพพื้นที่จริงในอำเภอดอนตูมและอำเภอกำแพงแสน เนื่องจากเป็นพื้นที่ที่มีค่าคาดการณ์ปริมาณฝนสูงสุดในวันที่ 2026-10-29 เพื่อเตรียมรับมือสถานการณ์น้ำ",
+      "limitations": "ข้อมูลแบบจำลองอากาศและฝน ไม่ใช่ผลตรวจวัดรายแปลง",
+      "source_dates": "อากาศและฝน: 2026-10-29",
+      "evidence_ids": [
+        "weather"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_weather.json",
+      "generated_at": "2026-10-29T07:33:30.225Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-29",
+      "topic_order": 3,
+      "topic": "โรคและแมลง",
+      "summary": "ข้อมูลวันที่ 28 ตุลาคม 2569 จากรายงานผล AI เฝ้าระวังระดับจังหวัด จำนวน 5 รายการ พบความเสี่ยงระดับสูง 2 รายการ ได้แก่ โรคไหม้ข้าวในข้าว และโรคเน่าดำกล้วยไม้ในกล้วยไม้ และพบความเสี่ยงระดับปานกลาง 3 รายการ ได้แก่ โรคแคงเกอร์ส้มโอ โรคเน่าเละพืชผัก และโรคแอนแทรคโนสฝรั่ง ผลนี้ยังไม่ยืนยันโรคระบาด",
+      "next_steps": "ควรตรวจสอบแปลงปลูกและโรงเรือนตามคำแนะนำเพื่อเฝ้าระวังอาการของโรคพืชตามชุดข้อมูลเนื่องจากเป็นผล AI เฝ้าระวังระดับจังหวัดที่ยังไม่ยืนยันการระบาด",
+      "limitations": "ผล AI เฝ้าระวังระดับจังหวัด ยังไม่ยืนยันโรคระบาดหรือความเสี่ยงรายแปลง",
+      "source_dates": "โรคและแมลง: 2026-10-28",
+      "evidence_ids": [
+        "disease"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_disease_reports.json",
+      "generated_at": "2026-10-29T07:33:30.225Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-29",
+      "topic_order": 4,
+      "topic": "จุดความร้อน",
+      "summary": "ข้อมูลจุดความร้อนในจังหวัดนครปฐมตรวจพบในชุดข้อมูลจำนวน 6 จุด ช่วงวันที่ 30 กันยายน 2569 ถึงวันที่ 29 ตุลาคม 2569 โดยอ้างอิงข้อมูลวันที่ 23 ตุลาคม 2569 แยกเป็นอำเภอบางเลน 4 จุด อำเภอกำแพงแสน 1 จุด และอำเภอเมืองนครปฐม 1 จุด จำนวนจุดตรวจพบในชุดข้อมูลช่วงที่ระบุไม่ใช่จำนวนเหตุไฟไหม้หรือจำนวนเกษตรกร",
+      "next_steps": "ควรตรวจสอบพื้นที่อำเภอบางเลน อำเภอกำแพงแสน และอำเภอเมืองนครปฐมในชุดข้อมูลจุดความร้อน เพราะพบการบันทึกข้อมูลจำนวนจุดความร้อนในพื้นที่ดังกล่าว",
+      "limitations": "นับจุดในชุดข้อมูลตามช่วงที่ระบุ วันที่ตรวจพบล่าสุดไม่ใช่วันที่ยืนยันว่าดึงข้อมูลครบ และไม่ใช่จำนวนเหตุไฟไหม้",
+      "source_dates": "จุดความร้อน: 2026-10-23",
+      "evidence_ids": [
+        "hotspots"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/public_hotspots.json",
+      "generated_at": "2026-10-29T07:33:30.225Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-29",
+      "topic_order": 5,
+      "topic": "ทะเบียนเกษตรกร",
+      "summary": "เป้าหมายจังหวัดปี 2570: 32,500 ครัวเรือน • ข้อมูลทะเบียนเกษตรกรจังหวัดนครปฐม ปี 2570 อ้างอิงวันที่ 2026-10-27 ระบุเป้าหมาย 32500 ครัวเรือน ข้อมูลระดับจังหวัดมีครัวเรือน 35873 ครัวเรือน ยอดครัวเรือนปรับปรุงข้อมูลแล้ว 989 ครัวเรือน และครัวเรือนสุทธิ 1005 ครัวเรือน ข้อมูลยังไม่ระบุรายละเอียดจำแนกรายอำเภอเพิ่มเติม นอกเหนือจากยอดรวมระดับจังหวัดตามหลักฐานที่ปรากฏ",
+      "next_steps": "ควรตรวจสอบรายละเอียดข้อมูลทะเบียนเกษตรกรรายอำเภอในจังหวัดนครปฐม เนื่องจากข้อมูลปัจจุบันแสดงเพียงยอดรวมระดับจังหวัด เพื่อให้ทราบการกระจายตัวของครัวเรือนเกษตรกรในแต่ละพื้นที่",
+      "limitations": "ข้อมูลทะเบียนตามรอบวันตัดยอดของเกษตรอำเภอ ไม่ใช่ยอดที่ปรับปรุงวันนี้",
+      "source_dates": "ทะเบียนเกษตรกร: 2026-10-27",
+      "evidence_ids": [
+        "registry"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/farmer_registry.json",
+      "generated_at": "2026-10-29T07:33:30.225Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-29",
+      "topic_order": 6,
+      "topic": "การวาดแปลง",
+      "summary": "ข้อมูลความก้าวหน้าการวาดแปลงปี 2570 รอบที่ 1 ณ วันที่ 2026-10-29 อ้างอิงจาก geoplots_parcel_progress ระบุว่าอำเภอเมืองนครปฐมมีเป้าหมาย 415 แปลง วาดแล้ว 7 แปลง คงเหลือ 408 แปลง คิดเป็นร้อยละ 1.69 อำเภอบางเลนเป้าหมาย 910 แปลง วาดแล้ว 4 แปลง คงเหลือ 906 แปลง คิดเป็นร้อยละ 0.44 ส่วนอำเภอกำแพงแสนเป้าหมาย 955 แปลง นครชัยศรีเป้าหมาย 338 แปลง ดอนตูมเป้าหมาย 252 แปลง สามพรานเป้าหมาย 1289 แปลง และพุทธมณฑลเป้าหมาย 91 แปลง ยังไม่มีการวาดแปลง โดยทุกอำเภอมีผลการวาดแปลงเป็น 0 แปลงและร้อยละ 0",
+      "next_steps": "ควรตรวจสอบความคืบหน้าการวาดแปลงในชุดข้อมูล geoplots_parcel_progress ของอำเภอกำแพงแสน นครชัยศรี ดอนตูม สามพราน และพุทธมณฑล เนื่องจากยังไม่มีการวาดแปลงแปลงเป้าหมาย และติดตามการดำเนินงานในอำเภอเมืองนครปฐมกับอำเภอบางเลนที่ยังคงมีแปลงคงเหลือจำนวนมาก",
+      "limitations": "ความคืบหน้าตามวันรายงานต้นทางของการวาดแปลง อาจยังไม่มีงานที่ทำหลังจากวันดังกล่าว",
+      "source_dates": "การวาดแปลง (วันที่ดึงจาก GEOPLOTS): 2026-10-29",
+      "evidence_ids": [
+        "parcels"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/geoplots_parcel_progress.json",
+      "generated_at": "2026-10-29T07:33:30.225Z",
+      "model": "gemini-3.5-flash-lite"
+    },
+    {
+      "briefing_date": "2026-10-29",
+      "topic_order": 7,
+      "topic": "มาตรฐานสินค้า",
+      "summary": "ข้อมูลวันที่ 2026-10-29 ระบุจำนวนใบรับรอง 5640 รายการ มีใบรับรองหมดอายุตามวันอ้างอิง 49 รายการ จะหมดอายุใน 30 วัน 36 รายการ และมีรายการที่วันหมดอายุขาดหายหรือไม่ถูกต้อง 3668 รายการ ข้อมูลนี้เป็นการนับรายการใบรับรองไม่ใช่จำนวนเกษตรกร และยังไม่ทราบสถานะจริงของใบรับรองในพื้นที่",
+      "next_steps": "ควรตรวจสอบสถานะจริงของใบรับรองในชุดข้อมูลหรือพื้นที่เพราะมีรายการที่วันหมดอายุขาดหายจำนวนมากและต้องยืนยันสถานะก่อนนำไปใช้",
+      "limitations": "คำนวณจากวันหมดอายุในข้อมูล นับใบรับรอง ไม่ใช่เกษตรกร ข้อมูลที่ไม่มีวันหมดอายุอยู่ระหว่างยืนยันต้นทาง",
+      "source_dates": "มาตรฐานสินค้า (วันอ้างอิงคำนวณหมดอายุ): 2026-10-29",
+      "evidence_ids": [
+        "certifications"
+      ],
+      "source_url": "https://dragonfly13110.github.io/npt-data/data/bi/certifications.json",
+      "generated_at": "2026-10-29T07:33:30.225Z",
+      "model": "gemini-3.5-flash-lite"
+    }
+  ]
+}
