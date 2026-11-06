@@ -538,15 +538,15 @@
       "table": "public_agricultural_prices",
       "title": "ราคาสินค้าเกษตร 4 แหล่ง · แยกราคาเดี่ยวและช่วงราคา",
       "status": "ready",
-      "count": 7354,
-      "fetchedAt": "2026-11-06T09:23:46.263Z",
+      "count": 6811,
+      "fetchedAt": "2026-11-06T15:01:00.919Z",
       "dataAsOf": "2026-11-06",
       "dataAsOfLabel": "2026-11-06",
       "updateFrequency": "ตรวจต้นทางรายวัน",
       "freshnessStatus": "ตรวจวันที่ต้นทาง ไม่ใช่วันดึงสำเนา",
       "scope": "สินค้า เกรด ตลาด หน่วย และประเภทราคาแยกกัน · ดูสถานะแต่ละแหล่ง",
-      "bytes": 9727552,
-      "sha256": "f040a0839f43687783438e3beccfc2b4b27f3571f69feb761058088af1ed5cfb"
+      "bytes": 9106202,
+      "sha256": "7b65a3b0cebd676f17201218f395d4886d6bc968a0cd933aba28ce7b8550b372"
     },
     {
       "table": "public_flood_monitor",
