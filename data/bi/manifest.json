@@ -298,17 +298,17 @@
     },
     {
       "table": "crop_production",
-      "title": "ผลผลิตพืช",
-      "status": "empty",
-      "count": 0,
-      "fetchedAt": "2026-11-10T09:45:40.821Z",
-      "dataAsOf": null,
-      "dataAsOfLabel": "ไม่มีข้อมูลในระบบ",
+      "title": "สถิติการผลิตพืชเศรษฐกิจ 5 ปี นครปฐม (สศก.)",
+      "status": "ready",
+      "count": 34,
+      "fetchedAt": "2026-11-10T14:38:54.205Z",
+      "dataAsOf": "2563-2568",
+      "dataAsOfLabel": "ปีเพาะปลูก 2563-2568",
       "updateFrequency": "รายปี",
-      "freshnessStatus": "ไม่มีข้อมูล",
-      "scope": "ผลผลิตพืชเศรษฐกิจ",
-      "bytes": 122,
-      "sha256": "8b33a5d18f607e42727334d15fa867790ecf36036cec6c214e76f5cd80cd2a7d"
+      "freshnessStatus": "ปกติ (ข้อมูลเปิด สศก.)",
+      "scope": "สถิติเนื้อที่เพาะปลูก เนื้อที่เก็บเกี่ยว ผลผลิต และผลผลิตต่อไร่ จังหวัดนครปฐม จาก สศก.",
+      "bytes": 11123,
+      "sha256": "d26cb39df178e892dadf87e3ef5ecad683f890803d51ff900a95888227f6c3a4"
     },
     {
       "table": "production_costs",
@@ -617,6 +617,48 @@
       "scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน",
       "bytes": 444157,
       "sha256": "dcc9c7028b07954e1b11cedc0000bc144f0b6fa5f15185c8ac115604e3ce79e9"
+    },
+    {
+      "table": "crop_suitability_zoning",
+      "title": "โซนนิ่งความเหมาะสมของดินและพื้นที่ปลูกพืชรายตำบล (Agri-Map WFS)",
+      "status": "ready",
+      "count": 1060,
+      "fetchedAt": "2026-11-10T14:38:54.205Z",
+      "dataAsOf": "2026-11-10",
+      "dataAsOfLabel": "Agri-Map S1/S2/S3/N (106 ตำบล)",
+      "updateFrequency": "รายปี",
+      "freshnessStatus": "ปกติ (DOAE SSMAP / LDD Agri-Map)",
+      "scope": "พื้นที่ความเหมาะสม S1/S2/S3/N และกลุ่มชุดดิน 10 ชนิดพืช ครบ 106 ตำบล 7 อำเภอ จ.นครปฐม",
+      "bytes": 558780,
+      "sha256": "08bb9ad0fa5e166cd5afa9e209fff9ef04ec6edb01e237c25290422e8b99beb8"
+    },
+    {
+      "table": "crop_irrigation_zones",
+      "title": "พื้นที่เขตโครงการชลประทานรายตำบล (DOAE / RID WFS)",
+      "status": "ready",
+      "count": 160,
+      "fetchedAt": "2026-11-10T14:38:54.205Z",
+      "dataAsOf": "2026-11-10",
+      "dataAsOfLabel": "โครงการชลประทานนครปฐม",
+      "updateFrequency": "รายปี",
+      "freshnessStatus": "ปกติ (DOAE SSMAP WFS)",
+      "scope": "พื้นที่ชลประทานแยกตามโครงการและตำบลในจังหวัดนครปฐม",
+      "bytes": 82329,
+      "sha256": "58bc45fb9c2dc18252a7a1e73bedda2b984060817915343752b47d7e63351936"
+    },
+    {
+      "table": "crop_oae_history",
+      "title": "ประวัติพื้นที่เพาะปลูก ผลผลิต และผลผลิตต่อไร่ย้อนหลัง 5 ปี นครปฐม (สศก.)",
+      "status": "ready",
+      "count": 34,
+      "fetchedAt": "2026-11-10T14:38:54.205Z",
+      "dataAsOf": "2563-2568",
+      "dataAsOfLabel": "สถิติ สศก. ย้อนหลัง 5 ปี (2563-2568)",
+      "updateFrequency": "รายปี",
+      "freshnessStatus": "ปกติ (OAE Open Data)",
+      "scope": "สถิติพืชเศรษฐกิจนครปฐม (ข้าวนาปี, ข้าวนาปรัง, มันสำปะหลัง, ปาล์มน้ำมัน, ยางพารา, มะพร้าว, ลำไย)",
+      "bytes": 15785,
+      "sha256": "33757272653fea03f2c6ca4022539c3d47cf874f535d6f8e6869cc33be6d1129"
     }
   ]
 }
