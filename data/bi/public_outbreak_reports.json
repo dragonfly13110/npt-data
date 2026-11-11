@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": "public_outbreak_reports",
   "status": "ready",
-  "count": 24,
-  "fetchedAt": "2026-11-10T17:48:46.168Z",
+  "count": 20,
+  "fetchedAt": "2026-11-11T09:22:25.301Z",
   "data": [
     {
       "report_id": "13951",
@@ -58,17 +58,6 @@
       "source_modified_at": "2026-08-31T18:50:34",
       "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/08/SUMCrop_pest-2569_8_26.pdf",
       "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-470/",
-      "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
-    },
-    {
-      "report_id": "13327",
-      "report_group": "พืชไร่",
-      "report_date": "2026-08-12",
-      "title": "สถานการณ์การระบาดศัตรูพืชไร่ วันที่ 12 สิงหาคม 2569",
-      "published_at": "2026-08-17T17:38:25",
-      "source_modified_at": "2026-08-17T17:38:26",
-      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/08/SUMCrop_pest-2569_8_12.pdf",
-      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-466/",
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
@@ -127,17 +116,6 @@
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
-      "report_id": "13330",
-      "report_group": "ไม้ยืนต้น",
-      "report_date": "2026-08-12",
-      "title": "สถานการณ์การระบาดศัตรูไม้ยืนต้น วันที่ 12 สิงหาคม 2569",
-      "published_at": "2026-08-17T17:39:33",
-      "source_modified_at": "2026-08-17T17:39:34",
-      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/08/SUMTree_pest_2569_08_12.pdf",
-      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-467/",
-      "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
-    },
-    {
       "report_id": "13957",
       "report_group": "ข้าว",
       "report_date": "2026-10-28",
@@ -193,17 +171,6 @@
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     },
     {
-      "report_id": "13333",
-      "report_group": "ข้าว",
-      "report_date": "2026-08-12",
-      "title": "สถานการณ์การระบาดศัตรูข้าว วันที่ 12 สิงหาคม 2569",
-      "published_at": "2026-08-17T17:40:19",
-      "source_modified_at": "2026-08-17T17:40:20",
-      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/08/SUMRice_pest_2569_08_12.pdf",
-      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-468/",
-      "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
-    },
-    {
       "report_id": "13960",
       "report_group": "ไม้ผล",
       "report_date": "2026-10-28",
@@ -256,17 +223,6 @@
       "source_modified_at": "2026-08-31T18:53:24",
       "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/08/SUMFruit-tree_pest__2569_8_26.pdf",
       "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-473/",
-      "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
-    },
-    {
-      "report_id": "13336",
-      "report_group": "ไม้ผล",
-      "report_date": "2026-08-12",
-      "title": "สถานการณ์การระบาดศัตรูไม้ผล วันที่ 12 สิงหาคม 2569",
-      "published_at": "2026-08-17T17:42:34",
-      "source_modified_at": "2026-08-17T17:42:35",
-      "source_url": "https://ppsf.doae.go.th/wp-content/uploads/2026/08/SUMFruit-tree_pest__2569_8_12.pdf",
-      "report_url": "https://ppsf.doae.go.th/%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%b2%e0%b8%94%e0%b8%a8%e0%b8%b1%e0%b8%95%e0%b8%a3-469/",
       "spatial_scope": "รายงานส่วนกลาง รวมจังหวัดที่รายงาน ระดับประเทศ"
     }
   ]
