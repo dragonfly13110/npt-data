@@ -3,17 +3,17 @@
   "table": "public_agricultural_prices",
   "productScope": "สินค้าเกษตร: พืช ปศุสัตว์ ประมง และผลผลิตแห้งขั้นต้น ไม่รวมอาหารสำเร็จรูปหรือของใช้",
   "status": "ready",
-  "count": 7155,
-  "fetchedAt": "2026-11-11T09:23:25.345Z",
+  "count": 7219,
+  "fetchedAt": "2026-11-11T15:10:59.347Z",
   "sources": [
     {
       "name": "สศก. / NABC",
-      "status": "retained",
-      "fetchedAt": "2026-11-10T11:56:23.493Z",
-      "rows": 0,
-      "error": "Public source agriapi.nabc.go.th returned 403",
-      "retainedRows": 347,
-      "latestDate": "2026-11-10"
+      "status": "ready",
+      "fetchedAt": "2026-11-11T15:10:59.347Z",
+      "rows": 4104,
+      "error": null,
+      "retainedRows": 411,
+      "latestDate": "2026-11-11"
     },
     {
       "name": "ตลาดไท",
@@ -46,7 +46,7 @@
   "history": {
     "maxDays": 90,
     "maxBytes": 10485760,
-    "trimmedForSize": false
+    "trimmedForSize": true
   },
   "qualityRejected": {
     "source": "ตลาดสี่มุมเมือง",
@@ -15894,6 +15894,1222 @@
       "collected_at": "2026-11-11T09:23:25.345Z"
     },
     {
+      "data_date": "2026-11-11",
+      "product_category": "กุ้งขาว",
+      "product_name": "กุ้งขาวแวนนาไม ขนาด 50 ตัว/กก.",
+      "market_name": "ตลาดกลางกุ้งสมุทรสาคร",
+      "province": "สมุทรสาคร",
+      "day_price": 175,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"กุ้งขาวแวนนาไม ขนาด 50 ตัว/กก.\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางกุ้งสมุทรสาคร\",\"สมุทรสาคร\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "กุ้งขาวแวนนาไม ขนาด 50 ตัว/กก.",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 175,
+      "price_max": 175,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "กุ้งขาว",
+      "product_name": "กุ้งขาวแวนนาไม ขนาด 50 ตัว/กก.",
+      "market_name": "ร้านสินงอกงาม",
+      "province": "ฉะเชิงเทรา",
+      "day_price": 185,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"กุ้งขาวแวนนาไม ขนาด 50 ตัว/กก.\",\"ตามชื่อสินค้าต้นทาง\",\"ร้านสินงอกงาม\",\"ฉะเชิงเทรา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "กุ้งขาวแวนนาไม ขนาด 50 ตัว/กก.",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 185,
+      "price_max": 185,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "กุ้งขาว",
+      "product_name": "กุ้งขาวแวนนาไม ขนาด 60 ตัว/กก.",
+      "market_name": "ตลาดกลางกุ้งสมุทรสาคร",
+      "province": "สมุทรสาคร",
+      "day_price": 145,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"กุ้งขาวแวนนาไม ขนาด 60 ตัว/กก.\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางกุ้งสมุทรสาคร\",\"สมุทรสาคร\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "กุ้งขาวแวนนาไม ขนาด 60 ตัว/กก.",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 145,
+      "price_max": 145,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "กุ้งขาว",
+      "product_name": "กุ้งขาวแวนนาไม ขนาด 60 ตัว/กก.",
+      "market_name": "ร้านสินงอกงาม",
+      "province": "ฉะเชิงเทรา",
+      "day_price": 160,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"กุ้งขาวแวนนาไม ขนาด 60 ตัว/กก.\",\"ตามชื่อสินค้าต้นทาง\",\"ร้านสินงอกงาม\",\"ฉะเชิงเทรา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "กุ้งขาวแวนนาไม ขนาด 60 ตัว/กก.",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 160,
+      "price_max": 160,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "กุ้งขาว",
+      "product_name": "กุ้งขาวแวนนาไม ขนาด 70 ตัว/กก.",
+      "market_name": "ตลาดกลางกุ้งสมุทรสาคร",
+      "province": "สมุทรสาคร",
+      "day_price": 140,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"กุ้งขาวแวนนาไม ขนาด 70 ตัว/กก.\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางกุ้งสมุทรสาคร\",\"สมุทรสาคร\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "กุ้งขาวแวนนาไม ขนาด 70 ตัว/กก.",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 140,
+      "price_max": 140,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "กุ้งขาว",
+      "product_name": "กุ้งขาวแวนนาไม ขนาด 70 ตัว/กก.",
+      "market_name": "ร้านสินงอกงาม",
+      "province": "ฉะเชิงเทรา",
+      "day_price": 150,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"กุ้งขาวแวนนาไม ขนาด 70 ตัว/กก.\",\"ตามชื่อสินค้าต้นทาง\",\"ร้านสินงอกงาม\",\"ฉะเชิงเทรา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "กุ้งขาวแวนนาไม ขนาด 70 ตัว/กก.",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 150,
+      "price_max": 150,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "กุ้งขาว",
+      "product_name": "กุ้งขาวแวนนาไม ขนาด 80 ตัว/กก.",
+      "market_name": "ตลาดกลางกุ้งสมุทรสาคร",
+      "province": "สมุทรสาคร",
+      "day_price": 135,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"กุ้งขาวแวนนาไม ขนาด 80 ตัว/กก.\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางกุ้งสมุทรสาคร\",\"สมุทรสาคร\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "กุ้งขาวแวนนาไม ขนาด 80 ตัว/กก.",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 135,
+      "price_max": 135,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "กุ้งขาว",
+      "product_name": "กุ้งขาวแวนนาไม ขนาด 80 ตัว/กก.",
+      "market_name": "ร้านสินงอกงาม",
+      "province": "ฉะเชิงเทรา",
+      "day_price": 140,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"กุ้งขาวแวนนาไม ขนาด 80 ตัว/กก.\",\"ตามชื่อสินค้าต้นทาง\",\"ร้านสินงอกงาม\",\"ฉะเชิงเทรา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "กุ้งขาวแวนนาไม ขนาด 80 ตัว/กก.",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 140,
+      "price_max": 140,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ไก่",
+      "product_name": "ไก่รุ่นพันธุ์เนื้อ",
+      "market_name": "บริษัท เจริญโภคภัณฑ์ จำกัด",
+      "province": "ชลบุรี",
+      "day_price": 42,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ไก่รุ่นพันธุ์เนื้อ\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท เจริญโภคภัณฑ์ จำกัด\",\"ชลบุรี\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B9%84%E0%B8%81%E0%B9%88&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ไก่รุ่นพันธุ์เนื้อ",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 42,
+      "price_max": 42,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ไก่",
+      "product_name": "ไก่รุ่นพันธุ์เนื้อ",
+      "market_name": "ฟาร์ม คุณณรงค์ พิพัฒสุวรรณ",
+      "province": "นครปฐม",
+      "day_price": 45,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ไก่รุ่นพันธุ์เนื้อ\",\"ตามชื่อสินค้าต้นทาง\",\"ฟาร์ม คุณณรงค์ พิพัฒสุวรรณ\",\"นครปฐม\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B9%84%E0%B8%81%E0%B9%88&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ไก่รุ่นพันธุ์เนื้อ",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 45,
+      "price_max": 45,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวเปลือกเจ้า",
+      "product_name": "ข้าวเปลือกเจ้าพันธุ์สุพรรณบุรี ความชื้น 15%",
+      "market_name": "ท่าข้าวเปรมศิริพืชผล",
+      "province": "พิษณุโลก",
+      "day_price": 8700,
+      "unit": "บาท/ตัน",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวเปลือกเจ้าพันธุ์สุพรรณบุรี ความชื้น 15%\",\"ตามชื่อสินค้าต้นทาง\",\"ท่าข้าวเปรมศิริพืชผล\",\"พิษณุโลก\",\"บาท/ตัน\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวเปลือกเจ้าพันธุ์สุพรรณบุรี ความชื้น 15%",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 8700,
+      "price_max": 8700,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวเปลือกเจ้า",
+      "product_name": "ข้าวเปลือกเจ้าพันธุ์สุพรรณบุรี ความชื้น 25%",
+      "market_name": "ท่าข้าวเปรมศิริพืชผล",
+      "province": "พิษณุโลก",
+      "day_price": 7700,
+      "unit": "บาท/ตัน",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวเปลือกเจ้าพันธุ์สุพรรณบุรี ความชื้น 25%\",\"ตามชื่อสินค้าต้นทาง\",\"ท่าข้าวเปรมศิริพืชผล\",\"พิษณุโลก\",\"บาท/ตัน\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวเปลือกเจ้าพันธุ์สุพรรณบุรี ความชื้น 25%",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 7700,
+      "price_max": 7700,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวหอมมะลิ",
+      "product_name": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "market_name": "ท่าข้าว ธ.ก.ส.",
+      "province": "ขอนแก่น",
+      "day_price": 16000,
+      "unit": "บาท/ตัน",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวเปลือกเจ้าหอมมะลิ 105\",\"ตามชื่อสินค้าต้นทาง\",\"ท่าข้าว ธ.ก.ส.\",\"ขอนแก่น\",\"บาท/ตัน\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AB%E0%B8%AD%E0%B8%A1%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 16000,
+      "price_max": 16000,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวหอมมะลิ",
+      "product_name": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "market_name": "โรงสีกิจทวียโสธร",
+      "province": "ยโสธร",
+      "day_price": 13000,
+      "unit": "บาท/ตัน",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวเปลือกเจ้าหอมมะลิ 105\",\"ตามชื่อสินค้าต้นทาง\",\"โรงสีกิจทวียโสธร\",\"ยโสธร\",\"บาท/ตัน\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AB%E0%B8%AD%E0%B8%A1%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 13000,
+      "price_max": 13000,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวหอมมะลิ",
+      "product_name": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "market_name": "โรงสีไฟไทยเจริญวัฒนา",
+      "province": "อำนาจเจริญ",
+      "day_price": 13500,
+      "unit": "บาท/ตัน",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวเปลือกเจ้าหอมมะลิ 105\",\"ตามชื่อสินค้าต้นทาง\",\"โรงสีไฟไทยเจริญวัฒนา\",\"อำนาจเจริญ\",\"บาท/ตัน\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AB%E0%B8%AD%E0%B8%A1%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 13500,
+      "price_max": 13500,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวหอมมะลิ",
+      "product_name": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "market_name": "โรงสีราษีพาณิชย์ศรีสะเกษ",
+      "province": "ศรีสะเกษ",
+      "day_price": 13400,
+      "unit": "บาท/ตัน",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวเปลือกเจ้าหอมมะลิ 105\",\"ตามชื่อสินค้าต้นทาง\",\"โรงสีราษีพาณิชย์ศรีสะเกษ\",\"ศรีสะเกษ\",\"บาท/ตัน\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AB%E0%B8%AD%E0%B8%A1%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 13400,
+      "price_max": 13400,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวหอมมะลิ",
+      "product_name": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "market_name": "โรงสีสหกรณ์การเกษตรสุวรรณภูมิ",
+      "province": "ร้อยเอ็ด",
+      "day_price": 17500,
+      "unit": "บาท/ตัน",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวเปลือกเจ้าหอมมะลิ 105\",\"ตามชื่อสินค้าต้นทาง\",\"โรงสีสหกรณ์การเกษตรสุวรรณภูมิ\",\"ร้อยเอ็ด\",\"บาท/ตัน\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AB%E0%B8%AD%E0%B8%A1%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 17500,
+      "price_max": 17500,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวหอมมะลิ",
+      "product_name": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "market_name": "โรงสีสหพัฒนา",
+      "province": "บุรีรัมย์",
+      "day_price": 14300,
+      "unit": "บาท/ตัน",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวเปลือกเจ้าหอมมะลิ 105\",\"ตามชื่อสินค้าต้นทาง\",\"โรงสีสหพัฒนา\",\"บุรีรัมย์\",\"บาท/ตัน\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AB%E0%B8%AD%E0%B8%A1%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวเปลือกเจ้าหอมมะลิ 105",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 14300,
+      "price_max": 14300,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวโพดเลี้ยงสัตว์",
+      "product_name": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "market_name": "บริษัท แหลมทอง จำกัด",
+      "province": "พระนครศรีอยุธยา",
+      "day_price": 12.6,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท แหลมทอง จำกัด\",\"พระนครศรีอยุธยา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%9E%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 12.6,
+      "price_max": 12.6,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวโพดเลี้ยงสัตว์",
+      "product_name": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "market_name": "ร้านใจงามการเกษตร",
+      "province": "น่าน",
+      "day_price": 8.9,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%\",\"ตามชื่อสินค้าต้นทาง\",\"ร้านใจงามการเกษตร\",\"น่าน\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%9E%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 8.9,
+      "price_max": 8.9,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวโพดเลี้ยงสัตว์",
+      "product_name": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "market_name": "สหกรณ์การเกษตรด่านขุนทด",
+      "province": "นครราชสีมา",
+      "day_price": 11.5,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%\",\"ตามชื่อสินค้าต้นทาง\",\"สหกรณ์การเกษตรด่านขุนทด\",\"นครราชสีมา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%9E%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 11.5,
+      "price_max": 11.5,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวโพดเลี้ยงสัตว์",
+      "product_name": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "market_name": "สหกรณ์การเกษตรร้องกวาง",
+      "province": "แพร่",
+      "day_price": 10.6,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%\",\"ตามชื่อสินค้าต้นทาง\",\"สหกรณ์การเกษตรร้องกวาง\",\"แพร่\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%9E%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 10.6,
+      "price_max": 10.6,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวโพดเลี้ยงสัตว์",
+      "product_name": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "market_name": "หจก. สยามคอร์นโปรดักส์ (ช.กังวาน)",
+      "province": "เพชรบูรณ์",
+      "day_price": 10.5,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%\",\"ตามชื่อสินค้าต้นทาง\",\"หจก. สยามคอร์นโปรดักส์ (ช.กังวาน)\",\"เพชรบูรณ์\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%9E%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 14.5%",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 10.5,
+      "price_max": 10.5,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ข้าวโพดเลี้ยงสัตว์",
+      "product_name": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 30%",
+      "market_name": "หจก. สยามคอร์นโปรดักส์ (ช.กังวาน)",
+      "province": "เพชรบูรณ์",
+      "day_price": 8.5,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ข้าวโพดเลี้ยงสัตว์ ความชื้น 30%\",\"ตามชื่อสินค้าต้นทาง\",\"หจก. สยามคอร์นโปรดักส์ (ช.กังวาน)\",\"เพชรบูรณ์\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%9E%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ข้าวโพดเลี้ยงสัตว์ ความชื้น 30%",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 8.5,
+      "price_max": 8.5,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ไข่ไก่",
+      "product_name": "ไข่ไก่ เบอร์ 3",
+      "market_name": "นายสมาน ทองดี",
+      "province": "นครราชสีมา",
+      "day_price": 450,
+      "unit": "บาท/ร้อยฟอง",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ไข่ไก่ เบอร์ 3\",\"ตามชื่อสินค้าต้นทาง\",\"นายสมาน ทองดี\",\"นครราชสีมา\",\"บาท/ร้อยฟอง\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%84%E0%B8%81%E0%B9%88&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ไข่ไก่ เบอร์ 3",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 450,
+      "price_max": 450,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ไข่ไก่",
+      "product_name": "ไข่ไก่ เบอร์ 4",
+      "market_name": "นายสมาน ทองดี",
+      "province": "นครราชสีมา",
+      "day_price": 433.33,
+      "unit": "บาท/ร้อยฟอง",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ไข่ไก่ เบอร์ 4\",\"ตามชื่อสินค้าต้นทาง\",\"นายสมาน ทองดี\",\"นครราชสีมา\",\"บาท/ร้อยฟอง\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%84%E0%B8%81%E0%B9%88&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ไข่ไก่ เบอร์ 4",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 433.33,
+      "price_max": 433.33,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ไข่ไก่",
+      "product_name": "ไข่ไก่สด",
+      "market_name": "ฟาร์มไก่ไข่วรางคณา",
+      "province": "สุพรรณบุรี",
+      "day_price": 340,
+      "unit": "บาท/ร้อยฟอง",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ไข่ไก่สด\",\"ตามชื่อสินค้าต้นทาง\",\"ฟาร์มไก่ไข่วรางคณา\",\"สุพรรณบุรี\",\"บาท/ร้อยฟอง\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%84%E0%B8%81%E0%B9%88&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ไข่ไก่สด",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 340,
+      "price_max": 340,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ไข่ไก่",
+      "product_name": "ไข่ไก่สด",
+      "market_name": "สหกรณ์ผู้เลี้ยงไก่ไข่",
+      "province": "ฉะเชิงเทรา",
+      "day_price": 400,
+      "unit": "บาท/ร้อยฟอง",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ไข่ไก่สด\",\"ตามชื่อสินค้าต้นทาง\",\"สหกรณ์ผู้เลี้ยงไก่ไข่\",\"ฉะเชิงเทรา\",\"บาท/ร้อยฟอง\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%84%E0%B8%81%E0%B9%88&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ไข่ไก่สด",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 400,
+      "price_max": 400,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ยางพารา",
+      "product_name": "น้ำยางพาราสด",
+      "market_name": "บริษัท ที.ที.ลาเท็กซ์แอนด์โปรดักส์ จำกัด",
+      "province": "นครศรีธรรมราช",
+      "day_price": 71,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"น้ำยางพาราสด\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท ที.ที.ลาเท็กซ์แอนด์โปรดักส์ จำกัด\",\"นครศรีธรรมราช\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A2%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B8%B2&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "น้ำยางพาราสด",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 71,
+      "price_max": 71,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ยางพารา",
+      "product_name": "น้ำยางพาราสด",
+      "market_name": "บริษัท ไทยรับเบอร์ลาเทกซ์กรุ๊ป จำกัด",
+      "province": "ระยอง",
+      "day_price": 72,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"น้ำยางพาราสด\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท ไทยรับเบอร์ลาเทกซ์กรุ๊ป จำกัด\",\"ระยอง\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A2%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B8%B2&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "น้ำยางพาราสด",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 72,
+      "price_max": 72,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ปาล์มน้ำมัน",
+      "product_name": "ผลปาล์มน้ำมันทั้งทะลาย คละ",
+      "market_name": "บริษัท สุขสมบูรณ์น้ำมันปาล์ม จำกัด",
+      "province": "ตราด",
+      "day_price": 7.5,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ผลปาล์มน้ำมันทั้งทะลาย คละ\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท สุขสมบูรณ์น้ำมันปาล์ม จำกัด\",\"ตราด\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A1%E0%B8%B1%E0%B8%99&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ผลปาล์มน้ำมันทั้งทะลาย คละ",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 7.5,
+      "price_max": 7.5,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะนาว",
+      "product_name": "มะนาว ผลขนาดกลาง",
+      "market_name": "ตลาดกลางหนองบ้วย",
+      "province": "เพชรบุรี",
+      "day_price": 160,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะนาว ผลขนาดกลาง\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางหนองบ้วย\",\"เพชรบุรี\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะนาว ผลขนาดกลาง",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 160,
+      "price_max": 160,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะนาว",
+      "product_name": "มะนาว ผลขนาดเล็ก",
+      "market_name": "ตลาดกลางหนองบ้วย",
+      "province": "เพชรบุรี",
+      "day_price": 150,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะนาว ผลขนาดเล็ก\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางหนองบ้วย\",\"เพชรบุรี\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะนาว ผลขนาดเล็ก",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 150,
+      "price_max": 150,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะนาว",
+      "product_name": "มะนาว ผลขนาดใหญ่",
+      "market_name": "ตลาดกลางหนองบ้วย",
+      "province": "เพชรบุรี",
+      "day_price": 180,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะนาว ผลขนาดใหญ่\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางหนองบ้วย\",\"เพชรบุรี\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะนาว ผลขนาดใหญ่",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 180,
+      "price_max": 180,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะนาว",
+      "product_name": "มะนาว ผลขนาดใหญ่พิเศษ",
+      "market_name": "ตลาดกลางหนองบ้วย",
+      "province": "เพชรบุรี",
+      "day_price": 200,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะนาว ผลขนาดใหญ่พิเศษ\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางหนองบ้วย\",\"เพชรบุรี\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะนาว ผลขนาดใหญ่พิเศษ",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 200,
+      "price_max": 200,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวน้ำหอม",
+      "market_name": "จุดรับซื้อ (ล้ง/โรงงาน) ราชบุรี",
+      "province": "ราชบุรี",
+      "day_price": 11,
+      "unit": "บาท/ผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวน้ำหอม\",\"ตามชื่อสินค้าต้นทาง\",\"จุดรับซื้อ (ล้ง/โรงงาน) ราชบุรี\",\"ราชบุรี\",\"บาท/ผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวน้ำหอม",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 11,
+      "price_max": 11,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวน้ำหอม",
+      "market_name": "ตลาดไท (ราคาขายส่ง)",
+      "province": "ปทุมธานี",
+      "day_price": 18,
+      "unit": "บาท/ผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวน้ำหอม\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดไท (ราคาขายส่ง)\",\"ปทุมธานี\",\"บาท/ผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวน้ำหอม",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 18,
+      "price_max": 18,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวน้ำหอม",
+      "market_name": "ตลาดศรีเมือง (ราคาขายส่ง)",
+      "province": "ราชบุรี",
+      "day_price": 20,
+      "unit": "บาท/ผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวน้ำหอม\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดศรีเมือง (ราคาขายส่ง)\",\"ราชบุรี\",\"บาท/ผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวน้ำหอม",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 20,
+      "price_max": 20,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวผลแห้ง ขนาดกลาง",
+      "market_name": "จุดรับซื้อ มะพร้าวตั้งเต็กเฮง",
+      "province": "ประจวบคีรีขันธ์",
+      "day_price": 1000,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวผลแห้ง ขนาดกลาง\",\"ตามชื่อสินค้าต้นทาง\",\"จุดรับซื้อ มะพร้าวตั้งเต็กเฮง\",\"ประจวบคีรีขันธ์\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวผลแห้ง ขนาดกลาง",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 1000,
+      "price_max": 1000,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวผลแห้ง ขนาดกลาง",
+      "market_name": "แหล่งรับซื้อ มะพร้าวทับสะแก",
+      "province": "ประจวบคีรีขันธ์",
+      "day_price": 950,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวผลแห้ง ขนาดกลาง\",\"ตามชื่อสินค้าต้นทาง\",\"แหล่งรับซื้อ มะพร้าวทับสะแก\",\"ประจวบคีรีขันธ์\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวผลแห้ง ขนาดกลาง",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 950,
+      "price_max": 950,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวผลแห้ง ขนาดคละ",
+      "market_name": "จุดรับซื้อ มะพร้าวนายประยูร ใจห้าว",
+      "province": "นครศรีธรรมราช",
+      "day_price": 1100,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวผลแห้ง ขนาดคละ\",\"ตามชื่อสินค้าต้นทาง\",\"จุดรับซื้อ มะพร้าวนายประยูร ใจห้าว\",\"นครศรีธรรมราช\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวผลแห้ง ขนาดคละ",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 1100,
+      "price_max": 1100,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "market_name": "จุดรับซื้อ มะพร้าวตั้งเต็กเฮง",
+      "province": "ประจวบคีรีขันธ์",
+      "day_price": 1800,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวผลแห้ง ขนาดใหญ่\",\"ตามชื่อสินค้าต้นทาง\",\"จุดรับซื้อ มะพร้าวตั้งเต็กเฮง\",\"ประจวบคีรีขันธ์\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 1800,
+      "price_max": 1800,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "market_name": "จุดรับซื้อ มะพร้าวนายบุญธรรม เกิดสมบัติ",
+      "province": "สุราษฎร์ธานี",
+      "day_price": 900,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวผลแห้ง ขนาดใหญ่\",\"ตามชื่อสินค้าต้นทาง\",\"จุดรับซื้อ มะพร้าวนายบุญธรรม เกิดสมบัติ\",\"สุราษฎร์ธานี\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 900,
+      "price_max": 900,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "market_name": "จุดรับซื้อ มะพร้าวนายมนัส เหล็กสงคราม",
+      "province": "ชุมพร",
+      "day_price": 800,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวผลแห้ง ขนาดใหญ่\",\"ตามชื่อสินค้าต้นทาง\",\"จุดรับซื้อ มะพร้าวนายมนัส เหล็กสงคราม\",\"ชุมพร\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 800,
+      "price_max": 800,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "market_name": "แหล่งรับซื้อ คุณธิดา/คุณจุ๊",
+      "province": "สมุทรสงคราม",
+      "day_price": 1200,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวผลแห้ง ขนาดใหญ่\",\"ตามชื่อสินค้าต้นทาง\",\"แหล่งรับซื้อ คุณธิดา/คุณจุ๊\",\"สมุทรสงคราม\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 1200,
+      "price_max": 1200,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มะพร้าว",
+      "product_name": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "market_name": "แหล่งรับซื้อ มะพร้าวทับสะแก",
+      "province": "ประจวบคีรีขันธ์",
+      "day_price": 1800,
+      "unit": "บาท/ร้อยผล",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มะพร้าวผลแห้ง ขนาดใหญ่\",\"ตามชื่อสินค้าต้นทาง\",\"แหล่งรับซื้อ มะพร้าวทับสะแก\",\"ประจวบคีรีขันธ์\",\"บาท/ร้อยผล\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มะพร้าวผลแห้ง ขนาดใหญ่",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 1800,
+      "price_max": 1800,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มันฝรั่ง",
+      "product_name": "มันฝรั่งโรงงาน",
+      "market_name": "บริษัท เป๊ปซี่-โคล่า (ไทย) เทรดดิ้ง จำกัด",
+      "province": "ตาก",
+      "day_price": 11,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"มันฝรั่งโรงงาน\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท เป๊ปซี่-โคล่า (ไทย) เทรดดิ้ง จำกัด\",\"ตาก\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%9D%E0%B8%A3%E0%B8%B1%E0%B9%88%E0%B8%87&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "มันฝรั่งโรงงาน",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 11,
+      "price_max": 11,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ยางพารา",
+      "product_name": "ยางพาราแผ่นดิบ ชั้น 3",
+      "market_name": "ตลาดกลางยางพารา ระยอง",
+      "province": "ระยอง",
+      "day_price": 83.1,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ยางพาราแผ่นดิบ ชั้น 3\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางยางพารา ระยอง\",\"ระยอง\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A2%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B8%B2&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ยางพาราแผ่นดิบ ชั้น 3",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 83.1,
+      "price_max": 83.1,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ยางพารา",
+      "product_name": "ยางพาราแผ่นดิบ ชั้น 3",
+      "market_name": "ตลาดกลางยางพารา สงขลา",
+      "province": "สงขลา",
+      "day_price": 79.5,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ยางพาราแผ่นดิบ ชั้น 3\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางยางพารา สงขลา\",\"สงขลา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A2%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B8%B2&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ยางพาราแผ่นดิบ ชั้น 3",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 79.5,
+      "price_max": 79.5,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ยางพารา",
+      "product_name": "ยางพาราแผ่นดิบ ชั้น 3",
+      "market_name": "ตลาดกลางยางพารา สุราษฎร์ธานี",
+      "province": "สุราษฎร์ธานี",
+      "day_price": 80.88,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ยางพาราแผ่นดิบ ชั้น 3\",\"ตามชื่อสินค้าต้นทาง\",\"ตลาดกลางยางพารา สุราษฎร์ธานี\",\"สุราษฎร์ธานี\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A2%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B8%B2&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ยางพาราแผ่นดิบ ชั้น 3",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 80.88,
+      "price_max": 80.88,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "ยางพารา",
+      "product_name": "ยางพาราแผ่นดิบ ชั้น 3",
+      "market_name": "บริษัท สุราษฎร์สัมฤทธิ์ธุรกิจ จำกัด",
+      "province": "สุราษฎร์ธานี",
+      "day_price": 77.5,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"ยางพาราแผ่นดิบ ชั้น 3\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท สุราษฎร์สัมฤทธิ์ธุรกิจ จำกัด\",\"สุราษฎร์ธานี\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A2%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B8%B2&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "ยางพาราแผ่นดิบ ชั้น 3",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 77.5,
+      "price_max": 77.5,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "สับปะรดโรงงาน",
+      "product_name": "สับปะรดปัตตาเวียส่งโรงงาน",
+      "market_name": "กลุ่มสหกรณ์ผู้ปลูกสับปะรด",
+      "province": "ราชบุรี",
+      "day_price": 8.9,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"สับปะรดปัตตาเวียส่งโรงงาน\",\"ตามชื่อสินค้าต้นทาง\",\"กลุ่มสหกรณ์ผู้ปลูกสับปะรด\",\"ราชบุรี\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%AA%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%B0%E0%B8%A3%E0%B8%94%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "สับปะรดปัตตาเวียส่งโรงงาน",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 8.9,
+      "price_max": 8.9,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "สับปะรดโรงงาน",
+      "product_name": "สับปะรดปัตตาเวียส่งโรงงาน",
+      "market_name": "บริษัท กุยบุรีผลไม้กระป๋อง จำกัด (เค.เอฟ.ซี.)",
+      "province": "ประจวบคีรีขันธ์",
+      "day_price": 8.8,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"สับปะรดปัตตาเวียส่งโรงงาน\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท กุยบุรีผลไม้กระป๋อง จำกัด (เค.เอฟ.ซี.)\",\"ประจวบคีรีขันธ์\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%AA%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%B0%E0%B8%A3%E0%B8%94%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "สับปะรดปัตตาเวียส่งโรงงาน",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 8.8,
+      "price_max": 8.8,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "สับปะรดโรงงาน",
+      "product_name": "สับปะรดปัตตาเวียส่งโรงงาน",
+      "market_name": "บริษัท สามร้อยยอด จำกัด (เอส.อาร์.วาย.)",
+      "province": "ประจวบคีรีขันธ์",
+      "day_price": 9,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"สับปะรดปัตตาเวียส่งโรงงาน\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท สามร้อยยอด จำกัด (เอส.อาร์.วาย.)\",\"ประจวบคีรีขันธ์\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%AA%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%B0%E0%B8%A3%E0%B8%94%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "สับปะรดปัตตาเวียส่งโรงงาน",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 9,
+      "price_max": 9,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "สุกร",
+      "product_name": "สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป",
+      "market_name": "บริษัท เจริญโภคภัณฑ์ จำกัด",
+      "province": "ชลบุรี",
+      "day_price": 76,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท เจริญโภคภัณฑ์ จำกัด\",\"ชลบุรี\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%AA%E0%B8%B8%E0%B8%81%E0%B8%A3&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 76,
+      "price_max": 76,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "สุกร",
+      "product_name": "สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป",
+      "market_name": "ฟาร์มคุณบำเพ็ญ",
+      "province": "นครปฐม",
+      "day_price": 64,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป\",\"ตามชื่อสินค้าต้นทาง\",\"ฟาร์มคุณบำเพ็ญ\",\"นครปฐม\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%AA%E0%B8%B8%E0%B8%81%E0%B8%A3&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 64,
+      "price_max": 64,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "สุกร",
+      "product_name": "สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป",
+      "market_name": "ศิริปุณย์ฟาร์ม",
+      "province": "ฉะเชิงเทรา",
+      "day_price": 74,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป\",\"ตามชื่อสินค้าต้นทาง\",\"ศิริปุณย์ฟาร์ม\",\"ฉะเชิงเทรา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%AA%E0%B8%B8%E0%B8%81%E0%B8%A3&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 74,
+      "price_max": 74,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มันสำปะหลัง",
+      "product_name": "หัวมันสำปะหลังสด (แป้ง 25%)",
+      "market_name": "บริษัท ชลเจริญ จำกัด",
+      "province": "ชลบุรี",
+      "day_price": 3.6,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"หัวมันสำปะหลังสด (แป้ง 25%)\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท ชลเจริญ จำกัด\",\"ชลบุรี\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%9B%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "หัวมันสำปะหลังสด (แป้ง 25%)",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 3.6,
+      "price_max": 3.6,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มันสำปะหลัง",
+      "product_name": "หัวมันสำปะหลังสด (แป้ง 25%)",
+      "market_name": "บริษัท โชคยืนยงอุตสาหกรรม จำกัด",
+      "province": "นครราชสีมา",
+      "day_price": 4.05,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"หัวมันสำปะหลังสด (แป้ง 25%)\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท โชคยืนยงอุตสาหกรรม จำกัด\",\"นครราชสีมา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%9B%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "หัวมันสำปะหลังสด (แป้ง 25%)",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 4.05,
+      "price_max": 4.05,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มันสำปะหลัง",
+      "product_name": "หัวมันสำปะหลังสด (แป้ง 25%)",
+      "market_name": "บริษัท สงวนวงษ์อุตสาหกรรม จำกัด",
+      "province": "นครราชสีมา",
+      "day_price": 3.9,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"หัวมันสำปะหลังสด (แป้ง 25%)\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท สงวนวงษ์อุตสาหกรรม จำกัด\",\"นครราชสีมา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%9B%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "หัวมันสำปะหลังสด (แป้ง 25%)",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 3.9,
+      "price_max": 3.9,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มันสำปะหลัง",
+      "product_name": "หัวมันสำปะหลังสด (แป้ง 30%)",
+      "market_name": "บริษัท ชลเจริญ จำกัด",
+      "province": "ชลบุรี",
+      "day_price": 3.85,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"หัวมันสำปะหลังสด (แป้ง 30%)\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท ชลเจริญ จำกัด\",\"ชลบุรี\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%9B%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "หัวมันสำปะหลังสด (แป้ง 30%)",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 3.85,
+      "price_max": 3.85,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มันสำปะหลัง",
+      "product_name": "หัวมันสำปะหลังสด (แป้ง 30%)",
+      "market_name": "บริษัท สงวนวงษ์อุตสาหกรรม จำกัด",
+      "province": "นครราชสีมา",
+      "day_price": 4.15,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"หัวมันสำปะหลังสด (แป้ง 30%)\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท สงวนวงษ์อุตสาหกรรม จำกัด\",\"นครราชสีมา\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%9B%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "หัวมันสำปะหลังสด (แป้ง 30%)",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 4.15,
+      "price_max": 4.15,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มันสำปะหลัง",
+      "product_name": "หัวมันสำปะหลังสด (แป้ง 30%)",
+      "market_name": "บริษัท สำปะหลังพัฒนา จำกัด",
+      "province": "ระยอง",
+      "day_price": 4.3,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"หัวมันสำปะหลังสด (แป้ง 30%)\",\"ตามชื่อสินค้าต้นทาง\",\"บริษัท สำปะหลังพัฒนา จำกัด\",\"ระยอง\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%9B%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "หัวมันสำปะหลังสด (แป้ง 30%)",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 4.3,
+      "price_max": 4.3,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
+      "data_date": "2026-11-11",
+      "product_category": "มันสำปะหลัง",
+      "product_name": "หัวมันสำปะหลังสด คละ",
+      "market_name": "คุณไชยเลิศ จันทร์วัฒนศิริ",
+      "province": "กาญจนบุรี",
+      "day_price": 2.9,
+      "unit": "บาท/กก.",
+      "price_type": "ราคารับซื้อรายวัน ณ ตลาดสำคัญ",
+      "series_key": "[\"สศก. / NABC\",\"หัวมันสำปะหลังสด คละ\",\"ตามชื่อสินค้าต้นทาง\",\"คุณไชยเลิศ จันทร์วัฒนศิริ\",\"กาญจนบุรี\",\"บาท/กก.\",\"ราคารับซื้อรายวัน ณ ตลาดสำคัญ\"]",
+      "source_url": "https://agriapi.nabc.go.th/api/daily-prices/category?product_category=%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%9B%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87&page=1&limit=1000",
+      "spatial_scope": "ราคาตามจังหวัดและตลาดที่ระบุ ไม่ใช่ราคาเฉลี่ยนครปฐม",
+      "source_name": "สศก. / NABC",
+      "source_product_id": "หัวมันสำปะหลังสด คละ",
+      "grade": "ตามชื่อสินค้าต้นทาง",
+      "price_min": 2.9,
+      "price_max": 2.9,
+      "collected_at": "2026-11-11T15:10:59.347Z"
+    },
+    {
       "data_date": "2026-11-10",
       "product_category": "ข้าวสาร",
       "product_name": "ข้าวขาว 5%",
@@ -31509,7 +32725,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 170,
       "price_max": 170,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31528,7 +32744,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 185,
       "price_max": 185,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31547,7 +32763,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 145,
       "price_max": 145,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31566,7 +32782,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 160,
       "price_max": 160,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31585,7 +32801,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31604,7 +32820,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 150,
       "price_max": 150,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31623,7 +32839,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 130,
       "price_max": 130,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31642,7 +32858,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31661,7 +32877,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 42,
       "price_max": 42,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31680,7 +32896,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 45,
       "price_max": 45,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31699,7 +32915,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8700,
       "price_max": 8700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31718,7 +32934,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7700,
       "price_max": 7700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31737,7 +32953,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14200,
       "price_max": 14200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31756,7 +32972,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 16000,
       "price_max": 16000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31775,7 +32991,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13000,
       "price_max": 13000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31794,7 +33010,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13500,
       "price_max": 13500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31813,7 +33029,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13330,
       "price_max": 13330,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31832,7 +33048,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13500,
       "price_max": 13500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31851,7 +33067,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 17500,
       "price_max": 17500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31870,7 +33086,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14300,
       "price_max": 14300,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31889,7 +33105,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 12.6,
       "price_max": 12.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31908,7 +33124,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.9,
       "price_max": 8.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31927,7 +33143,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11.5,
       "price_max": 11.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31946,7 +33162,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.6,
       "price_max": 10.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31965,7 +33181,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.5,
       "price_max": 10.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -31984,7 +33200,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.5,
       "price_max": 8.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32003,7 +33219,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 450,
       "price_max": 450,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32022,7 +33238,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 433.33,
       "price_max": 433.33,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32041,7 +33257,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 340,
       "price_max": 340,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32060,7 +33276,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 400,
       "price_max": 400,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32079,7 +33295,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 71,
       "price_max": 71,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32098,7 +33314,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 74,
       "price_max": 74,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32117,7 +33333,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.5,
       "price_max": 7.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32136,7 +33352,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.6,
       "price_max": 7.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32155,7 +33371,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.9,
       "price_max": 7.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32174,7 +33390,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.5,
       "price_max": 7.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32193,7 +33409,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.8,
       "price_max": 7.8,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32212,7 +33428,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.5,
       "price_max": 7.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32231,7 +33447,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.8,
       "price_max": 7.8,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32250,7 +33466,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 160,
       "price_max": 160,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32269,7 +33485,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 150,
       "price_max": 150,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32288,7 +33504,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 180,
       "price_max": 180,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32307,7 +33523,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 200,
       "price_max": 200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32326,7 +33542,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11,
       "price_max": 11,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32345,7 +33561,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 18,
       "price_max": 18,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32364,7 +33580,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 20,
       "price_max": 20,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32383,7 +33599,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1000,
       "price_max": 1000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32402,7 +33618,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 950,
       "price_max": 950,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32421,7 +33637,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1100,
       "price_max": 1100,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32440,7 +33656,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32459,7 +33675,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 900,
       "price_max": 900,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32478,7 +33694,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 800,
       "price_max": 800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32497,7 +33713,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1200,
       "price_max": 1200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32516,7 +33732,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32535,7 +33751,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11,
       "price_max": 11,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32554,7 +33770,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 82.8,
       "price_max": 82.8,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32573,7 +33789,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 81.58,
       "price_max": 81.58,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32592,7 +33808,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 82.61,
       "price_max": 82.61,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32611,7 +33827,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 78,
       "price_max": 78,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32630,7 +33846,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 78,
       "price_max": 78,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32649,7 +33865,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.9,
       "price_max": 8.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32668,7 +33884,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.8,
       "price_max": 8.8,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32687,7 +33903,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9,
       "price_max": 9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32706,7 +33922,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 76,
       "price_max": 76,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32725,7 +33941,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 64,
       "price_max": 64,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32744,7 +33960,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 74,
       "price_max": 74,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32763,7 +33979,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.6,
       "price_max": 3.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32782,7 +33998,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.05,
       "price_max": 4.05,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32801,7 +34017,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.9,
       "price_max": 3.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32820,7 +34036,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.85,
       "price_max": 3.85,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32839,7 +34055,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.15,
       "price_max": 4.15,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32858,7 +34074,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.3,
       "price_max": 4.3,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-10",
@@ -32877,7 +34093,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 2.9,
       "price_max": 2.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48381,7 +49597,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 170,
       "price_max": 170,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48400,7 +49616,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 185,
       "price_max": 185,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48419,7 +49635,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 145,
       "price_max": 145,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48438,7 +49654,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 160,
       "price_max": 160,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48457,7 +49673,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48476,7 +49692,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 150,
       "price_max": 150,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48495,7 +49711,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 130,
       "price_max": 130,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48514,7 +49730,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48533,7 +49749,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 42,
       "price_max": 42,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48552,7 +49768,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 45,
       "price_max": 45,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48571,7 +49787,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8700,
       "price_max": 8700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48590,7 +49806,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7700,
       "price_max": 7700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48609,7 +49825,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 16000,
       "price_max": 16000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48628,7 +49844,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13700,
       "price_max": 13700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48647,7 +49863,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13750,
       "price_max": 13750,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48666,7 +49882,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13500,
       "price_max": 13500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48685,7 +49901,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 17500,
       "price_max": 17500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48704,7 +49920,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14300,
       "price_max": 14300,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48723,7 +49939,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 12.5,
       "price_max": 12.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48742,7 +49958,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.9,
       "price_max": 8.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48761,7 +49977,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11.5,
       "price_max": 11.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48780,7 +49996,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.6,
       "price_max": 10.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48799,7 +50015,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.5,
       "price_max": 10.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48818,7 +50034,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.5,
       "price_max": 8.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48837,7 +50053,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 450,
       "price_max": 450,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48856,7 +50072,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 433.33,
       "price_max": 433.33,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48875,7 +50091,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 340,
       "price_max": 340,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48894,7 +50110,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 400,
       "price_max": 400,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48913,7 +50129,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 71,
       "price_max": 71,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48932,7 +50148,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 74,
       "price_max": 74,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48951,7 +50167,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.8,
       "price_max": 7.8,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48970,7 +50186,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 160,
       "price_max": 160,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -48989,7 +50205,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 150,
       "price_max": 150,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49008,7 +50224,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 180,
       "price_max": 180,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49027,7 +50243,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 200,
       "price_max": 200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49046,7 +50262,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11,
       "price_max": 11,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49065,7 +50281,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 18,
       "price_max": 18,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49084,7 +50300,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 20,
       "price_max": 20,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49103,7 +50319,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1000,
       "price_max": 1000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49122,7 +50338,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 950,
       "price_max": 950,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49141,7 +50357,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1100,
       "price_max": 1100,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49160,7 +50376,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49179,7 +50395,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 900,
       "price_max": 900,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49198,7 +50414,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 800,
       "price_max": 800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49217,7 +50433,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1200,
       "price_max": 1200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49236,7 +50452,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49255,7 +50471,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11,
       "price_max": 11,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49274,7 +50490,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 85.5,
       "price_max": 85.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49293,7 +50509,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 81.22,
       "price_max": 81.22,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49312,7 +50528,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 82.4,
       "price_max": 82.4,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49331,7 +50547,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 78,
       "price_max": 78,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49350,7 +50566,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.9,
       "price_max": 8.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49369,7 +50585,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.8,
       "price_max": 8.8,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49388,7 +50604,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9,
       "price_max": 9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49407,7 +50623,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 76,
       "price_max": 76,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49426,7 +50642,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 64,
       "price_max": 64,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49445,7 +50661,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 74,
       "price_max": 74,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49464,7 +50680,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.6,
       "price_max": 3.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49483,7 +50699,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.05,
       "price_max": 4.05,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49502,7 +50718,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.9,
       "price_max": 3.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49521,7 +50737,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.85,
       "price_max": 3.85,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49540,7 +50756,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.15,
       "price_max": 4.15,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49559,7 +50775,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.3,
       "price_max": 4.3,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-09",
@@ -49578,7 +50794,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 2.9,
       "price_max": 2.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-08",
@@ -92974,7 +94190,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 175,
       "price_max": 175,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -92993,7 +94209,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 180,
       "price_max": 180,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93012,7 +94228,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 145,
       "price_max": 145,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93031,7 +94247,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 170,
       "price_max": 170,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93050,7 +94266,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93069,7 +94285,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 150,
       "price_max": 150,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93088,7 +94304,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 135,
       "price_max": 135,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93107,7 +94323,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93126,7 +94342,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 42,
       "price_max": 42,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93145,7 +94361,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 45,
       "price_max": 45,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93164,7 +94380,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8700,
       "price_max": 8700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93183,7 +94399,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7700,
       "price_max": 7700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93202,7 +94418,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 17000,
       "price_max": 17000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93221,7 +94437,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13800,
       "price_max": 13800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93240,7 +94456,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14170,
       "price_max": 14170,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93259,7 +94475,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13800,
       "price_max": 13800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93278,7 +94494,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 17500,
       "price_max": 17500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93297,7 +94513,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14300,
       "price_max": 14300,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93316,7 +94532,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 12.4,
       "price_max": 12.4,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93335,7 +94551,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.9,
       "price_max": 8.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93354,7 +94570,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11.5,
       "price_max": 11.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93373,7 +94589,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.1,
       "price_max": 10.1,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93392,7 +94608,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.5,
       "price_max": 10.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93411,7 +94627,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.5,
       "price_max": 8.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93430,7 +94646,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 450,
       "price_max": 450,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93449,7 +94665,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 433.33,
       "price_max": 433.33,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93468,7 +94684,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 340,
       "price_max": 340,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93487,7 +94703,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 400,
       "price_max": 400,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93506,7 +94722,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 75,
       "price_max": 75,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93525,7 +94741,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 78,
       "price_max": 78,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93544,7 +94760,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.7,
       "price_max": 7.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93563,7 +94779,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 220,
       "price_max": 220,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93582,7 +94798,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 200,
       "price_max": 200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93601,7 +94817,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 240,
       "price_max": 240,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93620,7 +94836,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 250,
       "price_max": 250,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93639,7 +94855,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11,
       "price_max": 11,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93658,7 +94874,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 18,
       "price_max": 18,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93677,7 +94893,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 15,
       "price_max": 15,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93696,7 +94912,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1000,
       "price_max": 1000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93715,7 +94931,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 950,
       "price_max": 950,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93734,7 +94950,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1000,
       "price_max": 1000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93753,7 +94969,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93772,7 +94988,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 800,
       "price_max": 800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93791,7 +95007,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 700,
       "price_max": 700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93810,7 +95026,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1100,
       "price_max": 1100,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93829,7 +95045,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93848,7 +95064,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11,
       "price_max": 11,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93867,7 +95083,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 82.88,
       "price_max": 82.88,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93886,7 +95102,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 82.22,
       "price_max": 82.22,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93905,7 +95121,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 79,
       "price_max": 79,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93924,7 +95140,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9.7,
       "price_max": 9.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93943,7 +95159,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9.5,
       "price_max": 9.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93962,7 +95178,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.1,
       "price_max": 10.1,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -93981,7 +95197,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 76,
       "price_max": 76,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94000,7 +95216,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 64,
       "price_max": 64,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94019,7 +95235,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 74,
       "price_max": 74,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94038,7 +95254,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.6,
       "price_max": 3.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94057,7 +95273,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.05,
       "price_max": 4.05,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94076,7 +95292,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.9,
       "price_max": 3.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94095,7 +95311,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.85,
       "price_max": 3.85,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94114,7 +95330,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.15,
       "price_max": 4.15,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94133,7 +95349,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.3,
       "price_max": 4.3,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-06",
@@ -94152,7 +95368,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3,
       "price_max": 3,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109637,7 +110853,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 175,
       "price_max": 175,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109656,7 +110872,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 180,
       "price_max": 180,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109675,7 +110891,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 145,
       "price_max": 145,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109694,7 +110910,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 170,
       "price_max": 170,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109713,7 +110929,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109732,7 +110948,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 150,
       "price_max": 150,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109751,7 +110967,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 130,
       "price_max": 130,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109770,7 +110986,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109789,7 +111005,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 42,
       "price_max": 42,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109808,7 +111024,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 45,
       "price_max": 45,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109827,7 +111043,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8700,
       "price_max": 8700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109846,7 +111062,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7700,
       "price_max": 7700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109865,7 +111081,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14200,
       "price_max": 14200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109884,7 +111100,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 17000,
       "price_max": 17000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109903,7 +111119,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13800,
       "price_max": 13800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109922,7 +111138,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13500,
       "price_max": 13500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109941,7 +111157,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14170,
       "price_max": 14170,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109960,7 +111176,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13800,
       "price_max": 13800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109979,7 +111195,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 17500,
       "price_max": 17500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -109998,7 +111214,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14300,
       "price_max": 14300,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110017,7 +111233,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 12.15,
       "price_max": 12.15,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110036,7 +111252,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.9,
       "price_max": 8.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110055,7 +111271,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11.5,
       "price_max": 11.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110074,7 +111290,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.1,
       "price_max": 10.1,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110093,7 +111309,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.5,
       "price_max": 10.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110112,7 +111328,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.5,
       "price_max": 8.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110131,7 +111347,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 450,
       "price_max": 450,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110150,7 +111366,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 433.33,
       "price_max": 433.33,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110169,7 +111385,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 340,
       "price_max": 340,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110188,7 +111404,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 400,
       "price_max": 400,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110207,7 +111423,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 75,
       "price_max": 75,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110226,7 +111442,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 76,
       "price_max": 76,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110245,7 +111461,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.7,
       "price_max": 7.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110264,7 +111480,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.2,
       "price_max": 8.2,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110283,7 +111499,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.7,
       "price_max": 7.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110302,7 +111518,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.2,
       "price_max": 8.2,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110321,7 +111537,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.7,
       "price_max": 7.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110340,7 +111556,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8,
       "price_max": 8,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110359,7 +111575,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 220,
       "price_max": 220,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110378,7 +111594,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 200,
       "price_max": 200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110397,7 +111613,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 240,
       "price_max": 240,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110416,7 +111632,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 250,
       "price_max": 250,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110435,7 +111651,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 12,
       "price_max": 12,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110454,7 +111670,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 18,
       "price_max": 18,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110473,7 +111689,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 20,
       "price_max": 20,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110492,7 +111708,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1000,
       "price_max": 1000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110511,7 +111727,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 950,
       "price_max": 950,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110530,7 +111746,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1000,
       "price_max": 1000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110549,7 +111765,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110568,7 +111784,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 800,
       "price_max": 800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110587,7 +111803,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 700,
       "price_max": 700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110606,7 +111822,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1100,
       "price_max": 1100,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110625,7 +111841,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110644,7 +111860,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11,
       "price_max": 11,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110663,7 +111879,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 85.89,
       "price_max": 85.89,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110682,7 +111898,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 83.1,
       "price_max": 83.1,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110701,7 +111917,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 82.71,
       "price_max": 82.71,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110720,7 +111936,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 80,
       "price_max": 80,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110739,7 +111955,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 80,
       "price_max": 80,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110758,7 +111974,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9.7,
       "price_max": 9.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110777,7 +111993,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9.5,
       "price_max": 9.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110796,7 +112012,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.1,
       "price_max": 10.1,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110815,7 +112031,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 76,
       "price_max": 76,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110834,7 +112050,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 64,
       "price_max": 64,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110853,7 +112069,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 74,
       "price_max": 74,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110872,7 +112088,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.6,
       "price_max": 3.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110891,7 +112107,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.05,
       "price_max": 4.05,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110910,7 +112126,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.9,
       "price_max": 3.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110929,7 +112145,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.85,
       "price_max": 3.85,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110948,7 +112164,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.15,
       "price_max": 4.15,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110967,7 +112183,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.3,
       "price_max": 4.3,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-05",
@@ -110986,7 +112202,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3,
       "price_max": 3,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126167,7 +127383,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 175,
       "price_max": 175,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126186,7 +127402,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 180,
       "price_max": 180,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126205,7 +127421,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 145,
       "price_max": 145,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126224,7 +127440,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 170,
       "price_max": 170,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126243,7 +127459,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126262,7 +127478,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 150,
       "price_max": 150,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126281,7 +127497,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 130,
       "price_max": 130,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126300,7 +127516,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 140,
       "price_max": 140,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126319,7 +127535,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 42,
       "price_max": 42,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126338,7 +127554,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 45,
       "price_max": 45,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126357,7 +127573,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8700,
       "price_max": 8700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126376,7 +127592,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9500,
       "price_max": 9500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126395,7 +127611,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9400,
       "price_max": 9400,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126414,7 +127630,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9800,
       "price_max": 9800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126433,7 +127649,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7700,
       "price_max": 7700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126452,7 +127668,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14200,
       "price_max": 14200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126471,7 +127687,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 17000,
       "price_max": 17000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126490,7 +127706,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13800,
       "price_max": 13800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126509,7 +127725,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13500,
       "price_max": 13500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126528,7 +127744,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 14170,
       "price_max": 14170,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126547,7 +127763,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 13800,
       "price_max": 13800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126566,7 +127782,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 17500,
       "price_max": 17500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126585,7 +127801,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 16500,
       "price_max": 16500,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126604,7 +127820,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11.65,
       "price_max": 11.65,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126623,7 +127839,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.9,
       "price_max": 8.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126642,7 +127858,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.7,
       "price_max": 10.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126661,7 +127877,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.1,
       "price_max": 10.1,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126680,7 +127896,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9.5,
       "price_max": 9.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126699,7 +127915,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.5,
       "price_max": 7.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126718,7 +127934,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 450,
       "price_max": 450,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126737,7 +127953,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 433.33,
       "price_max": 433.33,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126756,7 +127972,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 340,
       "price_max": 340,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126775,7 +127991,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 400,
       "price_max": 400,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126794,7 +128010,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 76,
       "price_max": 76,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126813,7 +128029,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 76,
       "price_max": 76,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126832,7 +128048,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.7,
       "price_max": 7.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126851,7 +128067,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.4,
       "price_max": 8.4,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126870,7 +128086,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.7,
       "price_max": 8.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126889,7 +128105,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.8,
       "price_max": 7.8,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126908,7 +128124,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.2,
       "price_max": 8.2,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126927,7 +128143,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 7.7,
       "price_max": 7.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126946,7 +128162,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 8.2,
       "price_max": 8.2,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126965,7 +128181,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 220,
       "price_max": 220,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -126984,7 +128200,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 200,
       "price_max": 200,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127003,7 +128219,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 240,
       "price_max": 240,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127022,7 +128238,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 250,
       "price_max": 250,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127041,7 +128257,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 12,
       "price_max": 12,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127060,7 +128276,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 18,
       "price_max": 18,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127079,7 +128295,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 20,
       "price_max": 20,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127098,7 +128314,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1000,
       "price_max": 1000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127117,7 +128333,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 950,
       "price_max": 950,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127136,7 +128352,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1000,
       "price_max": 1000,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127155,7 +128371,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127174,7 +128390,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 800,
       "price_max": 800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127193,7 +128409,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 700,
       "price_max": 700,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127212,7 +128428,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1100,
       "price_max": 1100,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127231,7 +128447,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 1800,
       "price_max": 1800,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127250,7 +128466,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 11,
       "price_max": 11,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127269,7 +128485,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 86.06,
       "price_max": 86.06,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127288,7 +128504,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 83.39,
       "price_max": 83.39,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127307,7 +128523,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 81.5,
       "price_max": 81.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127326,7 +128542,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 81.5,
       "price_max": 81.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127345,7 +128561,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9.7,
       "price_max": 9.7,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127364,7 +128580,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 9.5,
       "price_max": 9.5,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127383,7 +128599,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 10.1,
       "price_max": 10.1,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127402,7 +128618,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 76,
       "price_max": 76,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127421,7 +128637,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 64,
       "price_max": 64,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127440,7 +128656,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 74,
       "price_max": 74,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127459,7 +128675,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.6,
       "price_max": 3.6,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127478,7 +128694,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.05,
       "price_max": 4.05,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127497,7 +128713,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.9,
       "price_max": 3.9,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127516,7 +128732,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3.85,
       "price_max": 3.85,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127535,7 +128751,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.15,
       "price_max": 4.15,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127554,7 +128770,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 4.3,
       "price_max": 4.3,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-04",
@@ -127573,7 +128789,7 @@
       "grade": "ตามชื่อสินค้าต้นทาง",
       "price_min": 3,
       "price_max": 3,
-      "collected_at": "2026-11-10T11:56:23.493Z"
+      "collected_at": "2026-11-11T15:10:59.347Z"
     },
     {
       "data_date": "2026-11-03",
