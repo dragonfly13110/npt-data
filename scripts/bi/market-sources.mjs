@@ -436,6 +436,49 @@ export function boundPriceHistory(input) {
   return { data, history };
 }
 
+/** Resolve status metadata while preserving recent local sync success when a remote runner cannot reach the upstream API. */
+export function resolveSourceStatus({ name, result, previousSource, now }) {
+  const success = result.status === 'fulfilled' && result.value.length > 0;
+  if (success) {
+    return {
+      name,
+      status: 'ready',
+      fetchedAt: now.toISOString(),
+      rows: result.value.length,
+      error: null,
+    };
+  }
+  const prevTime = previousSource?.fetchedAt
+    ? Date.parse(previousSource.fetchedAt)
+    : Number.NaN;
+  const ageMs = Number.isFinite(prevTime) ? now.getTime() - prevTime : Infinity;
+  const freshLocalSync =
+    previousSource?.status === 'ready' &&
+    previousSource?.rows > 0 &&
+    Number.isFinite(prevTime) &&
+    ageMs >= 0 &&
+    (day(previousSource.fetchedAt) === day(now) || ageMs <= 12 * 3600 * 1000);
+  if (freshLocalSync) {
+    return {
+      name,
+      status: 'ready',
+      fetchedAt: previousSource.fetchedAt,
+      rows: previousSource.rows,
+      error: null,
+    };
+  }
+  return {
+    name,
+    status: 'retained',
+    fetchedAt: previousSource?.fetchedAt || null,
+    rows: 0,
+    error:
+      result.status === 'rejected'
+        ? result.reason.message
+        : 'No price records',
+  };
+}
+
 export async function collectMultiMarket(previous = {}, now = new Date()) {
   const rejected = [];
   const collectors = [
@@ -451,25 +494,16 @@ export async function collectMultiMarket(previous = {}, now = new Date()) {
   const results = await Promise.allSettled(
     collectors.map(async (fn) => (await fn()).filter(isAgriculturalProduct))
   );
-  const sources = results.map((r, i) => {
-    const success = r.status === 'fulfilled' && r.value.length > 0;
-    return {
+  const sources = results.map((result, i) =>
+    resolveSourceStatus({
       name: PRICE_SOURCES[i],
-      status: success ? 'ready' : 'retained',
-      fetchedAt: success
-        ? now.toISOString()
-        : previous.sources?.find((s) => s.name === PRICE_SOURCES[i])
-            ?.fetchedAt || null,
-      rows: success ? r.value.length : 0,
-      error: success
-        ? null
-        : r.status === 'rejected'
-          ? r.reason.message
-          : 'No price records',
-    };
-  });
-  const fresh = results.flatMap((r, i) =>
-    sources[i].status === 'ready' ? r.value : []
+      result,
+      previousSource: previous.sources?.find((s) => s.name === PRICE_SOURCES[i]),
+      now,
+    })
+  );
+  const fresh = results.flatMap((r) =>
+    r.status === 'fulfilled' && r.value.length > 0 ? r.value : []
   );
   assert(
     fresh.length || previous.data?.length,
