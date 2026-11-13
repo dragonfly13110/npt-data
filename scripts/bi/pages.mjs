@@ -11,6 +11,7 @@ import {
   collectPublicSituation,
   mergeWaterHistory,
 } from './public-situation.mjs';
+import { refreshDailyWeatherSnapshot } from './weather-refresh.mjs';
 
 export const PAGES_TABLES = [
   'farmer_registry',
@@ -539,9 +540,21 @@ async function main() {
       }),
     };
     const snapshot = await collectPagesSnapshot(client);
+    try {
+      snapshot.tables.daily_weather = await refreshDailyWeatherSnapshot(
+        snapshot.tables.daily_weather,
+        { fetchedAt: snapshot.fetchedAt }
+      );
+    } catch (error) {
+      console.warn(
+        `Open-Meteo weather refresh failed; retain database rows: ${error.message}`
+      );
+    }
     Object.assign(
       snapshot.tables,
-      await collectPublicSituation(client, snapshot.fetchedAt)
+      await collectPublicSituation(client, snapshot.fetchedAt, fetch, {
+        weatherRows: snapshot.tables.daily_weather.data,
+      })
     );
     const historyFile = path.resolve('data/bi/public_water_history.json');
     if (fs.existsSync(historyFile))

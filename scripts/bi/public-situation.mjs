@@ -361,7 +361,8 @@ export function flattenWaterAdvice(report) {
 export async function collectPublicSituation(
   client,
   fetchedAt,
-  fetcher = fetch
+  fetcher = fetch,
+  options = {}
 ) {
   const now = new Date(fetchedAt);
   const cutoff = new Date(now.getTime() - 90 * 86400000)
@@ -372,7 +373,9 @@ export async function collectPublicSituation(
     key: 'forecast_date',
     columns: ['forecast_date', 'summary', 'details', 'updated_at'],
   });
-  const weather = await readAll(client, PUBLIC_POWERBI_DATASETS.daily_weather);
+  const weather = Array.isArray(options.weatherRows)
+    ? options.weatherRows
+    : await readAll(client, PUBLIC_POWERBI_DATASETS.daily_weather);
   const hotspots = await readAll(client, {
     ...PUBLIC_POWERBI_DATASETS.fire_hotspots,
     columns: Object.keys(

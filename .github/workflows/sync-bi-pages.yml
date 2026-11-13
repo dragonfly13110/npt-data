@@ -36,7 +36,9 @@ jobs:
           node-version: '22'
       - name: Check snapshot and privacy behavior
         if: github.event_name != 'push'
-        run: node scripts/bi/check.mjs
+        run: |
+          node scripts/bi/check.mjs
+          node scripts/bi/weather-refresh.test.mjs
         working-directory: site
       - name: Export complete batch
         id: export_snapshot
