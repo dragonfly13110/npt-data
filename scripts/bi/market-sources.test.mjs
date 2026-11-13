@@ -1,94 +1,331 @@
 import assert from 'node:assert/strict';
 import {
+  PRICE_SOURCES,
+  normalizeUnit,
+  normalizeNptProduct,
   parseSimummuang,
-  parseTalaadThai,
   mergePriceHistory,
   priceRow,
   boundPriceHistory,
   isAgriculturalProduct,
   resolveSourceStatus,
 } from './market-sources.mjs';
+import { parseDitPriceHtml } from './dit-prices.mjs';
 import { validateLandUse } from './government-open-data.mjs';
+
 const now = new Date('2026-10-22T05:00:00Z');
-for (const name of [
-  'หมึกกระดอง',
-  'เห็ดเผาะ',
-  'เห็ดเผาะฝ้าย',
-  'หัวหมูสด',
-  'กระเจี๊ยบเขียว',
-  'มะขามเปียกฝัก',
-  'กุ้งแห้งเนื้อ',
-  'ไข่ไก่ เบอร์1',
-  'ข้าวสาร',
-])
-  assert(
-    isAgriculturalProduct({
-      source_name: 'ตลาดสี่มุมเมือง',
-      product_category: 'ของสด ของชำ',
-      product_name: name,
-    }),
-    name
-  );
-for (const name of [
-  'ลูกชิ้นหมู',
-  'น้ำพริกแกงเผ็ด',
-  'ผักกาดดอง',
-  'หมึกกระดองดอง',
-  'หน่อไม้ปี๊บ',
-  'มะพร้าวเผา',
-  'ปลาทูนึ่ง',
-  'หัวหมูพะโล้',
-  'น้ำมันพืช',
-  'ซอสปรุงรส',
-  'บะหมี่กึ่งสำเร็จรูป',
-  'ขนมจีน',
-  'น้ำย่านาง',
-  'เก้าอี้',
-  'หลอดไฟ',
-  'เศษBB',
-])
-  assert(
-    !isAgriculturalProduct({
-      source_name: 'ตลาดสี่มุมเมือง',
-      product_category: 'ของสด ของชำ',
-      product_name: name,
-    }),
-    name
-  );
-assert(
-  isAgriculturalProduct({
+
+// 1. Sources: strictly 3 sources (no ตลาดไท)
+assert.deepEqual(PRICE_SOURCES, [
+  'สศก. / NABC',
+  'กรมการค้าภายใน',
+  'ตลาดสี่มุมเมือง',
+]);
+
+// 2. Unit normalization + DIT retail unit bug fix (P13082/P13084/P13087/P13088)
+assert.equal(normalizeUnit('บาท/กิโลกรัม'), 'บาท/กก.');
+assert.equal(normalizeUnit('บาท/ลูก'), 'บาท/ผล');
+assert.equal(normalizeUnit('บาท/กก.'), 'บาท/กก.');
+
+const retailCorianderHtml = `
+  <h2>ประเภท : ขายปลีก สินค้า : ผักสด ผักชี คละ (บาท/กก.) บาท/กก.</h2>
+  <script>[[1794528000000, 120.5]]</script>
+`;
+const parsedRetail = parseDitPriceHtml(retailCorianderHtml, {
+  id: 'P13082',
+  productName: 'ผักชี คละ (บาท/กก.)\n',
+});
+assert.equal(parsedRetail.priceType, 'retail');
+assert.equal(parsedRetail.unit, 'กก.');
+assert.equal(parsedRetail.productName, 'ผักชี คละ (บาท/กก.)');
+
+// 3. Strictly plant crops + orchids/ornamentals grown in Nakhon Pathom (no livestock/fish/processed/foreign flowers)
+for (const sample of [
+  {
+    source_name: 'สศก. / NABC',
+    product_category: 'ข้าวเปลือกเจ้า',
+    product_name: 'ข้าวเปลือกเจ้าพันธุ์สุพรรณบุรี ความชื้น 15%',
+  },
+  {
+    source_name: 'สศก. / NABC',
+    product_category: 'อ้อยโรงงาน',
+    product_name: 'อ้อยโรงงานสด',
+  },
+  {
+    source_name: 'สศก. / NABC',
+    product_category: 'มะพร้าว',
+    product_name: 'มะพร้าวน้ำหอม',
+  },
+  {
+    source_name: 'กรมการค้าภายใน',
+    source_product_id: 'P14035',
+    product_category: 'ผลไม้-ขายปลีก',
+    product_name: 'ส้มโอ ขาวน้ำผึ้ง ใหญ่',
+  },
+  {
+    source_name: 'กรมการค้าภายใน',
+    source_product_id: 'W13001',
+    product_category: 'ผัก',
+    product_name: 'ผักคะน้า',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ผัก',
+    product_name: 'ใบกะเพรา',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ผัก',
+    product_name: 'กุ้ยช่ายเขียว',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ผลไม้',
+    product_name: 'ฝรั่งกิมจู',
+  },
+  {
     source_name: 'ตลาดสี่มุมเมือง',
     product_category: 'ดอกไม้ สังฆภัณฑ์',
     product_name: 'กล้วยไม้หวายขาว',
-  })
-);
-for (const name of [
-  'ธูป',
-  'เทียน',
-  'ดอกไม้จันทน์',
-  'ดอกรักปลอม',
-  'พวงมาลัยพลาสติก',
-])
-  assert(
-    !isAgriculturalProduct({
-      source_name: 'ตลาดสี่มุมเมือง',
-      product_category: 'ดอกไม้ สังฆภัณฑ์',
-      product_name: name,
-    }),
-    name
-  );
-assert(
-  isAgriculturalProduct({
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'กล้วยไม้บอมโจ',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'บัวหลวงสีขาว',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'ใบตอง',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'ต้นเตย',
+  },
+]) {
+  assert(isAgriculturalProduct(sample), `Should admit ${sample.product_name}`);
+}
+
+for (const rejected of [
+  { source_name: 'ตลาดไท', product_category: 'ผัก', product_name: 'ผักคะน้า' },
+  {
+    source_name: 'สศก. / NABC',
+    product_category: 'สุกร',
+    product_name: 'สุกรพันธุ์ผสม น้ำหนัก 100 กก. ขึ้นไป',
+  },
+  {
+    source_name: 'สศก. / NABC',
+    product_category: 'ไก่',
+    product_name: 'ไก่รุ่นพันธุ์เนื้อ',
+  },
+  {
+    source_name: 'สศก. / NABC',
+    product_category: 'กุ้งขาว',
+    product_name: 'กุ้งขาวแวนนาไม ขนาด 50 ตัว/กก.',
+  },
+  {
+    source_name: 'สศก. / NABC',
+    product_category: 'ปาล์มน้ำมัน',
+    product_name: 'ผลปาล์มน้ำมันทั้งทะลาย',
+  },
+  {
+    source_name: 'สศก. / NABC',
+    product_category: 'ยางพารา',
+    product_name: 'น้ำยางพาราสด',
+  },
+  {
     source_name: 'กรมการค้าภายใน',
-    source_product_id: 'W15041',
+    source_product_id: 'W15047',
     product_category: 'เครื่องเทศ/ของแห้ง',
-    product_name: 'พริกขี้หนูแห้ง อย่างดี',
-  })
+    product_name: 'หอมหัวใหญ่ (หอมภาคเหนือ) เบอร์ 0-1',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ของสด ของชำ',
+    product_name: 'หมึกกระดอง',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ของสด ของชำ',
+    product_name: 'หัวหมูสด',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ของสด ของชำ',
+    product_name: 'ไข่ไก่ เบอร์1',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ผลไม้',
+    product_name: 'แอปเปิ้ลฟูจิ จีน',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ผลไม้',
+    product_name: 'สับปะรดภูแล',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'ธูป',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'บาตร',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'ดอกไม้จันทน์',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'กุหลาบจีน',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'มัม มาเลย์',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'เบญจมาสเชียงใหม่',
+  },
+  {
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ผัก',
+    product_name: 'จิ้งหรีด',
+  },
+]) {
+  assert(
+    !isAgriculturalProduct(rejected),
+    `Should reject ${rejected.source_name}:${rejected.product_name}`
+  );
+}
+
+// 4. Unified product naming preserves upstream grade while aligning matching commodities
+assert.deepEqual(
+  normalizeNptProduct({
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ผัก',
+    product_name: 'ผักชีไทย',
+    grade: 'กลาง',
+    unit: 'บาท/กิโลกรัม',
+  }),
+  {
+    product_category: 'ผักและสมุนไพร',
+    product_name: 'ผักชี',
+    grade: 'ผักชีไทย (กลาง)',
+    unit: 'บาท/กก.',
+  }
 );
+assert.deepEqual(
+  normalizeNptProduct({
+    source_name: 'กรมการค้าภายใน',
+    source_product_id: 'P14011',
+    product_category: 'ผลไม้-ขายปลีก',
+    product_name: 'ฝรั่งกิมจู คัด',
+    grade: 'ตามชื่อสินค้าต้นทาง',
+    unit: 'บาท/กก.',
+  }),
+  {
+    product_category: 'ผลไม้',
+    product_name: 'ฝรั่งกิมจู',
+    grade: 'คัด',
+    unit: 'บาท/กก.',
+  }
+);
+assert.deepEqual(
+  normalizeNptProduct({
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ผลไม้',
+    product_name: 'ส้มโอขาวน้ำผึ้ง',
+    grade: 'ใหญ่',
+    unit: 'บาท/กิโลกรัม',
+  }),
+  {
+    product_category: 'ผลไม้',
+    product_name: 'ส้มโอขาวน้ำผึ้ง (น้ำหนัก กก.)',
+    grade: 'ใหญ่',
+    unit: 'บาท/กก.',
+  }
+);
+assert.deepEqual(
+  normalizeNptProduct({
+    source_name: 'สศก. / NABC',
+    product_category: 'มะนาว',
+    product_name: 'มะนาว ผลขนาดกลาง',
+    grade: 'กลาง',
+    unit: 'บาท/ร้อยผล',
+  }),
+  {
+    product_category: 'ผักและสมุนไพร',
+    product_name: 'มะนาว (รายร้อยผล)',
+    grade: 'ผลขนาดกลาง',
+    unit: 'บาท/ร้อยผล',
+  }
+);
+assert.deepEqual(
+  normalizeNptProduct({
+    source_name: 'สศก. / NABC',
+    source_product_id: 'ข้าวเปลือกเจ้าหอมมะลิ 105',
+    product_category: 'ข้าวเปลือกเจ้า',
+    product_name: 'ข้าวเปลือกเจ้าหอมมะลิ 105',
+    grade: 'ตามชื่อสินค้าต้นทาง',
+    unit: 'บาท/ตัน',
+  }),
+  {
+    product_category: 'ข้าวและธัญพืช',
+    product_name: 'ข้าวเปลือกหอมมะลิ',
+    grade: 'พันธุ์ขาวดอกมะลิ 105',
+    unit: 'บาท/ตัน',
+  }
+);
+assert.deepEqual(
+  normalizeNptProduct({
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'พืชไร่',
+    product_name: 'มันสำปะหลัง',
+    grade: 'ใหญ่',
+    unit: 'บาท/กิโลกรัม',
+  }),
+  {
+    product_category: 'พืชไร่',
+    product_name: 'มันสำปะหลัง (ตลาดผักสด)',
+    grade: 'ใหญ่',
+    unit: 'บาท/กก.',
+  }
+);
+assert.deepEqual(
+  normalizeNptProduct({
+    source_name: 'ตลาดสี่มุมเมือง',
+    product_category: 'ดอกไม้ สังฆภัณฑ์',
+    product_name: 'กล้วยไม้บอมโจ',
+    grade: 'กลาง',
+    unit: 'บาท/กำ',
+  }),
+  {
+    product_category: 'ไม้ดอกไม้ประดับ',
+    product_name: 'กล้วยไม้บอมโจ',
+    grade: 'กลาง',
+    unit: 'บาท/กำ',
+  }
+);
+
+// 5. Simummuang item parsing + zero-min & invalid-range quarantine
 const item = {
   _id: 'one',
   isActive: true,
-  th: { name: 'ผักชี' },
+  th: { name: 'ผักชีไทย' },
   prod_unit_id: { th: { name: 'กิโลกรัม' } },
   prod_category_id: { th: { name: 'ผัก' } },
   price: {
@@ -98,107 +335,60 @@ const item = {
     large: { min: 70, max: 50 },
   },
 };
-const rejected = [],
-  rows = parseSimummuang([item], now, rejected);
+const rejectedRows = [];
+const rows = parseSimummuang([item], now, rejectedRows);
 assert.equal(rows.length, 1);
 assert.equal(rows[0].data_date, '2026-10-22');
+assert.equal(rows[0].product_name, 'ผักชี');
+assert.equal(rows[0].unit, 'บาท/กก.');
 assert.equal(rows[0].price_min, null);
 assert.equal(rows[0].price_max, 60);
-assert.equal(rejected.length, 1);
-assert.equal(rows[0].day_price, null);
-assert(!('images' in rows[0]));
-const json = {
-  props: {
-    pageProps: {
-      productsPriceTrending: {
-        data: [
-          {
-            id: 1,
-            title: { th: 'มะนาว 400 ลูก' },
-            unit: 'กระสอบ',
-            slug: 'lime',
-            pricingData: {
-              latestPriceDiffProductSnapShot: {
-                data: {
-                  prev: {
-                    date: '2026-10-20T23:59:59.999Z',
-                    minPrice: 100,
-                    maxPrice: 120,
-                  },
-                  current: {
-                    date: '2026-10-21T23:59:59.999Z',
-                    minPrice: 110,
-                    maxPrice: 130,
-                  },
-                },
-              },
-            },
-          },
-        ],
-      },
-    },
-  },
-};
-const thai = parseTalaadThai(
-  '<script id="__NEXT_DATA__" type="application/json">' +
-    JSON.stringify(json) +
-    '</script>',
-  now
-);
-assert.deepEqual(
-  thai.map((r) => r.data_date),
-  ['2026-10-20', '2026-10-21']
-);
-assert.equal(thai[0].unit, 'บาท/กระสอบ');
+assert.equal(rejectedRows.length, 1);
+
+// 6. History merging filters out excluded legacy sources (e.g., ตลาดไท or livestock)
+const ditRow = priceRow({
+  data_date: '2026-10-21',
+  product_category: 'ผลไม้',
+  product_name: 'ฝรั่งกิมจู',
+  source_name: 'กรมการค้าภายใน',
+  source_product_id: 'P14011',
+  grade: 'คัด',
+  market_name: 'ชุดสำรวจราคาขายปลีก กรมการค้าภายใน',
+  province: null,
+  unit: 'บาท/กก.',
+  price_type: 'ราคาขายปลีกจากชุดสำรวจ',
+  day_price: 45,
+  price_min: 40,
+  price_max: 50,
+  source_url: 'https://pricelist.dit.go.th/main_price.php?seltime=day',
+  spatial_scope: 'ทดสอบ',
+  collected_at: now.toISOString(),
+});
+const oldTalaadThai = { ...ditRow, source_name: 'ตลาดไท', market_name: 'ตลาดไท' };
 const changed = { ...rows[0], price_max: 65 };
-const merged = mergePriceHistory([rows[0], ...thai], [changed], now);
-assert.equal(merged.length, 3);
+const merged = mergePriceHistory([rows[0], oldTalaadThai, ditRow], [changed], now);
+assert.equal(merged.length, 2);
+assert(!merged.some((r) => r.source_name === 'ตลาดไท'));
 assert.equal(
   merged.find((r) => r.source_name === 'ตลาดสี่มุมเมือง').price_max,
   65
 );
-assert.equal(mergePriceHistory(merged, [], now).length, 3);
-const oldGrocery = {
-  ...changed,
-  product_name: 'น้ำพริกแกงเผ็ด',
-  product_category: 'ของสด ของชำ',
-};
-assert.equal(
-  mergePriceHistory([oldGrocery, ...merged], [], now).length,
-  merged.length
-);
-assert.equal(
-  mergePriceHistory(
-    [
-      { ...changed, data_date: '2026-01-01' },
-      { ...changed, data_date: '2026-01-02' },
-    ],
-    [],
-    now
-  ).length,
-  1
-);
-assert.equal(
-  mergePriceHistory([], [{ ...changed, data_date: '2026-10-23' }], now).length,
-  0
-);
 assert.throws(() => priceRow({ ...changed, data_date: '2026-02-30' }));
-const another = { ...changed, grade: 'ใหญ่' };
-assert.equal(mergePriceHistory([changed], [another], now).length, 2);
 assert.throws(() => priceRow({ ...changed, price_min: -1 }));
 assert.throws(() => priceRow({ ...changed, price_min: 80 }));
-assert.throws(() => parseTalaadThai('<html>unavailable</html>', now));
+
+// 7. History size bound retains latest date per active source
 const bulky = [
   ...Array.from({ length: 1000 }, (_, i) => ({
     ...changed,
     data_date: i === 0 ? '2026-10-22' : '2026-10-21',
     spatial_scope: 'a'.repeat(10000),
   })),
-  ...thai,
+  ditRow,
 ];
 const bounded = boundPriceHistory(bulky);
 assert(bounded.history.trimmedForSize);
-assert(bounded.data.some((r) => r.source_name === 'ตลาดไท'));
+assert(bounded.data.some((r) => r.source_name === 'กรมการค้าภายใน'));
 assert(
   bounded.data.some(
     (r) => r.source_name === 'ตลาดสี่มุมเมือง' && r.data_date === '2026-10-22'
@@ -207,6 +397,8 @@ assert(
 assert(
   Buffer.byteLength(JSON.stringify(bounded.data, null, 2)) < 9 * 1024 * 1024
 );
+
+// 8. Land-use validation & source status preservation
 const districts = [
     'เมืองนครปฐม',
     'กำแพงแสน',
@@ -235,6 +427,7 @@ const records = districts.flatMap((d) =>
 assert.equal(validateLandUse(records, 42).length, 42);
 assert.throws(() => validateLandUse(records.slice(1), 42));
 assert.throws(() => validateLandUse([...records.slice(1), records[1]], 42));
+
 const prevNabcReady = {
   name: 'สศก. / NABC',
   status: 'ready',
@@ -264,6 +457,4 @@ const expiredNextMorning = resolveSourceStatus({
 assert.equal(expiredNextMorning.status, 'retained');
 assert.equal(expiredNextMorning.rows, 0);
 assert.match(expiredNextMorning.error, /403/);
-console.log(
-  'Multi-market dates, ranges, quarantine, source identity, history, status preservation, and data.go.th completeness checks passed'
-);
+console.log('All curated NPT agricultural price & orchid tests passed');

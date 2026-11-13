@@ -87,7 +87,7 @@ jobs:
       - name: Report retained prices and outbreak data
         if: github.event_name != 'push' && steps.market_outbreaks.outcome == 'failure'
         run: echo '::warning::Official price/outbreak batch failed. Previous JSON, source dates and hashes are retained; no empty replacement is published.'
-      - name: Collect prices from four independent sources
+      - name: Collect curated NPT agricultural prices and orchids
         id: multi_market
         continue-on-error: true
         if: github.event_name != 'push'
