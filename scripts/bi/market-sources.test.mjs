@@ -6,6 +6,7 @@ import {
   priceRow,
   boundPriceHistory,
   isAgriculturalProduct,
+  resolveSourceStatus,
 } from './market-sources.mjs';
 import { validateLandUse } from './government-open-data.mjs';
 const now = new Date('2026-10-22T05:00:00Z');
@@ -234,6 +235,35 @@ const records = districts.flatMap((d) =>
 assert.equal(validateLandUse(records, 42).length, 42);
 assert.throws(() => validateLandUse(records.slice(1), 42));
 assert.throws(() => validateLandUse([...records.slice(1), records[1]], 42));
+const prevNabcReady = {
+  name: 'สศก. / NABC',
+  status: 'ready',
+  fetchedAt: '2026-11-13T07:05:00.000Z',
+  rows: 4110,
+  error: null,
+};
+const rejected403 = {
+  status: 'rejected',
+  reason: new Error('Public source agriapi.nabc.go.th returned 403'),
+};
+const keptSameDay = resolveSourceStatus({
+  name: 'สศก. / NABC',
+  result: rejected403,
+  previousSource: prevNabcReady,
+  now: new Date('2026-11-13T10:17:00.000Z'),
+});
+assert.equal(keptSameDay.status, 'ready');
+assert.equal(keptSameDay.rows, 4110);
+assert.equal(keptSameDay.error, null);
+const expiredNextMorning = resolveSourceStatus({
+  name: 'สศก. / NABC',
+  result: rejected403,
+  previousSource: prevNabcReady,
+  now: new Date('2026-11-14T02:17:00.000Z'),
+});
+assert.equal(expiredNextMorning.status, 'retained');
+assert.equal(expiredNextMorning.rows, 0);
+assert.match(expiredNextMorning.error, /403/);
 console.log(
-  'Multi-market dates, ranges, quarantine, source identity, history, and data.go.th completeness checks passed'
+  'Multi-market dates, ranges, quarantine, source identity, history, status preservation, and data.go.th completeness checks passed'
 );
