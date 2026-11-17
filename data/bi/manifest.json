@@ -538,15 +538,15 @@
       "table": "public_agricultural_prices",
       "title": "ราคาพืชเกษตรและไม้ดอกนครปฐม · มาตรฐานรัฐ + เอกชนทางเลือก",
       "status": "ready",
-      "count": 6263,
-      "fetchedAt": "2026-11-16T20:28:28.850Z",
+      "count": 6336,
+      "fetchedAt": "2026-11-17T10:45:08.737Z",
       "dataAsOf": "2026-11-17",
       "dataAsOfLabel": "2026-11-17",
       "updateFrequency": "ตรวจต้นทางรายวัน",
       "freshnessStatus": "ตรวจวันที่ต้นทาง ไม่ใช่วันดึงสำเนา",
       "scope": "รับซื้อ (สศก.) · ขายส่ง/ปลีก (กรมการค้าภายใน) · เอกชนทางเลือก (สี่มุมเมือง)",
-      "bytes": 8667456,
-      "sha256": "1b660875171ce86cff44d45bfb2cc64fe106763de627940d4860e35ac4314041"
+      "bytes": 8760820,
+      "sha256": "11a4db0a4c2de17ffd83203fde86c5f8bdd456125e56bf553990f0895c692059"
     },
     {
       "table": "public_flood_monitor",
