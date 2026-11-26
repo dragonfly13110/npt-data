@@ -21,9 +21,6 @@ jobs:
   snapshot:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout public data
         uses: actions/checkout@v4
@@ -119,16 +116,48 @@ jobs:
           git add -- data/bi
           if ! git diff --cached --quiet; then
             git commit -m "chore(bi): update public decision data snapshot"
-            git push origin HEAD:main
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "::error::Failed to push BI snapshot after 3 attempts"
+                exit 1
+              fi
+              git fetch origin main
+              git rebase -X theirs origin/main
+            done
           fi
           # Export scratch files are not part of the public Pages artifact.
           rm -f output/bi-pages/*.json
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload complete site, including existing maps and documents
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: site
+
+  deploy:
+    needs: snapshot
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Wait for Pages artifact metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in $(seq 1 12); do
+            count=$(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?name=github-pages" --jq '.total_count' 2>/dev/null || echo 0)
+            echo "Attempt $attempt: artifact count=$count"
+            if [ "${count:-0}" -ge 1 ]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::warning::Artifact metadata still not visible after 60s; proceeding to deploy-pages"
       - name: Deploy Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
